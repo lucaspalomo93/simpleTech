@@ -3,4 +3,5 @@ export const COLORS = {
   ORANGE: '#D2632C',
   WHITE: '#FFFFFF',
   GREY_TEXT: '#717078',
+  LIGT_GREY_TEXT: '#D9D9D9'
 };
