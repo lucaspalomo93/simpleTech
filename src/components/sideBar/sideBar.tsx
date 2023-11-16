@@ -10,53 +10,56 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
-import { COLORS } from '../constants/colors';
+import { COLORS } from '../../constants/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useState } from 'react';
-import { items } from '../constants/menuItems';
-import { LIST_ITEM_BUTTON, LIST_ITEM_BUTTON_OPTION } from '../constants/styles';
+import { items } from '../../constants/menuItems';
+import {
+  LIST_ITEM_BUTTON,
+  LIST_ITEM_BUTTON_OPTION,
+  LIST_ITEM_BUTTON_STYLES,
+  LIST_ITEM_DEFAULT,
+} from '../../constants/styles';
+import { useSidebarOptions } from '../../hooks/useSideBarOptions';
 
 function SideBar() {
-  const [selectedOptions, setSelectedOptions] = useState(Array(3).fill(false));
-  const [expanded, setExpanded] = useState(Array(3).fill(false));
-  const [selectedSubOption, setSelectedSubOption] = useState('');
-
-  const handleItemClick = (index: number) => {
-    setSelectedOptions((prev) => {
-      const newOptions = Array(prev.length).fill(false);
-      newOptions[index] = !prev[index]; // Invertir el estado de selección
-      return newOptions;
-    });
-
-    setExpanded((prev) => {
-      const newExpanded = Array(prev.length).fill(false); // Cerrar todas las opciones
-      newExpanded[index] = !prev[index]; // Invertir el estado de expansión para la opción clicada
-      return newExpanded;
-    });
-  };
-
-  const handleSubOptionClick = (subOption: string) => {
-    // Verifica si la opción actual ya está seleccionada
-    if (selectedSubOption === subOption) {
-      setSelectedSubOption(''); // Desselecciona la opción actual
-    } else {
-      setSelectedSubOption(subOption); // Selecciona la nueva opción
-    }
-  };
+  const {
+    selectedOptions,
+    expanded,
+    selectedSubOption,
+    handleItemClick,
+    handleSubOptionClick,
+  } = useSidebarOptions();
 
   return (
-    <>
-      <Typography variant='h4' component='h2' sx={{color: COLORS.ORANGE, fontWeight: 'bold', marginTop: '4rem', marginBottom: '4rem'}}>S</Typography>
+    <Container>
+      <Typography
+        variant='h4'
+        component='h2'
+        sx={{
+          color: COLORS.ORANGE,
+          fontWeight: 'bold',
+          marginTop: '4rem',
+          marginBottom: '4rem',
+          marginLeft: '2rem',
+        }}
+      >
+        S
+      </Typography>
       <Typography
         variant='h5'
         component='h2'
         style={{ color: COLORS.GREY_TEXT, fontWeight: 'bold' }}
+        margin={'2rem'}
       >
         Soluciones
       </Typography>
 
-      <Container>
-        <List>
+      <Container
+        sx={{
+          margin: '2rem',
+        }}
+      >
+        <List sx={{ overflow: 'hidden' }}>
           {items.map((item, index) =>
             item.map((option, optionIndex) => (
               <div key={index}>
@@ -72,17 +75,7 @@ function SideBar() {
                           <ListItemButton
                             sx={{
                               ...LIST_ITEM_BUTTON,
-                              '&.Mui-selected': {
-                                backgroundColor: expanded[index]
-                                  ? COLORS.DARK_GREY
-                                  : 'transparent',
-                                '&:hover': {
-                                  backgroundColor: COLORS.DARK_GREY,
-                                },
-                                color: expanded[index]
-                                  ? COLORS.WHITE
-                                  : 'inherit',
-                              },
+                              ...LIST_ITEM_BUTTON_STYLES(expanded, index),
                             }}
                             selected={selectedOptions[index]}
                             onClick={() => handleItemClick(index)}
@@ -121,17 +114,7 @@ function SideBar() {
                     <ListItemButton
                       sx={{
                         ...LIST_ITEM_BUTTON,
-                        '&.Mui-selected': {
-                          backgroundColor: selectedOptions[index]
-                            ? COLORS.DARK_GREY
-                            : 'transparent',
-                          '&:hover': {
-                            backgroundColor: COLORS.DARK_GREY,
-                          },
-                          color: selectedOptions[index]
-                            ? COLORS.WHITE
-                            : 'inherit',
-                        },
+                        ...LIST_ITEM_DEFAULT(selectedOptions, index),
                       }}
                       selected={selectedOptions[index]}
                       onClick={() => handleItemClick(index)}
@@ -146,7 +129,7 @@ function SideBar() {
           )}
         </List>
       </Container>
-    </>
+    </Container>
   );
 }
 
