@@ -2,11 +2,11 @@ import { CssBaseline } from '@mui/material';
 import '../../styles/customStyles.css';
 import SideBar from '../sideBar/sideBar';
 import DescriptionFooter from '../descriptionFooter/descriptionFooter';
-import PictureDisplay from '../pictureDisplay/pictureDisplay';
 import ImageSidebar from '../imageSidebar/imageSidebar';
 import ColorPicker from '../colorPicker/colorPicker';
+import MainPictureDisplay from '../mainPictureDisplay/mainPictureDisplay';
 
-function RenderImages() {
+function Home() {
   return (
     <>
       <CssBaseline />
@@ -24,11 +24,11 @@ function RenderImages() {
           <ImageSidebar />
         </div>
         <div className='div5'>
-          <PictureDisplay />
+          <MainPictureDisplay />
         </div>
       </div>
     </>
   );
 }
 
-export default RenderImages;
+export default Home;

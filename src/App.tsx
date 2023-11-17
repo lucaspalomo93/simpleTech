@@ -1,20 +1,17 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import SimpleTechProvider from './context/context';
-import Home from './pages/home';
-import RenderImages from './components/renderImages/renderImages';
+import Presentation from './pages/presentation';
+import Home from './components/home/home';
 
 function App() {
   return (
     <SimpleTechProvider>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/catalogo' element={<RenderImages />} />
-          <Route
-            path='*'
-            element={<Navigate to="/" replace />} 
-          />
+          <Route path='/' element={<Presentation />} />
+          <Route path='/catalogo' element={<Home />} />
+          <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>
       </BrowserRouter>
     </SimpleTechProvider>
