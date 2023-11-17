@@ -21,6 +21,8 @@ export const LIST_ITEM_BUTTON = {
 
 export const LIST_ITEM_BUTTON_OPTION = {
   borderRadius: '10px',
+  display: 'flex',
+  gap: '2rem',
   '&.Mui-selected': {
     backgroundColor: COLORS.WHITE,
     color: COLORS.ORANGE,
@@ -77,4 +79,8 @@ export const LIST_ITEM_DEFAULT = (
       color: selectedOptions[index] ? COLORS.WHITE : 'inherit',
     },
   };
+};
+
+export const SVG_COLOR_CHANGE = {
+  fill: COLORS.ORANGE,
 };
