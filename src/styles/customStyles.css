@@ -34,3 +34,24 @@
   background-color: #363636;
   height: 100%;
 }
+
+.color-picker {
+  position: relative;
+}
+
+.color-picker img {
+  width: 50px; /* ajusta el ancho según sea necesario */
+  height: 50px; /* ajusta la altura según sea necesario */
+}
+
+.color-picker.selected::before {
+  content: '';
+  position: absolute;
+  top: -5px; /* ajusta la posición superior según sea necesario */
+  left: -5px; /* ajusta la posición izquierda según sea necesario */
+  width: 60px; /* ajusta el ancho del círculo según sea necesario */
+  height: 60px; /* ajusta la altura del círculo según sea necesario */
+  border: 2px solid #fff; /* ajusta el grosor y color del borde según sea necesario */
+  border-radius: 50%;
+  box-sizing: border-box;
+}
