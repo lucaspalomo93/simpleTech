@@ -34,20 +34,7 @@ function SideBar() {
 
   return (
     <Container>
-      {/* <Typography
-        variant='h4'
-        component='h2'
-        sx={{
-          color: COLORS.ORANGE,
-          fontWeight: 'bold',
-          marginTop: '4rem',
-          marginBottom: '4rem',
-          marginLeft: '2rem',
-        }}
-      >
-        S
-      </Typography> */}
-      <Container sx={{margin: '3rem 0 6rem 0'}}>
+      <Container sx={{ margin: '3rem 0 6rem 0' }}>
         <img src={ICON.S_ICON} alt='S Icon' />
       </Container>
       <Typography
@@ -107,7 +94,7 @@ function SideBar() {
                                 alt='Icono'
                                 className={
                                   selectedSubOption === subOption.label
-                                    ? 'selected'
+                                    ? 'selected-option'
                                     : ''
                                 }
                               />
