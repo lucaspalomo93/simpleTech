@@ -20,6 +20,8 @@ import {
   LIST_ITEM_DEFAULT,
 } from '../../constants/styles';
 import { useSidebarOptions } from '../../hooks/useSideBarOptions';
+import '../../styles/customStyles.css';
+import { ICON } from '../../constants/images';
 
 function SideBar() {
   const {
@@ -32,7 +34,7 @@ function SideBar() {
 
   return (
     <Container>
-      <Typography
+      {/* <Typography
         variant='h4'
         component='h2'
         sx={{
@@ -44,21 +46,20 @@ function SideBar() {
         }}
       >
         S
-      </Typography>
+      </Typography> */}
+      <Container sx={{margin: '3rem 0 6rem 0'}}>
+        <img src={ICON.S_ICON} alt='S Icon' />
+      </Container>
       <Typography
         variant='h5'
         component='h2'
         style={{ color: COLORS.GREY_TEXT, fontWeight: 'bold' }}
-        margin={'2rem'}
+        margin={'1rem'}
       >
         Soluciones
       </Typography>
 
-      <Container
-        sx={{
-          margin: '2rem',
-        }}
-      >
+      <Container>
         <List sx={{ overflow: 'hidden' }}>
           {items.map((item, index) =>
             item.map((option, optionIndex) => (
@@ -95,12 +96,21 @@ function SideBar() {
                           <ListItem key={subOptionIndex}>
                             <ListItemButton
                               sx={LIST_ITEM_BUTTON_OPTION}
-                              selected={selectedSubOption === subOption}
+                              selected={selectedSubOption === subOption.label}
                               onClick={() => {
-                                handleSubOptionClick(subOption);
+                                handleSubOptionClick(subOption.label);
                               }}
                             >
-                              <ListItemText primary={subOption} />
+                              <ListItemText primary={subOption.label} />
+                              <img
+                                src={subOption.icon}
+                                alt='Icono'
+                                className={
+                                  selectedSubOption === subOption.label
+                                    ? 'selected'
+                                    : ''
+                                }
+                              />
                             </ListItemButton>
                           </ListItem>
                         ))}

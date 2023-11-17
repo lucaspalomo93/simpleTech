@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import { COLORS } from '../../constants/colors';
 import { PICKERS } from '../../constants/images';
 import { useContext, useState } from 'react';
@@ -50,24 +50,24 @@ function ColorPicker() {
           >
             Color
           </Typography>
-          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <Grid container spacing={1} alignItems='center'>
             {Object.values(PICKERS).map((picker, index) => (
-              <div
-                key={index}
-                className={`color-picker ${
-                  selectedColor === picker ? 'selected' : ''
-                }`}
-                onClick={() => handleColorClick(picker)}
-                style={{ cursor: 'pointer' }}
-              >
-                <img src={picker} alt='picker' />
-              </div>
+              <Grid item key={index}>
+                <div
+                  className={`color-picker ${
+                    selectedColor === picker ? 'selected' : ''
+                  }`}
+                  onClick={() => handleColorClick(picker)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <img src={picker} alt='picker' />
+                </div>
+              </Grid>
             ))}
-          </div>
+          </Grid>
         </div>
       </Container>
     </div>
   );
 }
-
 export default ColorPicker;
