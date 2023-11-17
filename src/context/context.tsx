@@ -3,6 +3,7 @@ import { ReactNode, createContext, useMemo, useState } from 'react';
 interface State {
   sectionSelected: string;
   subSectionSelected: string;
+  colorPickerSelected: string;
 }
 
 interface ContextProps {
@@ -13,6 +14,7 @@ interface ContextProps {
 const initialValue = {
   sectionSelected: '',
   subSectionSelected: '',
+  colorPickerSelected: '',
 };
 
 export const SimpleTechContext = createContext<ContextProps>({
