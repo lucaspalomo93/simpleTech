@@ -1,7 +1,7 @@
 import { Container, Link, Typography } from '@mui/material';
 import { COLORS } from '../constants/colors';
 
-function Home() {
+function Presentation() {
   return (
     <Container
       style={{
@@ -46,4 +46,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Presentation;
