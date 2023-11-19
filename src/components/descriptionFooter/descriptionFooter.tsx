@@ -1,5 +1,5 @@
+import './descriptionFooter.css';
 import { Box, Divider } from '@mui/material';
-import '../../styles/customStyles.css';
 import { COLORS } from '../../constants/colors';
 
 function DescriptionFooter() {

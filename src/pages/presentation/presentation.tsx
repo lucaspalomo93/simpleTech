@@ -1,5 +1,5 @@
 import { Container, Link, Typography } from '@mui/material';
-import { COLORS } from '../constants/colors';
+import { COLORS } from '../../constants/colors';
 
 function Presentation() {
   return (
@@ -19,7 +19,6 @@ function Presentation() {
         justifyContent={'center'}
         color={COLORS.ORANGE}
         fontWeight={'bold'}
-        // fontSize={'10vh'}
         paddingTop={'30vh'}
         paddingBottom={'20vh'}
       >

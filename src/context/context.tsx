@@ -14,7 +14,7 @@ interface ContextProps {
 const initialValue = {
   sectionSelected: '',
   subSectionSelected: '',
-  colorPickerSelected: '',
+  colorPickerSelected: 'BLACK',
 };
 
 export const SimpleTechContext = createContext<ContextProps>({

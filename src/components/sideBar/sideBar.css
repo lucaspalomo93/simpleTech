@@ -1,0 +1,3 @@
+.selected-option {
+  filter: sepia(100%) saturate(800%) hue-rotate(7deg);
+}

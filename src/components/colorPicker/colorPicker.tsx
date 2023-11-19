@@ -1,16 +1,14 @@
+import './colorPicker.css';
 import { Container, Typography } from '@mui/material';
 import { COLORS } from '../../constants/colors';
 import { PICKERS } from '../../constants/images';
 import { useContext, useState } from 'react';
-import '../../styles/customStyles.css';
 import { SimpleTechContext } from '../../context/context';
-import { getColorPickerName } from '../../utils/colorPicker';
+import { getColorPickerName } from '../../utils/getcolorPicker';
 
 function ColorPicker() {
   const [selectedColor, setSelectedColor] = useState('');
   const { state, setState } = useContext(SimpleTechContext);
-
-  console.log('statePicker...', state.colorPickerSelected);
 
   const handleColorClick = (color: string) => {
     // Si el color seleccionado ya está seleccionado, deseleccionarlo

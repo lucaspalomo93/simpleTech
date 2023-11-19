@@ -1,3 +1,4 @@
+import './sideBar.css';
 import {
   Accordion,
   AccordionDetails,
@@ -20,7 +21,6 @@ import {
   LIST_ITEM_DEFAULT,
 } from '../../constants/styles';
 import { useSidebarOptions } from '../../hooks/useSideBarOptions';
-import '../../styles/customStyles.css';
 import { ICON } from '../../constants/images';
 
 function SideBar() {

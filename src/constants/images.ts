@@ -9,6 +9,7 @@ import TEJA from '../img/sideBar/TEJA.svg';
 import TRAPEZOIDAL from '../img/sideBar/TRAPEZOIDAL.svg';
 import MICRONERVADO from '../img/sideBar/MICRONERVADO.svg';
 import S_ICON from '../img/icon/S_ICON.svg';
+import DOWN_ARROW from '../img/icon/DOWN_ARROW.svg';
 import TECHOS_SINUSOIDAL_BLACK from '../img/roofs/TECHOS_SINUSOIDAL_BLACK.png';
 import TECHOS_SINUSOIDAL_BROWN from '../img/roofs/TECHOS_SINUSOIDAL_BROWN.png';
 import TECHOS_SINUSOIDAL_CREAM from '../img/roofs/TECHOS_SINUSOIDAL_CREAM.png';
@@ -51,6 +52,7 @@ export const SIDE_BAR_ICON = {
 
 export const ICON = {
   S_ICON,
+  DOWN_ARROW,
 };
 
 export const CENTRAL_IMAGE = {

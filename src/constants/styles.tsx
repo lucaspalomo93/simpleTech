@@ -84,3 +84,9 @@ export const LIST_ITEM_DEFAULT = (
 export const SVG_COLOR_CHANGE = {
   fill: COLORS.ORANGE,
 };
+
+export const IMG_PRESENT_STYLE = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
