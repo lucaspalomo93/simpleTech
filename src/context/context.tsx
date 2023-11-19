@@ -4,6 +4,8 @@ interface State {
   sectionSelected: string;
   subSectionSelected: string;
   colorPickerSelected: string;
+  showColorPicker: boolean;
+  colorPickersArray: any;
 }
 
 interface ContextProps {
@@ -15,6 +17,8 @@ const initialValue = {
   sectionSelected: '',
   subSectionSelected: '',
   colorPickerSelected: 'BLACK',
+  showColorPicker: false,
+  colorPickersArray: null,
 };
 
 export const SimpleTechContext = createContext<ContextProps>({

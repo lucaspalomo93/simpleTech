@@ -51,38 +51,30 @@ export const imageSelector = () => {
 function findImageInTechos(imageName: string) {
   const [section, subSection, color] = imageName.split('_');
   const img = get(CENTRAL_IMAGE, imageName);
-  const techosDefault = CENTRAL_IMAGE.TECHOS_SINUSOIDAL_DEFAULT;
-  const defaultTechoSinusoidal = CENTRAL_IMAGE.TECHOS_SINUSOIDAL_DEFAULT;
-  const defaultTechoTrapezoidal = CENTRAL_IMAGE.TECHOS_TRAPEZOIDAL_DEFAULT;
-  const defaultTechoTeja = CENTRAL_IMAGE.TECHOS_TEJA_DEFAULT;
+  // const techosDefault = CENTRAL_IMAGE.TECHOS_SINUSOIDAL_DEFAULT;
+  // const defaultTechoSinusoidal = CENTRAL_IMAGE.TECHOS_SINUSOIDAL_DEFAULT;
+  // const defaultTechoTrapezoidal = CENTRAL_IMAGE.TECHOS_TRAPEZOIDAL_DEFAULT;
+  // const defaultTechoTeja = CENTRAL_IMAGE.TECHOS_TEJA_DEFAULT;
 
   if (section && subSection && color) {
-    if (img) {
-      return img;
-    }
-  } else if (subSection == 'SINUSOIDAL') {
-    return defaultTechoSinusoidal;
-  } else if (subSection == 'TRAPEZOIDAL') {
-    return defaultTechoTrapezoidal;
-  } else if (subSection == 'TEJA') {
-    return defaultTechoTeja;
+    return img;
   }
 
-  return techosDefault;
+  return null;
 }
-
 function findImageInParedes(imageName: string) {
   const [section, subSection, color] = imageName.split('_');
   const img = get(CENTRAL_IMAGE, imageName);
-  const paredDefault = CENTRAL_IMAGE.PAREDES_MICRONERVADO_DEFAULT;
+  // const paredDefault = CENTRAL_IMAGE.PAREDES_MICRONERVADO_DEFAULT;
 
   if (section && subSection && color) {
     if (img) {
       return img;
-    } else {
-      return paredDefault;
     }
+    // else {
+    //   return paredDefault;
+    // }
   }
 
-  return paredDefault;
+  return null;
 }

@@ -19,6 +19,8 @@ export const useSidebarOptions = () => {
         ...state,
         sectionSelected: value.toUpperCase(),
         subSectionSelected: '',
+        showColorPicker: false,
+        colorPickerSelected: '',
       });
 
       return newOptions;
@@ -31,20 +33,22 @@ export const useSidebarOptions = () => {
     });
   };
 
-  const handleSubOptionClick = (subOption: string) => {
+  const handleSubOptionClick = (subOption: string, subOptionColors: any) => {
     // Verifica si la opción actual ya está seleccionada
-
     if (selectedSubOption === subOption) {
       setSelectedSubOption(''); // Desselecciona la opción actual
       setState({
         ...state,
         subSectionSelected: '',
+        showColorPicker: false,
       });
     } else {
       setSelectedSubOption(subOption); // Selecciona la nueva opción
       setState({
         ...state,
         subSectionSelected: subOption.toUpperCase(),
+        showColorPicker: true,
+        colorPickersArray: subOptionColors,
       });
     }
   };
