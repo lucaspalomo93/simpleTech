@@ -9,9 +9,6 @@ export const useSidebarOptions = () => {
 
   const { state, setState } = useContext(SimpleTechContext);
 
-  console.log('section...', state.sectionSelected);
-  console.log('subSection...', state.subSectionSelected);
-
   const handleItemClick = (index: number) => {
     setSelectedOptions((prev) => {
       const newOptions = Array(prev.length).fill(false);
@@ -29,7 +26,7 @@ export const useSidebarOptions = () => {
 
     setExpanded((prev) => {
       const newExpanded = Array(prev.length).fill(false); // Cerrar todas las opciones
-      newExpanded[index] = !prev[index]; // Invertir el estado de expansión para la opción clicada
+      newExpanded[index] = !prev[index]; // Invertir el estado de expansión para la opción clickeada
       return newExpanded;
     });
   };
@@ -41,13 +38,13 @@ export const useSidebarOptions = () => {
       setSelectedSubOption(''); // Desselecciona la opción actual
       setState({
         ...state,
-        subSectionSelected: '', // Reemplaza 'claveSubOption' con la clave real que deseas actualizar
+        subSectionSelected: '',
       });
     } else {
       setSelectedSubOption(subOption); // Selecciona la nueva opción
       setState({
         ...state,
-        subSectionSelected: subOption.toUpperCase(), // Reemplaza 'claveSubOption' con la clave real que deseas actualizar
+        subSectionSelected: subOption.toUpperCase(),
       });
     }
   };

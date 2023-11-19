@@ -1,8 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import SimpleTechProvider from './context/context';
-import Presentation from './pages/presentation';
-import Home from './components/home/home';
+import Presentation from './pages/presentation/presentation';
+import Home from './pages/home/home';
 
 function App() {
   return (
