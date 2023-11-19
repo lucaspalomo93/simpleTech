@@ -85,7 +85,7 @@ function SideBar() {
                               sx={LIST_ITEM_BUTTON_OPTION}
                               selected={selectedSubOption === subOption.label}
                               onClick={() => {
-                                handleSubOptionClick(subOption.label);
+                                handleSubOptionClick(subOption.label, subOption.colors);
                               }}
                             >
                               <ListItemText primary={subOption.label} />

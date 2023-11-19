@@ -7,9 +7,7 @@ import { IMG_PRESENT_STYLE } from '../../constants/styles';
 function MainPictureDisplay() {
   const img = imageSelector();
   return (
-    <div
-      style={img && IMG_PRESENT_STYLE}
-    >
+    <div style={img && IMG_PRESENT_STYLE}>
       {img ? (
         <Box
           component={'img'}

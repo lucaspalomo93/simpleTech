@@ -1,9 +1,12 @@
+// PICKERS
 import BLACK_PICKER from '/img/colorPickers/BLACK.png';
+import LIGHT_BROWN_PICKER from '/img/colorPickers/LIGHT_BROWN.png';
 import BROWN_PICKER from '/img/colorPickers/BROWN.png';
 import CREAM_PICKER from '/img/colorPickers/CREAM.png';
 import DARK_GREY_PICKER from '/img/colorPickers/DARK_GREY.png';
 import LIGHT_GREY_PICKER from '/img/colorPickers/LIGHT_GREY.png';
 import WHITE_PICKER from '/img/colorPickers/WHITE.png';
+
 import SINUSOIDAL from '/img/sideBarIcons/SINUSOIDAL.svg';
 import TEJA from '/img/sideBarIcons/TEJA.svg';
 import TRAPEZOIDAL from '/img/sideBarIcons/TRAPEZOIDAL.svg';
@@ -24,9 +27,9 @@ import TECHOS_TRAPEZOIDAL_DARK_GREY from '/img/sections/TECHOS_TRAPEZOIDAL_DARK_
 import TECHOS_TRAPEZOIDAL_LIGHT_GREY from '/img/sections/TECHOS_TRAPEZOIDAL_LIGHT_GREY.png';
 import TECHOS_TRAPEZOIDAL_WHITE from '/img/sections/TECHOS_TRAPEZOIDAL_WHITE.png';
 import TECHOS_TRAPEZOIDAL_DEFAULT from '/img/sections/TECHOS_TRAPEZOIDAL_CREAM.png';
-import TECHOS_TEJA_BROWN from '/img/sections/TECHOS_TEJA_BROWN.png';
+import TECHOS_TEJA_LIGHT_BROWN from '/img/sections/TECHOS_TEJA_LIGHT_BROWN.png';
 import TECHOS_TEJA_BLACK from '/img/sections/TECHOS_TEJA_BLACK.png';
-import TECHOS_TEJA_DEFAULT from '/img/sections/TECHOS_TEJA_BROWN.png';
+import TECHOS_TEJA_DEFAULT from '/img/sections/TECHOS_TEJA_LIGHT_BROWN.png';
 import PAREDES_MICRONERVADO_BLACK from '/img/sections/PAREDES_MICRONERVADO_BLACK.png';
 import PAREDES_MICRONERVADO_CREAM from '/img/sections/PAREDES_MICRONERVADO_CREAM.png';
 import PAREDES_MICRONERVADO_DARK_GREY from '/img/sections/PAREDES_MICRONERVADO_DARK_GREY.png';
@@ -36,6 +39,7 @@ import PAREDES_MICRONERVADO_DEFAULT from '/img/sections/PAREDES_MICRONERVADO_CRE
 
 export const PICKERS = {
   BLACK_PICKER,
+  LIGHT_BROWN_PICKER,
   BROWN_PICKER,
   CREAM_PICKER,
   DARK_GREY_PICKER,
@@ -70,7 +74,7 @@ export const CENTRAL_IMAGE = {
   TECHOS_TRAPEZOIDAL_LIGHT_GREY,
   TECHOS_TRAPEZOIDAL_WHITE,
   TECHOS_TRAPEZOIDAL_DEFAULT,
-  TECHOS_TEJA_BROWN,
+  TECHOS_TEJA_LIGHT_BROWN,
   TECHOS_TEJA_BLACK,
   TECHOS_TEJA_DEFAULT,
   PAREDES_MICRONERVADO_BLACK,
