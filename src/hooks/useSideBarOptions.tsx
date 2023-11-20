@@ -22,6 +22,8 @@ export const useSidebarOptions = () => {
         subSectionSelected: '',
         showColorPicker: false,
         colorPickerSelected: '',
+        footerDescriptionText: '',
+        footerDescriptionDimensions: '',
       });
       setSelectedSubSectionStyle('');
 
