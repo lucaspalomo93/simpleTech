@@ -1,4 +1,4 @@
-// PICKERS
+// COLOR PICKERS
 import BLACK_PICKER from '/img/colorPickers/BLACK.png';
 import LIGHT_BROWN_PICKER from '/img/colorPickers/LIGHT_BROWN.png';
 import BROWN_PICKER from '/img/colorPickers/BROWN.png';
@@ -18,7 +18,32 @@ import S_ICON from '/img/icon/S_ICON.svg';
 import DOWN_ARROW from '/img/icon/DOWN_ARROW.svg';
 import RIGHT_ARROW from '/img/icon/RIGHT_ARROW.svg';
 
-// COLOR PICKERS
+// SIDEBAR IMGES
+import GALERIA_TRAPEZOIDAL_01 from '/img/sideBarImages/trapezoidal/GALERIA_TRAPEZOIDAL_01.jpg';
+import GALERIA_TRAPEZOIDAL_02 from '/img/sideBarImages/trapezoidal/GALERIA_TRAPEZOIDAL_02.jpg';
+import GALERIA_TRAPEZOIDAL_03 from '/img/sideBarImages/trapezoidal/GALERIA_TRAPEZOIDAL_03.jpg';
+import GALERIA_TRAPEZOIDAL_04 from '/img/sideBarImages/trapezoidal/GALERIA_TRAPEZOIDAL_04.jpg';
+import GALERIA_TRAPEZOIDAL_05 from '/img/sideBarImages/trapezoidal/GALERIA_TRAPEZOIDAL_05.jpg';
+
+import GALERIA_TEJAS_01 from '/img/sideBarImages/tejas/GALERIA_TEJAS_01.jpg';
+import GALERIA_TEJAS_02 from '/img/sideBarImages/tejas/GALERIA_TEJAS_02.jpg';
+import GALERIA_TEJAS_03 from '/img/sideBarImages/tejas/GALERIA_TEJAS_03.jpg';
+import GALERIA_TEJAS_04 from '/img/sideBarImages/tejas/GALERIA_TEJAS_04.jpg';
+import GALERIA_TEJAS_05 from '/img/sideBarImages/tejas/GALERIA_TEJAS_05.jpg';
+
+import GALERIA_SINUSOIDAL_01 from '/img/sideBarImages/sinusoidal/GALERIA_SINUSOIDAL_01.jpg';
+import GALERIA_SINUSOIDAL_02 from '/img/sideBarImages/sinusoidal/GALERIA_SINUSOIDAL_02.jpg';
+import GALERIA_SINUSOIDAL_03 from '/img/sideBarImages/sinusoidal/GALERIA_SINUSOIDAL_03.jpg';
+import GALERIA_SINUSOIDAL_04 from '/img/sideBarImages/sinusoidal/GALERIA_SINUSOIDAL_04.jpg';
+import GALERIA_SINUSOIDAL_05 from '/img/sideBarImages/sinusoidal/GALERIA_SINUSOIDAL_05.jpg';
+
+import GALERIA_MICRONERVADO_01 from '/img/sideBarImages/micronervado/GALERIA_MICRONERVADO_01.jpg';
+import GALERIA_MICRONERVADO_02 from '/img/sideBarImages/micronervado/GALERIA_MICRONERVADO_02.jpg';
+import GALERIA_MICRONERVADO_03 from '/img/sideBarImages/micronervado/GALERIA_MICRONERVADO_03.jpg';
+import GALERIA_MICRONERVADO_04 from '/img/sideBarImages/micronervado/GALERIA_MICRONERVADO_04.jpg';
+import GALERIA_MICRONERVADO_05 from '/img/sideBarImages/micronervado/GALERIA_MICRONERVADO_05.jpg';
+
+// SOLUTION MAIN IMAGES
 import TECHOS_SINUSOIDAL_BLACK from '/img/sections/TECHOS_SINUSOIDAL_BLACK.png';
 import TECHOS_SINUSOIDAL_BROWN from '/img/sections/TECHOS_SINUSOIDAL_BROWN.png';
 import TECHOS_SINUSOIDAL_CREAM from '/img/sections/TECHOS_SINUSOIDAL_CREAM.png';
@@ -64,6 +89,29 @@ export const ICON = {
   S_ICON,
   DOWN_ARROW,
   RIGHT_ARROW,
+};
+
+export const SIDEBAR_IMAGES = {
+  GALERIA_TRAPEZOIDAL_01,
+  GALERIA_TRAPEZOIDAL_02,
+  GALERIA_TRAPEZOIDAL_03,
+  GALERIA_TRAPEZOIDAL_04,
+  GALERIA_TRAPEZOIDAL_05,
+  GALERIA_TEJAS_01,
+  GALERIA_TEJAS_02,
+  GALERIA_TEJAS_03,
+  GALERIA_TEJAS_04,
+  GALERIA_TEJAS_05,
+  GALERIA_SINUSOIDAL_01,
+  GALERIA_SINUSOIDAL_02,
+  GALERIA_SINUSOIDAL_03,
+  GALERIA_SINUSOIDAL_04,
+  GALERIA_SINUSOIDAL_05,
+  GALERIA_MICRONERVADO_01,
+  GALERIA_MICRONERVADO_02,
+  GALERIA_MICRONERVADO_03,
+  GALERIA_MICRONERVADO_04,
+  GALERIA_MICRONERVADO_05,
 };
 
 export const CENTRAL_IMAGE = {

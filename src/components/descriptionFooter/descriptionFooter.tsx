@@ -14,10 +14,12 @@ function DescriptionFooter() {
   return (
     <>
       <Box sx={{ backgroundColor: COLORS.DARK_GREY }}>
-        <Divider
-          style={{ width: '95%', margin: 'auto', fontWeight: 'bold' }}
-          color={COLORS.GREY_TEXT}
-        />
+        {state.showColorPicker && (
+          <Divider
+            style={{ width: '95%', margin: 'auto', fontWeight: 'bold' }}
+            color={COLORS.GREY_TEXT}
+          />
+        )}
       </Box>
       <div className='footer'>
         <div>
