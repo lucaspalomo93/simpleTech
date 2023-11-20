@@ -1,10 +1,33 @@
-import { useContext } from 'react';
+import './iamgeSidebar.css';
+import { useContext, useState } from 'react';
 import { COLORS } from '../../constants/colors';
 import { SimpleTechContext } from '../../context/context';
 
 function ImageSidebar() {
   const { state } = useContext(SimpleTechContext);
   const imageList = state.sidebarImagesArray;
+
+  // Estado para el visor de imágenes
+  const [imageViewer, setImageViewer] = useState({
+    isOpen: false,
+    currentImage: null,
+  });
+
+  // Manejar clic en una imagen para abrir el visor
+  const handleImageClick = (image: any) => {
+    setImageViewer({
+      isOpen: true,
+      currentImage: image,
+    });
+  };
+
+  // Manejar clic en cualquier parte de la pantalla para cerrar el visor
+  const handleViewerClose = () => {
+    setImageViewer({
+      isOpen: false,
+      currentImage: null,
+    });
+  };
 
   return (
     <div style={{ backgroundColor: COLORS.DARK_GREY, height: 'auto' }}>
@@ -20,9 +43,13 @@ function ImageSidebar() {
       >
         {imageList &&
           imageList.map((image: string, index: number) => (
-            <div style={{ margin: '0', display: 'contents' }}>
+            <div
+              key={index}
+              style={{ margin: '0', display: 'contents' }}
+              className='image-container'
+              onClick={() => handleImageClick(image)} // Manejar clic en la imagen
+            >
               <img
-                key={index}
                 src={image}
                 alt={`Image ${index + 1}`}
                 style={{
@@ -35,6 +62,13 @@ function ImageSidebar() {
             </div>
           ))}
       </div>
+
+      {/* Visor de imágenes */}
+      {imageViewer.isOpen && imageViewer.currentImage && (
+        <div className='image-viewer' onClick={handleViewerClose}>
+          <img src={imageViewer.currentImage} alt='Expanded Image' />
+        </div>
+      )}
     </div>
   );
 }
