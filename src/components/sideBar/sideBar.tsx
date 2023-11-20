@@ -25,11 +25,12 @@ import { ICON } from '../../constants/images';
 
 function SideBar() {
   const {
-    selectedOptions,
+    selectedSection,
     expanded,
-    selectedSubOption,
+    selectedSubSection,
+    selectedSubSectionStyle,
     handleItemClick,
-    handleSubOptionClick,
+    handleSubSectionClick,
   } = useSidebarOptions();
 
   return (
@@ -49,7 +50,7 @@ function SideBar() {
       <Container>
         <List sx={{ overflow: 'hidden' }}>
           {items.map((item, index) =>
-            item.map((option, optionIndex) => (
+            item.map((section, sectionIndex) => (
               <div key={index}>
                 {index < items.length - 1 ? ( // Mostrar como acordeón si no es la última opción
                   <>
@@ -65,35 +66,42 @@ function SideBar() {
                               ...LIST_ITEM_BUTTON,
                               ...LIST_ITEM_BUTTON_STYLES(expanded, index),
                             }}
-                            selected={selectedOptions[index]}
+                            selected={selectedSection[index]}
                             onClick={() => handleItemClick(index)}
                           >
                             <ListItemText
-                              key={optionIndex}
-                              primary={option.label}
+                              key={sectionIndex}
+                              primary={section.label}
                             />
-                            {option.label !== 'Inspiración' && (
+                            {section.label !== 'Inspiración' && (
                               <ExpandMoreIcon />
                             )}
                           </ListItemButton>
                         </ListItem>
                       </AccordionSummary>
                       <AccordionDetails>
-                        {option.options.map((subOption, subOptionIndex) => (
-                          <ListItem key={subOptionIndex}>
+                        {section.options.map((subSection, subSectionIndex) => (
+                          <ListItem key={subSectionIndex}>
                             <ListItemButton
                               sx={LIST_ITEM_BUTTON_OPTION}
-                              selected={selectedSubOption === subOption.label}
+                              selected={
+                                selectedSubSection === subSection.label &&
+                                selectedSubSectionStyle !== ''
+                              }
                               onClick={() => {
-                                handleSubOptionClick(subOption.label, subOption.colors);
+                                handleSubSectionClick(
+                                  subSection.label,
+                                  subSection.colors
+                                );
                               }}
                             >
-                              <ListItemText primary={subOption.label} />
+                              <ListItemText primary={subSection.label} />
                               <img
-                                src={subOption.icon}
+                                src={subSection.icon}
                                 alt='Icono'
                                 className={
-                                  selectedSubOption === subOption.label
+                                  selectedSubSection === subSection.label &&
+                                  selectedSubSectionStyle !== ''
                                     ? 'selected-option'
                                     : ''
                                 }
@@ -111,14 +119,14 @@ function SideBar() {
                     <ListItemButton
                       sx={{
                         ...LIST_ITEM_BUTTON,
-                        ...LIST_ITEM_DEFAULT(selectedOptions, index),
+                        ...LIST_ITEM_DEFAULT(selectedSection, index),
                       }}
-                      selected={selectedOptions[index]}
+                      selected={selectedSection[index]}
                       onClick={() => handleItemClick(index)}
                     >
-                      <ListItemText key={optionIndex} primary={option.label} />
+                      <ListItemText key={sectionIndex} primary={section.label} />
                     </ListItemButton>
-                    {option.label !== 'Inspiración' && <Divider />}
+                    {section.label !== 'Inspiración' && <Divider />}
                   </ListItem>
                 )}
               </div>
