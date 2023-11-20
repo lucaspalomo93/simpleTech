@@ -10,22 +10,57 @@ export const useSidebarOptions = () => {
 
   const { state, setState } = useContext(SimpleTechContext);
 
+  function resetSectionValues(value: string) {
+    setState({
+      ...state,
+      sectionSelected: value.toUpperCase(),
+      subSectionSelected: '',
+      showColorPicker: false,
+      colorPickerSelected: '',
+      footerDescriptionText: '',
+      footerDescriptionDimensions: '',
+    });
+    setSelectedSubSectionStyle('');
+  }
+
+  function resetSubSectionValues() {
+    setSelectedSubSection(''); // Desselecciona la opción actual
+    setSelectedSubSectionStyle('');
+    setState({
+      ...state,
+      subSectionSelected: '',
+      showColorPicker: false,
+      footerDescriptionText: '',
+      footerDescriptionDimensions: '',
+    });
+  }
+
+  function addNewSubSectionValues(
+    subOption: string,
+    subOptionColors: any,
+    footerDescriptionText: string,
+    footerDescriptionDimensions: string
+  ) {
+    setSelectedSubSection(subOption); // Selecciona la nueva opción
+    setSelectedSubSectionStyle('selected-option');
+    setState({
+      ...state,
+      subSectionSelected: subOption.toUpperCase(),
+      showColorPicker: true,
+      colorPickersArray: subOptionColors,
+      footerDescriptionText: footerDescriptionText,
+      footerDescriptionDimensions: footerDescriptionDimensions,
+    });
+  }
+
   const handleItemClick = (index: number) => {
     setSelectedSection((prev) => {
       const newOptions = Array(prev.length).fill(false);
       newOptions[index] = !prev[index]; // Invertir el estado de selección
       const sectionSelected = items[index][0].label;
       const value = newOptions[index] ? sectionSelected : '';
-      setState({
-        ...state,
-        sectionSelected: value.toUpperCase(),
-        subSectionSelected: '',
-        showColorPicker: false,
-        colorPickerSelected: '',
-        footerDescriptionText: '',
-        footerDescriptionDimensions: '',
-      });
-      setSelectedSubSectionStyle('');
+
+      resetSectionValues(value);
 
       return newOptions;
     });
@@ -46,26 +81,14 @@ export const useSidebarOptions = () => {
     const footerDescriptionDimensions = subSection.footerDescription.dimensions;
     // Verifica si la opción actual ya está seleccionada
     if (selectedSubSection === subOption) {
-      setSelectedSubSection(''); // Desselecciona la opción actual
-      setSelectedSubSectionStyle('');
-      setState({
-        ...state,
-        subSectionSelected: '',
-        showColorPicker: false,
-        footerDescriptionText: '',
-        footerDescriptionDimensions: '',
-      });
+      resetSubSectionValues();
     } else {
-      setSelectedSubSection(subOption); // Selecciona la nueva opción
-      setSelectedSubSectionStyle('selected-option');
-      setState({
-        ...state,
-        subSectionSelected: subOption.toUpperCase(),
-        showColorPicker: true,
-        colorPickersArray: subOptionColors,
-        footerDescriptionText: footerDescriptionText,
-        footerDescriptionDimensions: footerDescriptionDimensions,
-      });
+      addNewSubSectionValues(
+        subOption,
+        subOptionColors,
+        footerDescriptionText,
+        footerDescriptionDimensions
+      );
     }
   };
 
