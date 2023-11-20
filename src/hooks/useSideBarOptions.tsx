@@ -10,6 +10,8 @@ export const useSidebarOptions = () => {
 
   const { state, setState } = useContext(SimpleTechContext);
 
+  console.log('images...', state.sidebarImagesArray);
+
   function resetSectionValues(value: string) {
     setState({
       ...state,
@@ -19,6 +21,8 @@ export const useSidebarOptions = () => {
       colorPickerSelected: '',
       footerDescriptionText: '',
       footerDescriptionDimensions: '',
+      pictureText: '',
+      sidebarImagesArray: null,
     });
     setSelectedSubSectionStyle('');
   }
@@ -32,6 +36,8 @@ export const useSidebarOptions = () => {
       showColorPicker: false,
       footerDescriptionText: '',
       footerDescriptionDimensions: '',
+      pictureText: '',
+      sidebarImagesArray: null,
     });
   }
 
@@ -39,7 +45,9 @@ export const useSidebarOptions = () => {
     subOption: string,
     subOptionColors: any,
     footerDescriptionText: string,
-    footerDescriptionDimensions: string
+    footerDescriptionDimensions: string,
+    pictureText: string,
+    sideBarImages: any
   ) {
     setSelectedSubSection(subOption); // Selecciona la nueva opción
     setSelectedSubSectionStyle('selected-option');
@@ -50,6 +58,8 @@ export const useSidebarOptions = () => {
       colorPickersArray: subOptionColors,
       footerDescriptionText: footerDescriptionText,
       footerDescriptionDimensions: footerDescriptionDimensions,
+      pictureText: pictureText,
+      sidebarImagesArray: sideBarImages,
     });
   }
 
@@ -79,6 +89,8 @@ export const useSidebarOptions = () => {
   ) => {
     const footerDescriptionText = subSection.footerDescription.text;
     const footerDescriptionDimensions = subSection.footerDescription.dimensions;
+    const pictureText = subSection.pictureText;
+    const sideBarImages = subSection.sidebarImages;
     // Verifica si la opción actual ya está seleccionada
     if (selectedSubSection === subOption) {
       resetSubSectionValues();
@@ -87,7 +99,9 @@ export const useSidebarOptions = () => {
         subOption,
         subOptionColors,
         footerDescriptionText,
-        footerDescriptionDimensions
+        footerDescriptionDimensions,
+        pictureText,
+        sideBarImages
       );
     }
   };

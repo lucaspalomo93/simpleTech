@@ -1,4 +1,4 @@
-import { PICKERS, SIDE_BAR_ICON } from './images';
+import { PICKERS, SIDEBAR_IMAGES, SIDE_BAR_ICON } from './images';
 
 export const items = [
   [
@@ -21,6 +21,13 @@ export const items = [
             dimensions: '10mm / 30mm / 50mm',
           },
           pictureText: 'Ext: foil blanco',
+          sidebarImages: [
+            SIDEBAR_IMAGES.GALERIA_SINUSOIDAL_01,
+            SIDEBAR_IMAGES.GALERIA_SINUSOIDAL_02,
+            SIDEBAR_IMAGES.GALERIA_SINUSOIDAL_03,
+            SIDEBAR_IMAGES.GALERIA_SINUSOIDAL_04,
+            SIDEBAR_IMAGES.GALERIA_SINUSOIDAL_05,
+          ],
         },
         {
           label: 'Trapezoidal',
@@ -38,6 +45,13 @@ export const items = [
             dimensions: '10mm / 30mm / 50mm',
           },
           pictureText: 'Ext: foil blanco',
+          sidebarImages: [
+            SIDEBAR_IMAGES.GALERIA_TRAPEZOIDAL_01,
+            SIDEBAR_IMAGES.GALERIA_TRAPEZOIDAL_02,
+            SIDEBAR_IMAGES.GALERIA_TRAPEZOIDAL_03,
+            SIDEBAR_IMAGES.GALERIA_TRAPEZOIDAL_04,
+            SIDEBAR_IMAGES.GALERIA_TRAPEZOIDAL_05,
+          ],
         },
         {
           label: 'Teja',
@@ -48,6 +62,13 @@ export const items = [
             dimensions: '30mm / 50mm',
           },
           pictureText: 'Ext: foil blanco',
+          sidebarImages: [
+            SIDEBAR_IMAGES.GALERIA_TEJAS_01,
+            SIDEBAR_IMAGES.GALERIA_TEJAS_02,
+            SIDEBAR_IMAGES.GALERIA_TEJAS_03,
+            SIDEBAR_IMAGES.GALERIA_TEJAS_04,
+            SIDEBAR_IMAGES.GALERIA_TEJAS_05,
+          ],
         },
       ],
     },
@@ -71,6 +92,13 @@ export const items = [
             dimensions: '50mm',
           },
           pictureText: 'Ext: blanco o galvanizado',
+          sidebarImages: [
+            SIDEBAR_IMAGES.GALERIA_MICRONERVADO_01,
+            SIDEBAR_IMAGES.GALERIA_MICRONERVADO_02,
+            SIDEBAR_IMAGES.GALERIA_MICRONERVADO_03,
+            SIDEBAR_IMAGES.GALERIA_MICRONERVADO_04,
+            SIDEBAR_IMAGES.GALERIA_MICRONERVADO_05,
+          ],
         },
       ],
     },
