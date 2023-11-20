@@ -3,14 +3,15 @@ import { items } from '../constants/menuItems';
 import { SimpleTechContext } from '../context/context';
 
 export const useSidebarOptions = () => {
-  const [selectedOptions, setSelectedOptions] = useState(Array(3).fill(false));
+  const [selectedSection, setSelectedSection] = useState(Array(3).fill(false));
   const [expanded, setExpanded] = useState(Array(3).fill(false));
-  const [selectedSubOption, setSelectedSubOption] = useState('');
+  const [selectedSubSection, setSelectedSubSection] = useState('');
+  const [selectedSubSectionStyle, setSelectedSubSectionStyle] = useState('');
 
   const { state, setState } = useContext(SimpleTechContext);
 
   const handleItemClick = (index: number) => {
-    setSelectedOptions((prev) => {
+    setSelectedSection((prev) => {
       const newOptions = Array(prev.length).fill(false);
       newOptions[index] = !prev[index]; // Invertir el estado de selección
       const sectionSelected = items[index][0].label;
@@ -22,6 +23,7 @@ export const useSidebarOptions = () => {
         showColorPicker: false,
         colorPickerSelected: '',
       });
+      setSelectedSubSectionStyle('');
 
       return newOptions;
     });
@@ -33,17 +35,19 @@ export const useSidebarOptions = () => {
     });
   };
 
-  const handleSubOptionClick = (subOption: string, subOptionColors: any) => {
+  const handleSubSectionClick = (subOption: string, subOptionColors: any) => {
     // Verifica si la opción actual ya está seleccionada
-    if (selectedSubOption === subOption) {
-      setSelectedSubOption(''); // Desselecciona la opción actual
+    if (selectedSubSection === subOption) {
+      setSelectedSubSection(''); // Desselecciona la opción actual
+      setSelectedSubSectionStyle('');
       setState({
         ...state,
         subSectionSelected: '',
         showColorPicker: false,
       });
     } else {
-      setSelectedSubOption(subOption); // Selecciona la nueva opción
+      setSelectedSubSection(subOption); // Selecciona la nueva opción
+      setSelectedSubSectionStyle('selected-option');
       setState({
         ...state,
         subSectionSelected: subOption.toUpperCase(),
@@ -54,10 +58,11 @@ export const useSidebarOptions = () => {
   };
 
   return {
-    selectedOptions,
+    selectedSection,
     expanded,
-    selectedSubOption,
+    selectedSubSection,
+    selectedSubSectionStyle,
     handleItemClick,
-    handleSubOptionClick,
+    handleSubSectionClick,
   };
 };
