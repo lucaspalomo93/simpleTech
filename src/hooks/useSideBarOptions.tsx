@@ -10,8 +10,6 @@ export const useSidebarOptions = () => {
 
   const { state, setState } = useContext(SimpleTechContext);
 
-  console.log('images...', state.sidebarImagesArray);
-
   function resetSectionValues(value: string) {
     setState({
       ...state,
