@@ -35,7 +35,13 @@ export const useSidebarOptions = () => {
     });
   };
 
-  const handleSubSectionClick = (subOption: string, subOptionColors: any) => {
+  const handleSubSectionClick = (
+    subOption: string,
+    subOptionColors: any,
+    subSection: any
+  ) => {
+    const footerDescriptionText = subSection.footerDescription.text;
+    const footerDescriptionDimensions = subSection.footerDescription.dimensions;
     // Verifica si la opción actual ya está seleccionada
     if (selectedSubSection === subOption) {
       setSelectedSubSection(''); // Desselecciona la opción actual
@@ -44,6 +50,8 @@ export const useSidebarOptions = () => {
         ...state,
         subSectionSelected: '',
         showColorPicker: false,
+        footerDescriptionText: '',
+        footerDescriptionDimensions: '',
       });
     } else {
       setSelectedSubSection(subOption); // Selecciona la nueva opción
@@ -53,6 +61,8 @@ export const useSidebarOptions = () => {
         subSectionSelected: subOption.toUpperCase(),
         showColorPicker: true,
         colorPickersArray: subOptionColors,
+        footerDescriptionText: footerDescriptionText,
+        footerDescriptionDimensions: footerDescriptionDimensions,
       });
     }
   };

@@ -1,3 +1,4 @@
+import './presentation.css';
 import { Container, Link, Typography } from '@mui/material';
 import { COLORS } from '../../constants/colors';
 
@@ -25,17 +26,15 @@ function Presentation() {
         simpletech
       </Typography>
 
-      <Container sx={{
-        textAlign: 'center',
-        marginTop: '20vh'
-      }}>
+      <Container
+        sx={{
+          textAlign: 'center',
+          marginTop: '20vh',
+        }}
+      >
         <Link href='/catalogo' underline='none'>
           <Typography
-            textAlign={'center'}
-            color={COLORS.WHITE}
-            fontWeight={'200'}
-            letterSpacing={'5px'}
-            display={'inline'}
+            className='presentation-link'
           >
             CATÁLOGO DE SOLUCIONES
           </Typography>
