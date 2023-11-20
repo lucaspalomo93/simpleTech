@@ -91,7 +91,8 @@ function SideBar() {
                               onClick={() => {
                                 handleSubSectionClick(
                                   subSection.label,
-                                  subSection.colors
+                                  subSection.colors,
+                                  subSection
                                 );
                               }}
                             >
@@ -124,7 +125,10 @@ function SideBar() {
                       selected={selectedSection[index]}
                       onClick={() => handleItemClick(index)}
                     >
-                      <ListItemText key={sectionIndex} primary={section.label} />
+                      <ListItemText
+                        key={sectionIndex}
+                        primary={section.label}
+                      />
                     </ListItemButton>
                     {section.label !== 'Inspiración' && <Divider />}
                   </ListItem>

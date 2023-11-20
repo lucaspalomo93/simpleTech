@@ -6,6 +6,9 @@ interface State {
   colorPickerSelected: string;
   showColorPicker: boolean;
   colorPickersArray: any;
+  footerDescriptionText: string;
+  footerDescriptionDimensions: string;
+  pictureText: string;
 }
 
 interface ContextProps {
@@ -19,6 +22,9 @@ const initialValue = {
   colorPickerSelected: 'BLACK',
   showColorPicker: false,
   colorPickersArray: null,
+  footerDescriptionText: '',
+  footerDescriptionDimensions: '',
+  pictureText: '',
 };
 
 export const SimpleTechContext = createContext<ContextProps>({

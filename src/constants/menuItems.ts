@@ -16,6 +16,11 @@ export const items = [
             PICKERS.LIGHT_GREY_PICKER,
             PICKERS.BROWN_PICKER,
           ],
+          footerDescription: {
+            text: 'Foilroof: núcleo PUR',
+            dimensions: '10mm / 30mm / 50mm',
+          },
+          pictureText: 'Ext: foil blanco',
         },
         {
           label: 'Trapezoidal',
@@ -28,11 +33,21 @@ export const items = [
             PICKERS.LIGHT_GREY_PICKER,
             PICKERS.BROWN_PICKER,
           ],
+          footerDescription: {
+            text: 'Maxiroof o Foilroof: núcleo PUR',
+            dimensions: '10mm / 30mm / 50mm',
+          },
+          pictureText: 'Ext: foil blanco',
         },
         {
           label: 'Teja',
           icon: SIDE_BAR_ICON.TEJA,
           colors: [PICKERS.LIGHT_BROWN_PICKER, PICKERS.BLACK_PICKER],
+          footerDescription: {
+            text: 'Tejatech: núcleo PUR',
+            dimensions: '30mm / 50mm',
+          },
+          pictureText: 'Ext: foil blanco',
         },
       ],
     },
@@ -51,6 +66,11 @@ export const items = [
             PICKERS.WHITE_PICKER,
             PICKERS.LIGHT_GREY_PICKER,
           ],
+          footerDescription: {
+            text: 'Classwall: núcleo PUR',
+            dimensions: '50mm',
+          },
+          pictureText: 'Ext: blanco o galvanizado',
         },
       ],
     },

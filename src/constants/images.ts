@@ -7,12 +7,18 @@ import DARK_GREY_PICKER from '/img/colorPickers/DARK_GREY.png';
 import LIGHT_GREY_PICKER from '/img/colorPickers/LIGHT_GREY.png';
 import WHITE_PICKER from '/img/colorPickers/WHITE.png';
 
+// SIDEBAR ICONS
 import SINUSOIDAL from '/img/sideBarIcons/SINUSOIDAL.svg';
 import TEJA from '/img/sideBarIcons/TEJA.svg';
 import TRAPEZOIDAL from '/img/sideBarIcons/TRAPEZOIDAL.svg';
 import MICRONERVADO from '/img/sideBarIcons/MICRONERVADO.svg';
+
+// GENERIC ICONS
 import S_ICON from '/img/icon/S_ICON.svg';
 import DOWN_ARROW from '/img/icon/DOWN_ARROW.svg';
+import RIGHT_ARROW from '/img/icon/RIGHT_ARROW.svg';
+
+// COLOR PICKERS
 import TECHOS_SINUSOIDAL_BLACK from '/img/sections/TECHOS_SINUSOIDAL_BLACK.png';
 import TECHOS_SINUSOIDAL_BROWN from '/img/sections/TECHOS_SINUSOIDAL_BROWN.png';
 import TECHOS_SINUSOIDAL_CREAM from '/img/sections/TECHOS_SINUSOIDAL_CREAM.png';
@@ -57,6 +63,7 @@ export const SIDE_BAR_ICON = {
 export const ICON = {
   S_ICON,
   DOWN_ARROW,
+  RIGHT_ARROW,
 };
 
 export const CENTRAL_IMAGE = {

@@ -1,0 +1,12 @@
+.presentation-link {
+  text-align: center;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 5px;
+  display: inline;
+  transition: color 0.1s ease; /* Agrega una transición suave para el cambio de color */
+}
+
+.presentation-link:hover {
+  color: #d2632c;
+}
