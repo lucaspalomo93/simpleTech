@@ -33,7 +33,6 @@ function Home() {
   const condition = 'INSPIRACIÓN';
 
   const show = state.sectionSelected && state.sectionSelected === condition;
-  console.log(show);
 
   const parent = {
     display: 'grid',
