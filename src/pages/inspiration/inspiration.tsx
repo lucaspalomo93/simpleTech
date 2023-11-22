@@ -15,9 +15,11 @@ const imageSets: ImageSets = {
   Casas: {
     images: [
       'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
       'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
     ],
     texts: ['Americana', 'Rustica', 'Moderna', 'Antigua'],
   },
@@ -57,6 +59,14 @@ const Inspiration = () => {
     setCurrentIndex(0); // Reiniciar el índice cuando se cambia de categoría
   };
 
+  const getPrevIndex = (currentIndex: number, length: number) => {
+    return (currentIndex - 1 + length) % length;
+  };
+
+  const getNextIndex = (currentIndex: number, length: number) => {
+    return (currentIndex + 1) % length;
+  };
+
   return (
     <>
       <div
@@ -92,11 +102,28 @@ const Inspiration = () => {
       </div>
       <div
         style={{
-          width: '30%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
           margin: '0 auto',
           paddingTop: '2rem',
         }}
       >
+        <div style={{ width: '100%', height: '250px' }}>
+          <img
+            src={
+              imageSets[selectedCategory].images[
+                getPrevIndex(
+                  currentIndex,
+                  imageSets[selectedCategory].images.length
+                )
+              ]
+            }
+            alt='prev'
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </div>
         <Carousel
           showThumbs={false}
           showStatus={false}
@@ -106,11 +133,30 @@ const Inspiration = () => {
           width={'100%'}
         >
           {imageSets[selectedCategory].images.map((slide, index) => (
-            <div key={index}>
-              <img src={slide} alt={`Slide ${index + 1}`} />
+            <div key={index} style={{ width: '100%', height: '250px' }}>
+              {/* Ajusta la altura según tus necesidades */}
+              <img
+                src={slide}
+                alt={`Slide ${index + 1}`}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </div>
           ))}
         </Carousel>
+        <div style={{ width: '100%', height: '250px' }}>
+          <img
+            src={
+              imageSets[selectedCategory].images[
+                getNextIndex(
+                  currentIndex,
+                  imageSets[selectedCategory].images.length
+                )
+              ]
+            }
+            alt='next'
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </div>
       </div>
       <Typography
         variant='body2'
