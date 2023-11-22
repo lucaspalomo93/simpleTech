@@ -105,12 +105,17 @@ const Inspiration = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          width: '100%',
+          width: '70%',
           margin: '0 auto',
           paddingTop: '2rem',
         }}
       >
-        <div style={{ width: '100%', height: '250px' }}>
+        <div
+          style={{
+            width: '100%',
+            height: '250px',
+          }}
+        >
           <img
             src={
               imageSets[selectedCategory].images[
@@ -133,8 +138,7 @@ const Inspiration = () => {
           width={'100%'}
         >
           {imageSets[selectedCategory].images.map((slide, index) => (
-            <div key={index} style={{ width: '100%', height: '250px' }}>
-              {/* Ajusta la altura según tus necesidades */}
+            <div key={index} style={{ width: '100%', height: '300px' }}>
               <img
                 src={slide}
                 alt={`Slide ${index + 1}`}
@@ -177,7 +181,6 @@ const Inspiration = () => {
           style={{
             display: 'block',
             textAlign: 'center',
-            paddingBottom: '8rem',
           }}
         >
           <Link
