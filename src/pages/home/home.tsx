@@ -13,16 +13,16 @@ const CommonSection = () => {
   return (
     <>
       <div className='div2'>
-        <ColorPicker />{' '}
+        <ColorPicker />
       </div>
       <div className='div3'>
-        <MainPictureDisplay />{' '}
+        <MainPictureDisplay />
       </div>
       <div className='div4'>
-        <ImageSidebar />{' '}
+        <ImageSidebar />
       </div>
       <div className='div5'>
-        <DescriptionFooter />{' '}
+        <DescriptionFooter />
       </div>
     </>
   );
@@ -32,18 +32,44 @@ function Home() {
   const { state } = useContext(SimpleTechContext);
   const condition = 'INSPIRACIÓN';
 
+  const show = state.sectionSelected && state.sectionSelected === condition;
+
+  const parent = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    gridTemplateRows: 'repeat(5, 1fr)',
+    gridColumnGap: '0px',
+    gridRowGap: '0px',
+    height: '100vh',
+  };
+
+  const parentFlex = {
+    display: 'flex',
+  };
+
   return (
     <>
       <CssBaseline />
-      <div className='parent'>
+      <div style={!show ? parent : parentFlex}>
         <div className='div1'>
-          <SideBar />{' '}
+          <SideBar />
         </div>
         {state.sectionSelected && state.sectionSelected !== condition && (
           <CommonSection />
         )}
         {state.sectionSelected && state.sectionSelected === condition && (
-          <Inspiration />
+          <div
+            style={{
+              display: 'block',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: '#363636',
+              width: '100%',
+              height: '100vh'
+            }}
+          >
+            <Inspiration />
+          </div>
         )}
         {!state.sectionSelected && <CommonSection />}
       </div>
