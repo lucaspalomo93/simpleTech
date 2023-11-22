@@ -74,7 +74,6 @@ const Inspiration = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: '2rem',
           marginTop: '2rem',
           gap: '1rem',
         }}
@@ -190,7 +189,7 @@ const Inspiration = () => {
             style={{
               textAlign: 'center',
               marginTop: '1rem',
-              marginBottom: '2rem',
+              marginBottom: '1rem',
               fontSize: '0.9rem',
               letterSpacing: '0.07rem',
             }}
