@@ -21,6 +21,7 @@ export const useSidebarOptions = () => {
       footerDescriptionDimensions: '',
       pictureText: '',
       sidebarImagesArray: null,
+      showInspirationProject: false,
     });
     setSelectedSubSectionStyle('');
   }
