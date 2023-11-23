@@ -10,6 +10,7 @@ interface State {
   footerDescriptionDimensions: string;
   pictureText: string;
   sidebarImagesArray: any;
+  showInspirationProject: boolean;
 }
 
 interface ContextProps {
@@ -27,6 +28,7 @@ const initialValue = {
   footerDescriptionDimensions: '',
   pictureText: '',
   sidebarImagesArray: null,
+  showInspirationProject: false,
 };
 
 export const SimpleTechContext = createContext<ContextProps>({
