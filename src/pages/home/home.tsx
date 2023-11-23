@@ -12,16 +12,16 @@ import Inspiration from '../inspiration/inspiration';
 const CommonSection = () => {
   return (
     <>
-      <div className='div2'>
+      <div id='common-color-picker' className='div2'>
         <ColorPicker />
       </div>
-      <div className='div3'>
+      <div id='common-main-picture-display' className='div3'>
         <MainPictureDisplay />
       </div>
-      <div className='div4'>
+      <div id='common-image-sidebar' className='div4'>
         <ImageSidebar />
       </div>
-      <div className='div5'>
+      <div id='common-description-footer' className='div5'>
         <DescriptionFooter />
       </div>
     </>
@@ -51,7 +51,7 @@ function Home() {
     <>
       <CssBaseline />
       <div style={!show ? parent : parentFlex}>
-        <div className='div1'>
+        <div id='sidebar' className='div1'>
           <SideBar />
         </div>
         {state.sectionSelected && state.sectionSelected !== condition && (
@@ -59,13 +59,14 @@ function Home() {
         )}
         {state.sectionSelected && state.sectionSelected === condition && (
           <div
+            id='inspiration-page'
             style={{
               display: 'block',
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: '#363636',
               width: '100%',
-              height: '100vh'
+              height: '100vh',
             }}
           >
             <Inspiration />

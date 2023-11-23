@@ -13,7 +13,7 @@ function MainPictureDisplay() {
   const img = imageSelector();
 
   return (
-    <div style={img && IMG_PRESENT_STYLE}>
+    <div id='main-picture-display' style={img && IMG_PRESENT_STYLE}>
       {img ? (
         <div>
           <Box

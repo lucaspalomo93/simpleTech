@@ -30,7 +30,10 @@ function ImageSidebar() {
   };
 
   return (
-    <div style={{ backgroundColor: COLORS.DARK_GREY, height: 'auto' }}>
+    <div
+      id='image-sidebar-container'
+      style={{ backgroundColor: COLORS.DARK_GREY, height: 'auto' }}
+    >
       <div
         style={{
           display: 'flex',
@@ -44,6 +47,7 @@ function ImageSidebar() {
         {imageList &&
           imageList.map((image: string, index: number) => (
             <div
+              id={`img-sidebar-${index}`}
               key={index}
               style={{ margin: '0', display: 'contents' }}
               className='image-container'
