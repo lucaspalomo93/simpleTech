@@ -68,6 +68,29 @@ import PAREDES_MICRONERVADO_LIGHT_GREY from '/img/sections/PAREDES_MICRONERVADO_
 import PAREDES_MICRONERVADO_WHITE from '/img/sections/PAREDES_MICRONERVADO_WHITE.png';
 import PAREDES_MICRONERVADO_DEFAULT from '/img/sections/PAREDES_MICRONERVADO_CREAM.png';
 
+// INSPIRATION
+// *********************************************
+// INSPIRATION HOUSE PROJECT PRESENTATION IMAGES
+import CASA_0 from '/img/inspiration/houseProjectPresentation/CASA_0.jpg';
+import CASA_1 from '/img/inspiration/houseProjectPresentation/CASA_1.jpg';
+import CASA_2 from '/img/inspiration/houseProjectPresentation/CASA_2.jpg';
+import CASA_3 from '/img/inspiration/houseProjectPresentation/CASA_3.jpg';
+import CASA_4 from '/img/inspiration/houseProjectPresentation/CASA_4.jpeg';
+import CASA_5 from '/img/inspiration/houseProjectPresentation/CASA_5.jpg';
+import CASA_6 from '/img/inspiration/houseProjectPresentation/CASA_6.jpg';
+import CASA_7 from '/img/inspiration/houseProjectPresentation/CASA_7.jpg';
+import CASA_8 from '/img/inspiration/houseProjectPresentation/CASA_8.jpeg';
+
+// INSPIRATION CABIN PROJECT PRESENTATION IMAGES
+import CABIN_0 from '/img/inspiration/cabinProjectPresentation/CABIN_0.jpeg';
+import CABIN_1 from '/img/inspiration/cabinProjectPresentation/CABIN_1.jpg';
+import CABIN_2 from '/img/inspiration/cabinProjectPresentation/CABIN_2.jpg';
+
+// INSPIRATION TINY HOUSES PROJECT PRESENTATION IMAGES
+import TINY_0 from '/img/inspiration/tinyHouseProjectPresentation/TINY_0.webp';
+
+// EXPORTS
+// **********************************************
 export const PICKERS = {
   BLACK_PICKER,
   LIGHT_BROWN_PICKER,
@@ -138,4 +161,26 @@ export const CENTRAL_IMAGE = {
   PAREDES_MICRONERVADO_LIGHT_GREY,
   PAREDES_MICRONERVADO_WHITE,
   PAREDES_MICRONERVADO_DEFAULT,
+};
+
+export const CASAS_PRESENTATION = {
+  CASA_0,
+  CASA_1,
+  CASA_2,
+  CASA_3,
+  CASA_4,
+  CASA_5,
+  CASA_6,
+  CASA_7,
+  CASA_8,
+};
+
+export const CABIN_PRESENTATION = {
+  CABIN_0,
+  CABIN_1,
+  CABIN_2,
+};
+
+export const TINY_HOUSES_PRESENTATION = {
+  TINY_0,
 };

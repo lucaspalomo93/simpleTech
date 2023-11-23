@@ -1,9 +1,9 @@
-import { LinearProgress, Link, Typography } from "@mui/material";
-import { useContext, useState } from "react";
-import { COLORS } from "../../../constants/colors";
-import { Carousel } from "react-responsive-carousel";
-import { SimpleTechContext } from "../../../context/context";
-import { categories, imageSets } from "./data";
+import { LinearProgress, Link, Typography } from '@mui/material';
+import { useContext, useState } from 'react';
+import { COLORS } from '../../../constants/colors';
+import { Carousel } from 'react-responsive-carousel';
+import { SimpleTechContext } from '../../../context/context';
+import { categories, imageSets } from './data';
 
 function CarouselComponent() {
   const { state, setState } = useContext(SimpleTechContext);
@@ -33,7 +33,7 @@ function CarouselComponent() {
   const handlePrevImageClick = () => {
     const prevIndex = getPrevIndex(
       currentIndex,
-      imageSets[selectedCategory].images.length
+      imageSets[selectedCategory].projectImagePresentation.length
     );
     setCurrentIndex(prevIndex);
   };
@@ -41,7 +41,7 @@ function CarouselComponent() {
   const handleNextImageClick = () => {
     const nextIndex = getNextIndex(
       currentIndex,
-      imageSets[selectedCategory].images.length
+      imageSets[selectedCategory].projectImagePresentation.length
     );
     setCurrentIndex(nextIndex);
   };
@@ -88,31 +88,34 @@ function CarouselComponent() {
           paddingTop: '2rem',
         }}
       >
-        <div
-          style={{
-            width: '100%',
-            height: '250px',
-          }}
-        >
-          <img
-            src={
-              imageSets[selectedCategory].images[
-                getPrevIndex(
-                  currentIndex,
-                  imageSets[selectedCategory].images.length
-                )
-              ]
-            }
-            alt='prev'
+        {imageSets[selectedCategory].projectImagePresentation.length > 1 && (
+          <div
             style={{
               width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              cursor: 'pointer',
+              height: '250px',
             }}
-            onClick={handlePrevImageClick}
-          />
-        </div>
+          >
+            <img
+              src={
+                imageSets[selectedCategory].projectImagePresentation[
+                  getPrevIndex(
+                    currentIndex,
+                    imageSets[selectedCategory].projectImagePresentation.length
+                  )
+                ]
+              }
+              alt='prev'
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                cursor: 'pointer',
+              }}
+              onClick={handlePrevImageClick}
+            />
+          </div>
+        )}
+
         <Carousel
           showThumbs={false}
           showStatus={false}
@@ -121,36 +124,40 @@ function CarouselComponent() {
           onChange={handleSlideChange}
           width={'100%'}
         >
-          {imageSets[selectedCategory].images.map((slide, index) => (
-            <div key={index} style={{ width: '100%', height: '300px' }}>
-              <img
-                src={slide}
-                alt={`Slide ${index + 1}`}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-          ))}
+          {imageSets[selectedCategory].projectImagePresentation.map(
+            (slide, index) => (
+              <div key={index} style={{ width: '100%', height: '300px' }}>
+                <img
+                  src={slide}
+                  alt={`Slide ${index + 1}`}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+            )
+          )}
         </Carousel>
-        <div style={{ width: '100%', height: '250px' }}>
-          <img
-            src={
-              imageSets[selectedCategory].images[
-                getNextIndex(
-                  currentIndex,
-                  imageSets[selectedCategory].images.length
-                )
-              ]
-            }
-            alt='next'
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              cursor: 'pointer',
-            }}
-            onClick={handleNextImageClick}
-          />
-        </div>
+        {imageSets[selectedCategory].projectImagePresentation.length > 1 && (
+          <div style={{ width: '100%', height: '250px' }}>
+            <img
+              src={
+                imageSets[selectedCategory].projectImagePresentation[
+                  getNextIndex(
+                    currentIndex,
+                    imageSets[selectedCategory].projectImagePresentation.length
+                  )
+                ]
+              }
+              alt='next'
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                cursor: 'pointer',
+              }}
+              onClick={handleNextImageClick}
+            />
+          </div>
+        )}
       </div>
       <Typography
         variant='body2'
@@ -164,9 +171,8 @@ function CarouselComponent() {
           paddingTop: '1rem',
         }}
       >
-        {imageSets[selectedCategory].texts[currentIndex]}
+        {imageSets[selectedCategory].projectName[currentIndex]}
       </Typography>
-      {/* {showProject && ( */}
       <div
         style={{
           display: 'block',
@@ -190,14 +196,13 @@ function CarouselComponent() {
               showInspirationProject: true,
             }),
               console.log(
-                `Ver proyecto de ${imageSets[selectedCategory]?.texts[currentIndex]}`
+                `Ver proyecto de ${imageSets[selectedCategory]?.projectName[currentIndex]}`
               );
           }}
         >
           VER PROYECTO
         </Link>
       </div>
-      {/* )} */}
       <div
         style={{
           marginBottom: '2rem',
@@ -209,7 +214,9 @@ function CarouselComponent() {
         <LinearProgress
           variant='determinate'
           value={
-            (currentIndex / (imageSets[selectedCategory].images.length - 1)) *
+            (currentIndex /
+              (imageSets[selectedCategory].projectImagePresentation.length -
+                1)) *
             100
           }
           sx={{

@@ -9,7 +9,6 @@ const Inspiration = () => {
   const { state } = useContext(SimpleTechContext);
 
   return (
-    // Utiliza la expresión condicional ternaria
     <>
       {!state.showInspirationProject && <CarouselComponent />}
       {state.showInspirationProject && <ProjectVisualizer />}
