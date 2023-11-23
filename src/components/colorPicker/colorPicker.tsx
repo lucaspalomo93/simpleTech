@@ -35,6 +35,7 @@ function ColorPicker() {
 
   return (
     <div
+      id='color-pickers'
       style={{
         backgroundColor: COLORS.DARK_GREY,
         height: '100%',
@@ -53,6 +54,7 @@ function ColorPicker() {
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
               {pickersSelectedArray.map((picker: string, index: number) => (
                 <div
+                  id={`color-picker-container-${index}`}
                   key={index}
                   className={`color-picker ${
                     selectedColor === picker && state.colorPickerSelected !== ''
@@ -62,7 +64,11 @@ function ColorPicker() {
                   onClick={() => handleColorClick(picker)}
                   style={{ cursor: 'pointer' }}
                 >
-                  <img src={picker} alt='picker' />
+                  <img
+                    id={`color-picker-img-${index}`}
+                    src={picker}
+                    alt='picker'
+                  />
                 </div>
               ))}
             </div>

@@ -21,10 +21,13 @@ function DescriptionFooter() {
           />
         )}
       </Box>
-      <div className='footer'>
+      <div id='description-footer' className='footer'>
         <div>
           {state.showColorPicker && (
-            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            <div
+              id='description-footer-arrow'
+              style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}
+            >
               <img
                 style={{ paddingLeft: '4rem' }}
                 src={ICON.RIGHT_ARROW}
@@ -34,7 +37,10 @@ function DescriptionFooter() {
             </div>
           )}
         </div>
-        <div style={{ paddingRight: '4rem' }}>
+        <div
+          id='description-footer-dimensions'
+          style={{ paddingRight: '4rem' }}
+        >
           <Typography color={COLORS.LIGT_GREY_TEXT}>{dimensions}</Typography>
         </div>
       </div>

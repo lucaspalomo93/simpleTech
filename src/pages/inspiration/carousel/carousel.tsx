@@ -49,6 +49,7 @@ function CarouselComponent() {
   return (
     <>
       <div
+        id='carousel-container'
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -79,6 +80,7 @@ function CarouselComponent() {
         ))}
       </div>
       <div
+        id='left-img-container'
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -126,8 +128,13 @@ function CarouselComponent() {
         >
           {imageSets[selectedCategory].projectImagePresentation.map(
             (slide, index) => (
-              <div key={index} style={{ width: '100%', height: '300px' }}>
+              <div
+                id={`carousel-img-container-${index}`}
+                key={index}
+                style={{ width: '100%', height: '300px' }}
+              >
                 <img
+                  id={`carousel-img-${index}`}
                   src={slide}
                   alt={`Slide ${index + 1}`}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -137,7 +144,10 @@ function CarouselComponent() {
           )}
         </Carousel>
         {imageSets[selectedCategory].projectImagePresentation.length > 1 && (
-          <div style={{ width: '100%', height: '250px' }}>
+          <div
+            id='right-img-container'
+            style={{ width: '100%', height: '250px' }}
+          >
             <img
               src={
                 imageSets[selectedCategory].projectImagePresentation[
@@ -174,6 +184,7 @@ function CarouselComponent() {
         {imageSets[selectedCategory].projectName[currentIndex]}
       </Typography>
       <div
+        id='project-link-container'
         style={{
           display: 'block',
           textAlign: 'center',
@@ -204,6 +215,7 @@ function CarouselComponent() {
         </Link>
       </div>
       <div
+        id='linear-progress-container'
         style={{
           marginBottom: '2rem',
           display: 'flex',

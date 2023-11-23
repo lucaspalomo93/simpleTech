@@ -6,10 +6,11 @@ import { COLORS } from '../../../constants/colors';
 function DefaultSolutionDisplay() {
   return (
     <>
-      <div className='icon-img'>
+      <div id='default-solution-arrow' className='icon-img'>
         <img src={ICON.DOWN_ARROW} alt='down_arrow' />
       </div>
       <div
+        id='default-solution-text'
         style={{
           display: 'flex',
           alignItems: 'center',
