@@ -10,8 +10,6 @@ function CarouselComponent() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-  console.log('showing project? ', state.showInspirationProject);
-
   const handleSlideChange = (value: any) => {
     setCurrentIndex(value);
     // No reiniciar la variable booleana al cambiar de diapositiva
@@ -44,6 +42,26 @@ function CarouselComponent() {
       imageSets[selectedCategory].projectImagePresentation.length
     );
     setCurrentIndex(nextIndex);
+  };
+
+  const handleProjectLinkClick = () => {
+    const currentProjectCarouselImages =
+      imageSets[selectedCategory]?.carouselImages || [];
+    const currentProjectDisplayNames =
+      imageSets[selectedCategory]?.projectDisplayName[currentIndex];
+    const currentProjectDescriptions1 =
+      imageSets[selectedCategory]?.projectDescription_1[currentIndex];
+    const currentProjectDescriptions2 =
+      imageSets[selectedCategory]?.projectDescription_2[currentIndex];
+
+    setState({
+      ...state,
+      projectCarouselImages: currentProjectCarouselImages,
+      projectDisplayName: currentProjectDisplayNames,
+      projectDescription1: currentProjectDescriptions1,
+      projectDescription2: currentProjectDescriptions2,
+      showInspirationProject: true,
+    });
   };
 
   return (
@@ -117,7 +135,6 @@ function CarouselComponent() {
             />
           </div>
         )}
-
         <Carousel
           showThumbs={false}
           showStatus={false}
@@ -201,15 +218,7 @@ function CarouselComponent() {
             fontSize: '0.9rem',
             letterSpacing: '0.07rem',
           }}
-          onClick={() => {
-            setState({
-              ...state,
-              showInspirationProject: true,
-            }),
-              console.log(
-                `Ver proyecto de ${imageSets[selectedCategory]?.projectName[currentIndex]}`
-              );
-          }}
+          onClick={handleProjectLinkClick}
         >
           VER PROYECTO
         </Link>

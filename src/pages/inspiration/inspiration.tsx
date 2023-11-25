@@ -11,7 +11,7 @@ const Inspiration = () => {
   return (
     <>
       {!state.showInspirationProject && <CarouselComponent />}
-      {state.showInspirationProject && <ProjectVisualizer />}
+      <div>{state.showInspirationProject && <ProjectVisualizer />}</div>
     </>
   );
 };

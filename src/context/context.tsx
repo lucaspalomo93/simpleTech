@@ -11,6 +11,10 @@ interface State {
   pictureText: string;
   sidebarImagesArray: any;
   showInspirationProject: boolean;
+  projectCarouselImages: any;
+  projectDisplayName: string;
+  projectDescription1: string;
+  projectDescription2: string;
 }
 
 interface ContextProps {
@@ -29,6 +33,10 @@ const initialValue = {
   pictureText: '',
   sidebarImagesArray: null,
   showInspirationProject: false,
+  projectCarouselImages: null,
+  projectDisplayName: '',
+  projectDescription1: '',
+  projectDescription2: '',
 };
 
 export const SimpleTechContext = createContext<ContextProps>({

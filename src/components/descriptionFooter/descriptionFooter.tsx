@@ -16,7 +16,7 @@ function DescriptionFooter() {
       <Box sx={{ backgroundColor: COLORS.DARK_GREY }}>
         {state.showColorPicker && (
           <Divider
-            style={{ width: '95%', margin: 'auto', fontWeight: 'bold' }}
+            style={{ width: '95%', margin: 'auto', fontWeight: 'bold', height: '1.5px' }}
             color={COLORS.GREY_TEXT}
           />
         )}
