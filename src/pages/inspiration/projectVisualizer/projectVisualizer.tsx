@@ -20,6 +20,8 @@ function ProjectVisualizer() {
     projectDescription2,
   } = state;
 
+  console.log(projectCarouselImages);
+
   return (
     <div
       style={{ display: 'flex', flexDirection: 'column' }}
@@ -27,7 +29,7 @@ function ProjectVisualizer() {
       className='container'
     >
       <div id='project-caraousel' className='carousel'>
-        {projectCarouselImages.length > 0 ? (
+        {projectCarouselImages[0].length > 0 ? (
           <Carousel
             showThumbs={false}
             showStatus={false}
@@ -64,7 +66,7 @@ function ProjectVisualizer() {
               fontSize: '100px',
               width: '0.7rem',
               height: '0.7rem',
-              margin: '0.3rem'
+              margin: '0.3rem',
             },
             '& .MuiMobileStepper-dotActive': {
               backgroundColor: '#D2632C',

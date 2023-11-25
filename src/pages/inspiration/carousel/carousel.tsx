@@ -46,7 +46,7 @@ function CarouselComponent() {
 
   const handleProjectLinkClick = () => {
     const currentProjectCarouselImages =
-      imageSets[selectedCategory]?.carouselImages || [];
+      imageSets[selectedCategory]?.carouselImages[currentIndex][0];
     const currentProjectDisplayNames =
       imageSets[selectedCategory]?.projectDisplayName[currentIndex];
     const currentProjectDescriptions1 =
