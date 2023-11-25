@@ -5,12 +5,21 @@ import { Carousel } from 'react-responsive-carousel';
 import { Divider, MobileStepper, Typography } from '@mui/material';
 import { COLORS } from '../../../constants/colors';
 import DefaultSolutionDisplay from '../../../components/mainPictureDisplay/defaultSolutionDisplay/defaultSolutionDisplay';
+import { ICON } from '../../../constants/images';
+
 function ProjectVisualizer() {
-  const { state } = useContext(SimpleTechContext);
+  const { state, setState } = useContext(SimpleTechContext);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleCarouselChange = (index: number) => {
     setCurrentIndex(index);
+  };
+
+  const handleIconClick = () => {
+    setState({
+      ...state,
+      showInspirationProject: false,
+    });
   };
 
   const {
@@ -20,33 +29,40 @@ function ProjectVisualizer() {
     projectDescription2,
   } = state;
 
-  console.log(projectCarouselImages);
-
   return (
     <div
       style={{ display: 'flex', flexDirection: 'column' }}
       id='project-container'
       className='container'
     >
-      <div id='project-caraousel' className='carousel'>
-        {projectCarouselImages[0].length > 0 ? (
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            showIndicators={false}
-            selectedItem={currentIndex}
-            onChange={(index) => handleCarouselChange(index)}
-          >
-            {projectCarouselImages.map((image: string, index: number) => (
-              <div key={index}>
-                <img
-                  src={image}
-                  alt={`Slide ${index + 1}`}
-                  style={{ objectFit: 'cover', maxHeight: '30rem' }}
-                />
-              </div>
-            ))}
-          </Carousel>
+      <div className='carousel-container'>
+        {projectCarouselImages.length > 0 ? (
+          <div className='carousel-wrapper'>
+            <div className='close-icon' onClick={handleIconClick}>
+              <img
+                style={{ width: '4rem' }}
+                src={ICON.CLOSE_ICON}
+                alt='Close Icon'
+              />
+            </div>
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              selectedItem={currentIndex}
+              onChange={(index) => handleCarouselChange(index)}
+            >
+              {projectCarouselImages.map((image: string, index: number) => (
+                <div key={index}>
+                  <img
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    style={{ objectFit: 'cover', maxHeight: '30rem' }}
+                  />
+                </div>
+              ))}
+            </Carousel>
+          </div>
         ) : (
           <DefaultSolutionDisplay />
         )}

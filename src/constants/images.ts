@@ -17,6 +17,7 @@ import MICRONERVADO from '/img/sideBarIcons/MICRONERVADO.svg';
 import S_ICON from '/img/icon/S_ICON.svg';
 import DOWN_ARROW from '/img/icon/DOWN_ARROW.svg';
 import RIGHT_ARROW from '/img/icon/RIGHT_ARROW.svg';
+import CLOSE_ICON from '/img/icon/CLOSE_ICON.svg';
 
 // SIDEBAR IMGES
 import GALERIA_TRAPEZOIDAL_01 from '/img/sideBarImages/trapezoidal/GALERIA_TRAPEZOIDAL_01.jpg';
@@ -194,6 +195,7 @@ export const ICON = {
   S_ICON,
   DOWN_ARROW,
   RIGHT_ARROW,
+  CLOSE_ICON,
 };
 
 export const SIDEBAR_IMAGES = {
