@@ -1,6 +1,9 @@
 import {
   CABIN_PRESENTATION,
   CASAS_PRESENTATION,
+  PROJECT_CABIN,
+  PROJECT_HOUSES,
+  PROJECT_TINY,
   TINY_HOUSES_PRESENTATION,
 } from '../../../constants/images';
 
@@ -8,7 +11,7 @@ interface ImageSets {
   [key: string]: {
     projectImagePresentation: string[];
     projectName: string[];
-    carouselImages: string[];
+    carouselImages: any;
     projectDisplayName: string[];
     projectDescription_1: string[];
     projectDescription_2: string[];
@@ -42,12 +45,15 @@ export const imageSets: ImageSets = {
       'Vivienda Residencial',
     ],
     carouselImages: [
-      CASAS_PRESENTATION.CASA_0,
-      CASAS_PRESENTATION.CASA_1,
-      CASAS_PRESENTATION.CASA_2,
-      CASAS_PRESENTATION.CASA_3,
-      CASAS_PRESENTATION.CASA_4,
-      CASAS_PRESENTATION.CASA_5,
+      [PROJECT_HOUSES.ALVEAR],
+      [PROJECT_HOUSES.COUNTRY],
+      [PROJECT_HOUSES.PIEDRA],
+      [PROJECT_HOUSES.BLANCO],
+      [PROJECT_HOUSES.NUBE],
+      [PROJECT_HOUSES.URIZAR],
+      [PROJECT_HOUSES.HUEMULES],
+      [PROJECT_HOUSES.MAWIDA],
+      [PROJECT_HOUSES.RESIDENCIAL],
     ],
     projectDisplayName: [
       'Alvear Housing',
@@ -86,14 +92,7 @@ export const imageSets: ImageSets = {
   'Tiny House': {
     projectImagePresentation: [TINY_HOUSES_PRESENTATION.TINY_0],
     projectName: ['Tiny'],
-    carouselImages: [
-      CASAS_PRESENTATION.CASA_0,
-      CASAS_PRESENTATION.CASA_1,
-      CASAS_PRESENTATION.CASA_2,
-      CASAS_PRESENTATION.CASA_3,
-      CASAS_PRESENTATION.CASA_4,
-      CASAS_PRESENTATION.CASA_5,
-    ],
+    carouselImages: [[PROJECT_TINY.TINY]],
     projectDisplayName: ['Tiny House'],
     projectDescription_1: ['Godoy Cruz - Mendoza, Argentina'],
     projectDescription_2: ['Classwall Micronervado Gris Pizarra'],
@@ -110,9 +109,9 @@ export const imageSets: ImageSets = {
       'Parador Club House Maitenes',
     ],
     carouselImages: [
-      CASAS_PRESENTATION.CASA_0,
-      CASAS_PRESENTATION.CASA_1,
-      CASAS_PRESENTATION.CASA_2,
+      [PROJECT_CABIN.SOL],
+      [PROJECT_CABIN.POTRERILLOS],
+      [PROJECT_CABIN.MAITENES],
     ],
     projectDisplayName: [
       'Tierra del Sol',

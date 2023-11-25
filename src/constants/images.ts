@@ -89,6 +89,88 @@ import CABIN_2 from '/img/inspiration/cabinProjectPresentation/CABIN_2.jpg';
 // INSPIRATION TINY HOUSES PROJECT PRESENTATION IMAGES
 import TINY_0 from '/img/inspiration/tinyHouseProjectPresentation/TINY_0.webp';
 
+// INSPIRATION SECTION PROJECTS
+
+// CASAS
+import PROJECT_ALVEAR_0 from '/img/inspiration/projects/casas/alvearHousing/PROJECT_ALVEAR_0.jpg';
+import PROJECT_ALVEAR_1 from '/img/inspiration/projects/casas/alvearHousing/PROJECT_ALVEAR_1.jpg';
+import PROJECT_ALVEAR_2 from '/img/inspiration/projects/casas/alvearHousing/PROJECT_ALVEAR_2.jpg';
+import PROJECT_ALVEAR_3 from '/img/inspiration/projects/casas/alvearHousing/PROJECT_ALVEAR_3.jpg';
+import PROJECT_ALVEAR_4 from '/img/inspiration/projects/casas/alvearHousing/PROJECT_ALVEAR_4.jpg';
+
+import PROJECT_COUNTRY_0 from '/img/inspiration/projects/casas/casaCountry/PROJECT_COUNTRY_0.jpg';
+import PROJECT_COUNTRY_1 from '/img/inspiration/projects/casas/casaCountry/PROJECT_COUNTRY_1.jpg';
+import PROJECT_COUNTRY_2 from '/img/inspiration/projects/casas/casaCountry/PROJECT_COUNTRY_2.jpg';
+import PROJECT_COUNTRY_3 from '/img/inspiration/projects/casas/casaCountry/PROJECT_COUNTRY_3.jpg';
+
+import PROJECT_PIEDRA_0 from '/img/inspiration/projects/casas/casaDePiedra/PROJECT_PIEDRA_0.jpg';
+import PROJECT_PIEDRA_1 from '/img/inspiration/projects/casas/casaDePiedra/PROJECT_PIEDRA_1.jpg';
+import PROJECT_PIEDRA_2 from '/img/inspiration/projects/casas/casaDePiedra/PROJECT_PIEDRA_2.jpg';
+import PROJECT_PIEDRA_3 from '/img/inspiration/projects/casas/casaDePiedra/PROJECT_PIEDRA_3.jpeg';
+import PROJECT_PIEDRA_4 from '/img/inspiration/projects/casas/casaDePiedra/PROJECT_PIEDRA_4.jpg';
+
+import PROJECT_BLANCO_0 from '/img/inspiration/projects/casas/casaEnBlanco/PROJECT_BLANCO_0.jpg';
+import PROJECT_BLANCO_1 from '/img/inspiration/projects/casas/casaEnBlanco/PROJECT_BLANCO_1.jpg';
+import PROJECT_BLANCO_2 from '/img/inspiration/projects/casas/casaEnBlanco/PROJECT_BLANCO_2.jpg';
+import PROJECT_BLANCO_3 from '/img/inspiration/projects/casas/casaEnBlanco/PROJECT_BLANCO_3.jpg';
+import PROJECT_BLANCO_4 from '/img/inspiration/projects/casas/casaEnBlanco/PROJECT_BLANCO_4.jpg';
+
+import PROJECT_NUBE_0 from '/img/inspiration/projects/casas/casaNube/PROJECT_NUBE_0.jpeg';
+import PROJECT_NUBE_1 from '/img/inspiration/projects/casas/casaNube/PROJECT_NUBE_1.jpg';
+import PROJECT_NUBE_2 from '/img/inspiration/projects/casas/casaNube/PROJECT_NUBE_2.jpg';
+import PROJECT_NUBE_3 from '/img/inspiration/projects/casas/casaNube/PROJECT_NUBE_3.jpg';
+
+import PROJECT_URIZAR_0 from '/img/inspiration/projects/casas/casaUrizar/PROJECT_URIZAR_0.jpg';
+import PROJECT_URIZAR_1 from '/img/inspiration/projects/casas/casaUrizar/PROJECT_URIZAR_1.jpg';
+import PROJECT_URIZAR_2 from '/img/inspiration/projects/casas/casaUrizar/PROJECT_URIZAR_2.jpeg';
+import PROJECT_URIZAR_3 from '/img/inspiration/projects/casas/casaUrizar/PROJECT_URIZAR_3.jpeg';
+import PROJECT_URIZAR_4 from '/img/inspiration/projects/casas/casaUrizar/PROJECT_URIZAR_4.jpg';
+
+import PROJECT_HUEMULES_0 from '/img/inspiration/projects/casas/huemules/PROJECT_HUEMULES_0.jpg';
+import PROJECT_HUEMULES_1 from '/img/inspiration/projects/casas/huemules/PROJECT_HUEMULES_1.png';
+import PROJECT_HUEMULES_2 from '/img/inspiration/projects/casas/huemules/PROJECT_HUEMULES_2.jpg';
+import PROJECT_HUEMULES_3 from '/img/inspiration/projects/casas/huemules/PROJECT_HUEMULES_3.jpg';
+import PROJECT_HUEMULES_4 from '/img/inspiration/projects/casas/huemules/PROJECT_HUEMULES_4.jpg';
+
+import PROJECT_MAWIDA_0 from '/img/inspiration/projects/casas/mawida/PROJECT_MAWIDA_0.jpg';
+import PROJECT_MAWIDA_1 from '/img/inspiration/projects/casas/mawida/PROJECT_MAWIDA_1.jpeg';
+import PROJECT_MAWIDA_2 from '/img/inspiration/projects/casas/mawida/PROJECT_MAWIDA_2.jpg';
+import PROJECT_MAWIDA_3 from '/img/inspiration/projects/casas/mawida/PROJECT_MAWIDA_3.jpeg';
+import PROJECT_MAWIDA_4 from '/img/inspiration/projects/casas/mawida/PROJECT_MAWIDA_4.jpeg';
+
+import PROJECT_RESIDENCIAL_0 from '/img/inspiration/projects/casas/viviendaResidencial/PROJECT_RESIDENCIAL_0.jpeg';
+import PROJECT_RESIDENCIAL_1 from '/img/inspiration/projects/casas/viviendaResidencial/PROJECT_RESIDENCIAL_1.jpeg';
+import PROJECT_RESIDENCIAL_2 from '/img/inspiration/projects/casas/viviendaResidencial/PROJECT_RESIDENCIAL_2.jpg';
+import PROJECT_RESIDENCIAL_3 from '/img/inspiration/projects/casas/viviendaResidencial/PROJECT_RESIDENCIAL_3.jpg';
+import PROJECT_RESIDENCIAL_4 from '/img/inspiration/projects/casas/viviendaResidencial/PROJECT_RESIDENCIAL_4.jpg';
+
+// CABAÑAS
+import PROJECT_POTRERILLOS_1 from '/img/inspiration/projects/cabañas/cabañaPotrerillos/PROJECT_POTRERILLOS_1.jpeg';
+import PROJECT_POTRERILLOS_2 from '/img/inspiration/projects/cabañas/cabañaPotrerillos/PROJECT_POTRERILLOS_2.jpeg';
+import PROJECT_POTRERILLOS_3 from '/img/inspiration/projects/cabañas/cabañaPotrerillos/PROJECT_POTRERILLOS_3.jpeg';
+import PROJECT_POTRERILLOS_0 from '/img/inspiration/projects/cabañas/cabañaPotrerillos/PROJECT_POTRERILLOS_0.jpeg';
+import PROJECT_POTRERILLOS_4 from '/img/inspiration/projects/cabañas/cabañaPotrerillos/PROJECT_POTRERILLOS_4.jpeg';
+
+import PROJECT_SOL_0 from '/img/inspiration/projects/cabañas/cabañaTierraDelSol/PROJECT_SOL_0.jpg';
+import PROJECT_SOL_1 from '/img/inspiration/projects/cabañas/cabañaTierraDelSol/PROJECT_SOL_1.jpg';
+import PROJECT_SOL_2 from '/img/inspiration/projects/cabañas/cabañaTierraDelSol/PROJECT_SOL_2.jpg';
+import PROJECT_SOL_3 from '/img/inspiration/projects/cabañas/cabañaTierraDelSol/PROJECT_SOL_3.jpg';
+import PROJECT_SOL_4 from '/img/inspiration/projects/cabañas/cabañaTierraDelSol/PROJECT_SOL_4.jpg';
+import PROJECT_SOL_5 from '/img/inspiration/projects/cabañas/cabañaTierraDelSol/PROJECT_SOL_5.jpg';
+
+import PROJECT_MAITENES_0 from '/img/inspiration/projects/cabañas/paradorClubHouseMaitenes/PROJECT_MAITENES_0.jpg';
+import PROJECT_MAITENES_1 from '/img/inspiration/projects/cabañas/paradorClubHouseMaitenes/PROJECT_MAITENES_1.jpg';
+import PROJECT_MAITENES_2 from '/img/inspiration/projects/cabañas/paradorClubHouseMaitenes/PROJECT_MAITENES_2.jpg';
+import PROJECT_MAITENES_3 from '/img/inspiration/projects/cabañas/paradorClubHouseMaitenes/PROJECT_MAITENES_3.jpg';
+import PROJECT_MAITENES_4 from '/img/inspiration/projects/cabañas/paradorClubHouseMaitenes/PROJECT_MAITENES_4.png';
+
+// TINY
+import PROJECT_TINY_0 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TINY_0.webp';
+import PROJECT_TINY_1 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TINY_1.jpeg';
+import PROJECT_TINY_2 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TINY_2.jpeg';
+import PROJECT_TINY_3 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TINY_3.jpeg';
+import PROJECT_TINY_4 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TINY_4.jpg';
+
 // EXPORTS
 // **********************************************
 export const PICKERS = {
@@ -183,4 +265,98 @@ export const CABIN_PRESENTATION = {
 
 export const TINY_HOUSES_PRESENTATION = {
   TINY_0,
+};
+
+export const PROJECT_HOUSES = {
+  ALVEAR: [
+    PROJECT_ALVEAR_0,
+    PROJECT_ALVEAR_1,
+    PROJECT_ALVEAR_2,
+    PROJECT_ALVEAR_3,
+    PROJECT_ALVEAR_4,
+  ],
+  COUNTRY: [
+    PROJECT_COUNTRY_0,
+    PROJECT_COUNTRY_1,
+    PROJECT_COUNTRY_2,
+    PROJECT_COUNTRY_3,
+  ],
+  PIEDRA: [
+    PROJECT_PIEDRA_0,
+    PROJECT_PIEDRA_1,
+    PROJECT_PIEDRA_2,
+    PROJECT_PIEDRA_3,
+    PROJECT_PIEDRA_4,
+  ],
+  BLANCO: [
+    PROJECT_BLANCO_0,
+    PROJECT_BLANCO_1,
+    PROJECT_BLANCO_2,
+    PROJECT_BLANCO_3,
+    PROJECT_BLANCO_4,
+  ],
+  NUBE: [PROJECT_NUBE_0, PROJECT_NUBE_1, PROJECT_NUBE_2, PROJECT_NUBE_3],
+  URIZAR: [
+    PROJECT_URIZAR_0,
+    PROJECT_URIZAR_1,
+    PROJECT_URIZAR_2,
+    PROJECT_URIZAR_3,
+    PROJECT_URIZAR_4,
+  ],
+  HUEMULES: [
+    PROJECT_HUEMULES_0,
+    PROJECT_HUEMULES_1,
+    PROJECT_HUEMULES_2,
+    PROJECT_HUEMULES_3,
+    PROJECT_HUEMULES_4,
+  ],
+  MAWIDA: [
+    PROJECT_MAWIDA_0,
+    PROJECT_MAWIDA_1,
+    PROJECT_MAWIDA_2,
+    PROJECT_MAWIDA_3,
+    PROJECT_MAWIDA_4,
+  ],
+  RESIDENCIAL: [
+    PROJECT_RESIDENCIAL_0,
+    PROJECT_RESIDENCIAL_1,
+    PROJECT_RESIDENCIAL_2,
+    PROJECT_RESIDENCIAL_3,
+    PROJECT_RESIDENCIAL_4,
+  ],
+};
+
+export const PROJECT_CABIN = {
+  POTRERILLOS: [
+    PROJECT_POTRERILLOS_0,
+    PROJECT_POTRERILLOS_1,
+    PROJECT_POTRERILLOS_2,
+    PROJECT_POTRERILLOS_3,
+    PROJECT_POTRERILLOS_4,
+  ],
+  SOL: [
+    PROJECT_SOL_0,
+    PROJECT_SOL_1,
+    PROJECT_SOL_2,
+    PROJECT_SOL_3,
+    PROJECT_SOL_4,
+    PROJECT_SOL_5,
+  ],
+  MAITENES: [
+    PROJECT_MAITENES_0,
+    PROJECT_MAITENES_1,
+    PROJECT_MAITENES_2,
+    PROJECT_MAITENES_3,
+    PROJECT_MAITENES_4,
+  ],
+};
+
+export const PROJECT_TINY = {
+  TINY: [
+    PROJECT_TINY_0,
+    PROJECT_TINY_1,
+    PROJECT_TINY_2,
+    PROJECT_TINY_3,
+    PROJECT_TINY_4,
+  ],
 };
