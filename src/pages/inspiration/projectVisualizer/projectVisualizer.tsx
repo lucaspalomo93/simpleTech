@@ -100,8 +100,6 @@ function ProjectVisualizer() {
           display: 'flex',
           justifyContent: 'center',
           flexDirection: 'column',
-          gap: '2rem',
-          paddingTop: '2rem',
         }}
       >
         <div
@@ -121,7 +119,7 @@ function ProjectVisualizer() {
             display: 'flex',
             justifyContent: 'flex-end',
             color: COLORS.LIGT_GREY_TEXT,
-            padding: '0 2rem 3rem 0',
+            padding: '0 2rem 0 0',
             fontWeight: '200',
           }}
           id='project-description'
