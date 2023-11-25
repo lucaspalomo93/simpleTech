@@ -4,6 +4,7 @@ import { COLORS } from '../../constants/colors';
 import { useContext, useState } from 'react';
 import { SimpleTechContext } from '../../context/context';
 import { getColorPickerName } from '../../utils/getcolorPicker';
+import { PICKER_TYPOGRAPHY_STYLE } from './colorPickerMui';
 
 function ColorPicker() {
   const [selectedColor, setSelectedColor] = useState('');
@@ -44,14 +45,14 @@ function ColorPicker() {
     >
       {state.showColorPicker && (
         <Container>
-          <div style={{ display: 'flex', alignContent: 'center' }}>
+          <div className='picker-container'>
             <Typography
               color={COLORS.LIGT_GREY_TEXT}
-              sx={{ padding: '4rem 1rem 4rem 6rem' }}
+              sx={PICKER_TYPOGRAPHY_STYLE}
             >
               Color
             </Typography>
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+            <div className='picker-list'>
               {pickersSelectedArray.map((picker: string, index: number) => (
                 <div
                   id={`color-picker-container-${index}`}
@@ -62,7 +63,6 @@ function ColorPicker() {
                       : ''
                   }`}
                   onClick={() => handleColorClick(picker)}
-                  style={{ cursor: 'pointer' }}
                 >
                   <img
                     id={`color-picker-img-${index}`}

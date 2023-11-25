@@ -16,3 +16,46 @@
 .close-icon:hover {
   cursor: pointer;
 }
+
+.image {
+  object-fit: cover;
+  max-height: 30rem;
+}
+
+.stepper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-name {
+  padding: 2rem 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.divider-container {
+  width: 100%;
+}
+
+.description-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.description-1 {
+  display: flex;
+  justify-content: flex-end;
+  color: #d9d9d9;
+  padding: 3rem 2rem 0 0;
+  font-weight: 200;
+}
+
+.description-2 {
+  display: flex;
+  justify-content: flex-end;
+  color: #d9d9d9;
+  padding: 0 2rem 0 0;
+  font-weight: 200;
+}

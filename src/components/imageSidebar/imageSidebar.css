@@ -20,3 +20,28 @@
 .image-container:hover {
   cursor: pointer;
 }
+
+.image-sidebar-container {
+  background-color: #363636;
+  height: auto;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #363636;
+}
+
+.image-container {
+  margin: 0;
+  display: contents;
+}
+
+.image {
+  width: 65%;
+  object-fit: cover;
+  border-radius: 10px;
+}

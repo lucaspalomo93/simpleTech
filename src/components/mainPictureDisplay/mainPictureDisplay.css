@@ -1,0 +1,11 @@
+.box {
+    height: 50vh;
+    width: 70vh;
+    background-color: #363636;
+}
+
+.text-container {
+    display: flex;
+    justify-content: flex-end;
+    color: #D9D9D9;
+}

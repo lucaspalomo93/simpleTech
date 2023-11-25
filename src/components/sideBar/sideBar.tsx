@@ -11,7 +11,6 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
-import { COLORS } from '../../constants/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { items } from '../../constants/menuItems';
 import {
@@ -35,20 +34,19 @@ function SideBar() {
 
   return (
     <Container>
-      <Container sx={{ margin: '3rem 0 6rem 0' }}>
+      <Container className='s-icon-container'>
         <img src={ICON.S_ICON} alt='S Icon' />
       </Container>
       <Typography
+      className='header-text'
         variant='h5'
         component='h2'
-        style={{ color: COLORS.GREY_TEXT, fontWeight: 'bold' }}
-        margin={'1rem'}
       >
         Soluciones
       </Typography>
 
       <Container>
-        <List sx={{ overflow: 'hidden' }}>
+        <List className='list'>
           {items.map((item, index) =>
             item.map((section, sectionIndex) => (
               <div key={index}>

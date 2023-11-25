@@ -1,5 +1,6 @@
 .color-picker {
   position: relative;
+  cursor: pointer;
 }
 
 .color-picker img {
@@ -17,4 +18,15 @@
   border: 2px solid #fff;
   border-radius: 50%;
   box-sizing: border-box;
+}
+
+.picker-container {
+  display: flex;
+  align-content: center;
+}
+
+.picker-list {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }

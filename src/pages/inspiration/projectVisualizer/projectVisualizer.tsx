@@ -55,9 +55,9 @@ function ProjectVisualizer() {
               {projectCarouselImages.map((image: string, index: number) => (
                 <div key={index}>
                   <img
+                    className='image'
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    style={{ objectFit: 'cover', maxHeight: '30rem' }}
                   />
                 </div>
               ))}
@@ -67,7 +67,7 @@ function ProjectVisualizer() {
           <DefaultSolutionDisplay />
         )}
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div className='stepper-container'>
         <MobileStepper
           variant='dots'
           steps={projectCarouselImages.length}
@@ -91,19 +91,11 @@ function ProjectVisualizer() {
         />
       </div>
       <div id='project-name'>
-        <Typography
-          style={{
-            padding: '2rem 1rem',
-            fontWeight: '500',
-            letterSpacing: '1px',
-          }}
-          color={COLORS.WHITE}
-        >
-          {projectDisplayName}
-        </Typography>
+        <Typography className='project-name'>{projectDisplayName}</Typography>
       </div>
-      <div style={{ width: '100%' }}>
+      <div className='divider-container'>
         <Divider
+          className='visualizer-divider'
           style={{
             width: '95%',
             margin: 'auto',
@@ -114,33 +106,17 @@ function ProjectVisualizer() {
         />
       </div>
       <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          flexDirection: 'column',
-        }}
+      className='description-container'
       >
         <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            color: COLORS.LIGT_GREY_TEXT,
-            padding: '3rem 2rem 0 0',
-            fontWeight: '200',
-          }}
-          id='project-description'
+        className='description-1'
+          id='project-description-1'
         >
           {projectDescription1}
         </div>
         <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            color: COLORS.LIGT_GREY_TEXT,
-            padding: '0 2rem 0 0',
-            fontWeight: '200',
-          }}
-          id='project-description'
+        className='description-2'
+          id='project-description-2'
         >
           {projectDescription2}
         </div>
