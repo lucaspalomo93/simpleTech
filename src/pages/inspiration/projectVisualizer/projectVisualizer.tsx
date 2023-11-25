@@ -100,7 +100,6 @@ function ProjectVisualizer() {
           display: 'flex',
           justifyContent: 'center',
           flexDirection: 'column',
-          height: '25vh',
           gap: '2rem',
           paddingTop: '2rem',
         }}
