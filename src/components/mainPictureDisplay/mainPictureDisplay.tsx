@@ -15,15 +15,8 @@ function MainPictureDisplay() {
     <div id='main-picture-display' style={img && IMG_PRESENT_STYLE}>
       {img ? (
         <div>
-          <Box
-            className='box'
-            component={'img'}
-            src={img}
-            alt='img'
-          />
-          <div
-          className='text-container'
-          >
+          <Box className='box' component={'img'} src={img} alt='img' />
+          <div className='text-container'>
             <Typography>{imgText}</Typography>
           </div>
         </div>

@@ -22,6 +22,8 @@ function Presentation() {
         fontWeight={'bold'}
         paddingTop={'30vh'}
         paddingBottom={'20vh'}
+        fontSize={'4rem'}
+        className='title-simpletech'
       >
         simpletech
       </Typography>

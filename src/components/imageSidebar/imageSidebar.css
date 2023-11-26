@@ -47,3 +47,19 @@
   object-fit: cover;
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 480px) {
+  .image-wrapper {
+    flex-direction: row;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .image-container {
+    width: 5px;
+  }
+
+  .image-container img {
+    width: 50px;
+  }
+}
