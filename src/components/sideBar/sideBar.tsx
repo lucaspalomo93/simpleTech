@@ -34,7 +34,7 @@ function SideBar() {
   } = useSidebarOptions();
 
   return (
-    <Container>
+    <Container className='first-container'>
       <Container className='s-icon-container'>
         <Link href='/' underline='none'>
           <img src={ICON.S_ICON} alt='S Icon' />
@@ -79,32 +79,35 @@ function SideBar() {
                       <AccordionDetails>
                         {section.options.map((subSection, subSectionIndex) => (
                           <ListItem key={subSectionIndex}>
-                            <ListItemButton
-                              sx={LIST_ITEM_BUTTON_OPTION}
-                              selected={
-                                selectedSubSection === subSection.label &&
-                                selectedSubSectionStyle !== ''
-                              }
-                              onClick={() => {
-                                handleSubSectionClick(
-                                  subSection.label,
-                                  subSection.colors,
-                                  subSection
-                                );
-                              }}
-                            >
-                              <ListItemText primary={subSection.label} />
-                              <img
-                                src={subSection.icon}
-                                alt='Icono'
-                                className={
+                            <div>
+                              <ListItemButton
+                                sx={LIST_ITEM_BUTTON_OPTION}
+                                style={{right: '25px'}}
+                                selected={
                                   selectedSubSection === subSection.label &&
                                   selectedSubSectionStyle !== ''
-                                    ? 'selected-option'
-                                    : ''
                                 }
-                              />
-                            </ListItemButton>
+                                onClick={() => {
+                                  handleSubSectionClick(
+                                    subSection.label,
+                                    subSection.colors,
+                                    subSection
+                                  );
+                                }}
+                              >
+                                <ListItemText primary={subSection.label} />
+                                <img
+                                  src={subSection.icon}
+                                  alt='Icono'
+                                  className={
+                                    selectedSubSection === subSection.label &&
+                                    selectedSubSectionStyle !== ''
+                                      ? 'selected-option'
+                                      : ''
+                                  }
+                                />
+                              </ListItemButton>
+                            </div>
                           </ListItem>
                         ))}
                       </AccordionDetails>
