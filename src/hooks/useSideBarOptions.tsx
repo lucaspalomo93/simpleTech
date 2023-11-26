@@ -23,6 +23,7 @@ export const useSidebarOptions = () => {
       sidebarImagesArray: null,
       showInspirationProject: false,
     });
+    resetSubSectionValues();
     setSelectedSubSectionStyle('');
   }
 
