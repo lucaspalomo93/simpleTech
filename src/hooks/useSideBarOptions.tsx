@@ -23,7 +23,7 @@ export const useSidebarOptions = () => {
       sidebarImagesArray: null,
       showInspirationProject: false,
     });
-    resetSubSectionValues();
+    setSelectedSubSection(''); // Desselecciona la opción actual
     setSelectedSubSectionStyle('');
   }
 
