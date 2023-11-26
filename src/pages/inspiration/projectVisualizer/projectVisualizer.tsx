@@ -40,7 +40,7 @@ function ProjectVisualizer() {
           <div className='carousel-wrapper'>
             <div className='close-icon' onClick={handleIconClick}>
               <img
-                style={{ width: '4rem' }}
+                className='close-icon-img'
                 src={ICON.CLOSE_ICON}
                 alt='Close Icon'
               />
@@ -114,12 +114,12 @@ function ProjectVisualizer() {
         />
       </div>
       <div className='description-container'>
-          <div className='description-1' id='project-description'>
-            {projectDescription1}
-          </div>
-          <div className='description-2' id='project-description'>
-            {projectDescription2}
-          </div>
+        <div className='description-1' id='project-description'>
+          {projectDescription1}
+        </div>
+        <div className='description-2' id='project-description'>
+          {projectDescription2}
+        </div>
       </div>
     </div>
   );

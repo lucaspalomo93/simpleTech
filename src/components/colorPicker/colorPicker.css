@@ -35,3 +35,22 @@
 .color-text {
   margin: 1rem;
 }
+
+@media only screen and (max-width: 480px) {
+  .color-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+
+  .color-picker img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .color-picker.selected::before {
+    width: 42px;
+    height: 42px;
+  }
+}

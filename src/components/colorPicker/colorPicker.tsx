@@ -41,7 +41,7 @@ function ColorPicker() {
       }}
     >
       {state.showColorPicker && (
-        <Container>
+        <Container sx={{padding: '0'}}>
           <div className='picker-container'>
             <div className='color-text'>
               <Typography fontSize={'1.2rem'} color={COLORS.LIGT_GREY_TEXT}>
