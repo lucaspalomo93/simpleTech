@@ -38,20 +38,17 @@ function ColorPicker() {
       id='color-pickers'
       style={{
         backgroundColor: COLORS.DARK_GREY,
-        height: '100%',
-        width: '100%',
       }}
     >
       {state.showColorPicker && (
         <Container>
-          <div style={{ display: 'flex', alignContent: 'center' }}>
-            <Typography
-              color={COLORS.LIGT_GREY_TEXT}
-              sx={{ padding: '4rem 1rem 4rem 6rem' }}
-            >
-              Color
-            </Typography>
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <div className='picker-container'>
+            <div className='color-text'>
+              <Typography fontSize={'1.2rem'} color={COLORS.LIGT_GREY_TEXT}>
+                Color
+              </Typography>
+            </div>
+            <div className='picker-list'>
               {pickersSelectedArray.map((picker: string, index: number) => (
                 <div
                   id={`color-picker-container-${index}`}
@@ -62,7 +59,6 @@ function ColorPicker() {
                       : ''
                   }`}
                   onClick={() => handleColorClick(picker)}
-                  style={{ cursor: 'pointer' }}
                 >
                   <img
                     id={`color-picker-img-${index}`}

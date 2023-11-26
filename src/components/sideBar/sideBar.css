@@ -1,3 +1,17 @@
 .selected-option {
   filter: sepia(100%) saturate(800%) hue-rotate(7deg);
 }
+
+.s-icon-container {
+  margin: 3rem 0 6rem 0;
+}
+
+.header-text {
+  color: #717078;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.list {
+  overflow: hidden;
+}

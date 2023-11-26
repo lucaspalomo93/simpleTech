@@ -1,6 +1,5 @@
-import './iamgeSidebar.css';
+import './imageSidebar.css';
 import { useContext, useState } from 'react';
-import { COLORS } from '../../constants/colors';
 import { SimpleTechContext } from '../../context/context';
 
 function ImageSidebar() {
@@ -30,39 +29,17 @@ function ImageSidebar() {
   };
 
   return (
-    <div
-      id='image-sidebar-container'
-      style={{ backgroundColor: COLORS.DARK_GREY, height: 'auto' }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '2rem',
-          backgroundColor: COLORS.DARK_GREY,
-        }}
-      >
+    <div id='image-sidebar-container'>
+      <div className='image-wrapper'>
         {imageList &&
           imageList.map((image: string, index: number) => (
             <div
               id={`img-sidebar-${index}`}
               key={index}
-              style={{ margin: '0', display: 'contents' }}
               className='image-container'
               onClick={() => handleImageClick(image)} // Manejar clic en la imagen
             >
-              <img
-                src={image}
-                alt={`Image ${index + 1}`}
-                style={{
-                  width: '65%',
-                  height: '25px%',
-                  objectFit: 'cover',
-                  borderRadius: '10px',
-                }}
-              />
+              <img className='image' src={image} alt={`Image ${index + 1}`} />
             </div>
           ))}
       </div>

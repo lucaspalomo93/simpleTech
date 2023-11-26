@@ -1,5 +1,10 @@
-.carousel-container {
+.container {
+  height: 100vh;
+}
+
+.carousel-visualizer-container {
   position: relative;
+  margin: 0;
 }
 
 .carousel-wrapper {
@@ -10,9 +15,53 @@
   position: absolute;
   top: 30px;
   right: 30px;
-  z-index: 999; /* Asegura que el icono esté sobre el Carousel */
+  z-index: 999;
 }
 
 .close-icon:hover {
   cursor: pointer;
+}
+
+.image {
+  object-fit: cover;
+  max-height: 30rem;
+}
+
+.stepper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-name {
+  padding: 2rem 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.divider-container {
+  width: 100%;
+}
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 2rem;
+}
+
+.description-1 {
+  display: flex;
+  color: #d9d9d9;
+  font-weight: 200;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.description-2 {
+  display: flex;
+  color: #d9d9d9;
+  font-weight: 200;
+  padding-right: 2rem;
 }

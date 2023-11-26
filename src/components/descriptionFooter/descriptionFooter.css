@@ -1,9 +1,28 @@
 .footer {
     background-color: #363636;
     height: 100%;
-    /* margin: 0;
-    padding: 0; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .divider {
+    width: 95%;
+    margin: auto;
+    font-weight: bold;
+    height: 1.5px;
+  }
+
+  .footer-arrow {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .footer-img {
+    padding-left: 4rem;
+  }
+
+  .footer-dimensions {
+    padding-right: 4rem;
   }

@@ -1,5 +1,20 @@
 .icon-img {
   display: flex;
   align-items: flex-start;
-  padding-left: 16rem;
+  padding-left: 4rem;
+}
+
+.default-solution-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.text {
+  text-align: left;
+  justify-content: center;
+  color: #D2632C;
+  font-weight: bold;
+  font-size: 4rem;
 }

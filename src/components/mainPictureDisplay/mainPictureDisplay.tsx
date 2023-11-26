@@ -3,7 +3,6 @@ import { imageSelector } from '../../utils/imageSelector';
 import { Box, Typography } from '@mui/material';
 import DefaultSolutionDisplay from './defaultSolutionDisplay/defaultSolutionDisplay';
 import { IMG_PRESENT_STYLE } from '../../constants/styles';
-import { COLORS } from '../../constants/colors';
 import { useContext } from 'react';
 import { SimpleTechContext } from '../../context/context';
 
@@ -17,21 +16,13 @@ function MainPictureDisplay() {
       {img ? (
         <div>
           <Box
+            className='box'
             component={'img'}
-            sx={{
-              height: '50vh',
-              width: '70vh',
-              backgroundColor: '#363636',
-            }}
             src={img}
             alt='img'
           />
           <div
-            style={{
-              display: 'flex',
-              justifyContent: 'flex-end',
-              color: COLORS.LIGT_GREY_TEXT,
-            }}
+          className='text-container'
           >
             <Typography>{imgText}</Typography>
           </div>

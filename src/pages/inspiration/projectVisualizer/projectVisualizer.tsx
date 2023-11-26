@@ -35,7 +35,7 @@ function ProjectVisualizer() {
       id='project-container'
       className='container'
     >
-      <div className='carousel-container'>
+      <div className='carousel-visualizer-container'>
         {projectCarouselImages.length > 0 ? (
           <div className='carousel-wrapper'>
             <div className='close-icon' onClick={handleIconClick}>
@@ -113,37 +113,13 @@ function ProjectVisualizer() {
           color={COLORS.GREY_TEXT}
         />
       </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          flexDirection: 'column',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            color: COLORS.LIGT_GREY_TEXT,
-            padding: '3rem 2rem 0 0',
-            fontWeight: '200',
-          }}
-          id='project-description'
-        >
-          {projectDescription1}
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            color: COLORS.LIGT_GREY_TEXT,
-            padding: '0 2rem 0 0',
-            fontWeight: '200',
-          }}
-          id='project-description'
-        >
-          {projectDescription2}
-        </div>
+      <div className='description-container'>
+          <div className='description-1' id='project-description'>
+            {projectDescription1}
+          </div>
+          <div className='description-2' id='project-description'>
+            {projectDescription2}
+          </div>
       </div>
     </div>
   );

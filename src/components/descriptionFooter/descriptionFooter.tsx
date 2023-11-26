@@ -13,10 +13,10 @@ function DescriptionFooter() {
 
   return (
     <>
-      <Box sx={{ backgroundColor: COLORS.DARK_GREY }}>
+      <Box sx={{ backgroundColor: COLORS.DARK_GREY, paddingTop: '3rem'}}>
         {state.showColorPicker && (
           <Divider
-            style={{ width: '95%', margin: 'auto', fontWeight: 'bold', height: '1.5px' }}
+            className='divider'
             color={COLORS.GREY_TEXT}
           />
         )}
@@ -26,10 +26,10 @@ function DescriptionFooter() {
           {state.showColorPicker && (
             <div
               id='description-footer-arrow'
-              style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}
+              className='footer-arrow'
             >
               <img
-                style={{ paddingLeft: '4rem' }}
+              className='footer-img'
                 src={ICON.RIGHT_ARROW}
                 alt='right_arrow'
               />
@@ -38,8 +38,8 @@ function DescriptionFooter() {
           )}
         </div>
         <div
+        className='footer-dimensions'
           id='description-footer-dimensions'
-          style={{ paddingRight: '4rem' }}
         >
           <Typography color={COLORS.LIGT_GREY_TEXT}>{dimensions}</Typography>
         </div>
