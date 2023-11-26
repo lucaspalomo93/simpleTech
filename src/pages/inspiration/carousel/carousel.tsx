@@ -70,8 +70,10 @@ function CarouselComponent() {
       <div id='carousel-container' className='carousel-container'>
         {categories.map((category, index) => (
           <Link
-            className='link'
+            className='category-link'
             key={index}
+            underline='none'
+            color={COLORS.WHITE}
             bgcolor={
               selectedCategory === category ? COLORS.ORANGE : COLORS.DARK_GREY
             }
@@ -154,7 +156,7 @@ function CarouselComponent() {
           VER PROYECTO
         </Link>
       </div>
-      <div id='linear-progress-container' className='linear-progress-container'>
+      <div id='linear-progress-container' className='linear-progress-container-carousel'>
         <LinearProgress
           className='linear-progress'
           variant='determinate'
@@ -165,9 +167,14 @@ function CarouselComponent() {
             100
           }
           sx={{
+            backgroundColor: '#D9D9D9',
             '& .MuiLinearProgress-bar': {
               backgroundColor: '#D2632C',
             },
+            borderRadius: '10px',
+            width: '80%',
+            height: '0.7rem',
+            margin: '3rem auto',
           }}
         />
       </div>

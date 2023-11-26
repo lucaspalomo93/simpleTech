@@ -13,7 +13,7 @@ function DescriptionFooter() {
 
   return (
     <>
-      <Box sx={{ backgroundColor: COLORS.DARK_GREY }}>
+      <Box sx={{ backgroundColor: COLORS.DARK_GREY, paddingTop: '3rem'}}>
         {state.showColorPicker && (
           <Divider
             className='divider'

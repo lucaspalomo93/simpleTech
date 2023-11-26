@@ -5,6 +5,7 @@ import {
   AccordionSummary,
   Container,
   Divider,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -35,13 +36,11 @@ function SideBar() {
   return (
     <Container>
       <Container className='s-icon-container'>
-        <img src={ICON.S_ICON} alt='S Icon' />
+        <Link href='/' underline='none'>
+          <img src={ICON.S_ICON} alt='S Icon' />
+        </Link>
       </Container>
-      <Typography
-      className='header-text'
-        variant='h5'
-        component='h2'
-      >
+      <Typography className='header-text' variant='h5' component='h2'>
         Soluciones
       </Typography>
 

@@ -6,7 +6,7 @@
     gap: 1rem;
 }
 
-.link {
+.category-link {
     color: #FFFFFF;
     padding: 0.5rem;
     border-radius: 25px;
@@ -72,11 +72,12 @@
     letter-spacing: 0.07rem;
 }
 
-.linear-progres-container {
+.linear-progress-container-carousel {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 4rem;
 }
 
 .linear-progress {

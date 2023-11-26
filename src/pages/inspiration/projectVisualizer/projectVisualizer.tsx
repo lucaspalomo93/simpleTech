@@ -35,7 +35,7 @@ function ProjectVisualizer() {
       id='project-container'
       className='container'
     >
-      <div className='carousel-container'>
+      <div className='carousel-visualizer-container'>
         {projectCarouselImages.length > 0 ? (
           <div className='carousel-wrapper'>
             <div className='close-icon' onClick={handleIconClick}>
@@ -55,9 +55,9 @@ function ProjectVisualizer() {
               {projectCarouselImages.map((image: string, index: number) => (
                 <div key={index}>
                   <img
-                    className='image'
                     src={image}
                     alt={`Slide ${index + 1}`}
+                    style={{ objectFit: 'cover', maxHeight: '30rem' }}
                   />
                 </div>
               ))}
@@ -67,7 +67,7 @@ function ProjectVisualizer() {
           <DefaultSolutionDisplay />
         )}
       </div>
-      <div className='stepper-container'>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         <MobileStepper
           variant='dots'
           steps={projectCarouselImages.length}
@@ -91,11 +91,19 @@ function ProjectVisualizer() {
         />
       </div>
       <div id='project-name'>
-        <Typography className='project-name'>{projectDisplayName}</Typography>
+        <Typography
+          style={{
+            padding: '2rem 1rem',
+            fontWeight: '500',
+            letterSpacing: '1px',
+          }}
+          color={COLORS.WHITE}
+        >
+          {projectDisplayName}
+        </Typography>
       </div>
-      <div className='divider-container'>
+      <div style={{ width: '100%' }}>
         <Divider
-          className='visualizer-divider'
           style={{
             width: '95%',
             margin: 'auto',
@@ -105,21 +113,13 @@ function ProjectVisualizer() {
           color={COLORS.GREY_TEXT}
         />
       </div>
-      <div
-      className='description-container'
-      >
-        <div
-        className='description-1'
-          id='project-description-1'
-        >
-          {projectDescription1}
-        </div>
-        <div
-        className='description-2'
-          id='project-description-2'
-        >
-          {projectDescription2}
-        </div>
+      <div className='description-container'>
+          <div className='description-1' id='project-description'>
+            {projectDescription1}
+          </div>
+          <div className='description-2' id='project-description'>
+            {projectDescription2}
+          </div>
       </div>
     </div>
   );
