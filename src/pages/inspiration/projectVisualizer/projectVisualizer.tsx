@@ -55,6 +55,7 @@ function ProjectVisualizer() {
               {projectCarouselImages.map((image: string, index: number) => (
                 <div key={index}>
                   <img
+                    className='project-visualizer-image'
                     src={image}
                     alt={`Slide ${index + 1}`}
                     style={{ objectFit: 'cover', maxHeight: '30rem' }}
