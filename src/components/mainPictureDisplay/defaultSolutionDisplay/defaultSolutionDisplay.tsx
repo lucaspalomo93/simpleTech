@@ -3,6 +3,8 @@ import { ICON } from '../../../constants/images';
 import { Typography } from '@mui/material';
 
 function DefaultSolutionDisplay() {
+
+
   return (
     <div className='default-container'>
       <div id='default-solution-arrow' className='icon-img'>
