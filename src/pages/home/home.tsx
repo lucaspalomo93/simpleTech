@@ -1,11 +1,11 @@
 import './home.css';
-import { CssBaseline, useMediaQuery, useTheme } from '@mui/material';
+import { CssBaseline, Link, useMediaQuery, useTheme } from '@mui/material';
 import SideBar from '../../components/sideBar/sideBar';
 import DescriptionFooter from '../../components/descriptionFooter/descriptionFooter';
 import ImageSidebar from '../../components/imageSidebar/imageSidebar';
 import ColorPicker from '../../components/colorPicker/colorPicker';
 import MainPictureDisplay from '../../components/mainPictureDisplay/mainPictureDisplay';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { SimpleTechContext } from '../../context/context';
 import Inspiration from '../inspiration/inspiration';
 import { ICON } from '../../constants/images';
@@ -42,9 +42,26 @@ function Home() {
 
   const [showSidebar, setShowSidebar] = useState(!isMobile);
 
-  const handleToggleSidebar = () => {
+  const handleToggleSidebar = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
     setShowSidebar(!showSidebar);
   };
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      const sidebar = document.querySelector('.sidebar');
+
+      if (sidebar && !sidebar.contains(event.target as Node)) {
+        setShowSidebar(false);
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
 
   return (
     <>
@@ -65,12 +82,14 @@ function Home() {
               <div className='header-icons'>
                 <div
                   className='dropdown-container'
-                  onClick={handleToggleSidebar}
+                  onClick={(e) => handleToggleSidebar(e)}
                 >
                   <img src={ICON.DROPWDOWN_ICON} alt='dropdown' />
                 </div>
                 <div className='solution-icon-container'>
-                  <img src={ICON.S_ICON} alt='solution-icon' />
+                  <Link href='/'>
+                    <img src={ICON.S_ICON} alt='solution-icon' />
+                  </Link>
                 </div>
               </div>
             )}
