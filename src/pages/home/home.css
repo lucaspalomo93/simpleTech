@@ -1,6 +1,7 @@
 .main-container {
   height: 100vh;
   display: flex;
+  max-height: 100vh;
 }
 
 .content {
