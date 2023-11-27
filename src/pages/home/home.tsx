@@ -34,7 +34,7 @@ const CommonSection = () => {
 };
 
 function Home() {
-  const { state } = useContext(SimpleTechContext);
+  const { state, setState } = useContext(SimpleTechContext);
   const condition = 'INSPIRACIÓN';
 
   const theme = useTheme();
@@ -42,7 +42,7 @@ function Home() {
 
   const [showSidebar, setShowSidebar] = useState(!isMobile);
 
-  const handleToggleSidebar = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleToggleSidebar = (event: React.MouseEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     setShowSidebar(!showSidebar);
   };
@@ -62,6 +62,13 @@ function Home() {
       document.removeEventListener('click', handleOutsideClick);
     };
   }, []);
+
+  const handleInspiracionClick = () => {
+    setState({
+      ...state,
+      sectionSelected: 'INSPIRACIÓN',
+    });
+  };
 
   return (
     <>
@@ -103,6 +110,22 @@ function Home() {
         {state.sectionSelected && state.sectionSelected === condition && (
           <div className='inspiration'>
             <Inspiration />
+          </div>
+        )}
+        {isMobile && !showSidebar && state.sectionSelected === '' &&(
+          <div className='presentation-buttons-container'>
+            <button
+              onClick={(e) => handleToggleSidebar(e)}
+              className='presentation-solution-button'
+            >
+              Soluciones
+            </button>
+            <button
+              onClick={handleInspiracionClick}
+              className='presentation-inspiration-button'
+            >
+              Inspiración
+            </button>
           </div>
         )}
       </div>

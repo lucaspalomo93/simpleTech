@@ -94,7 +94,7 @@ function ProjectVisualizer() {
       <div id='project-name'>
         <Typography
           style={{
-            padding: '2rem 1rem',
+            padding: '1rem 1rem',
             fontWeight: '500',
             letterSpacing: '1px',
           }}

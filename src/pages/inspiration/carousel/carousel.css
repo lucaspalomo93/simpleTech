@@ -97,5 +97,6 @@
   .linear-progress-container-carousel {
     padding-top: 0;
     margin-bottom: 0;
+    height: 3rem;
   }
 }
