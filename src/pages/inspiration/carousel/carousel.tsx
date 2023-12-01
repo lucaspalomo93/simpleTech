@@ -142,7 +142,11 @@ function CarouselComponent() {
           </div>
         )}
       </div>
-      <Typography className='project-name' variant='body2'>
+      <Typography
+        fontFamily={'Montserrat, sans-serif'}
+        className='project-name'
+        variant='body2'
+      >
         {imageSets[selectedCategory].projectName[currentIndex]}
       </Typography>
       <div id='project-link-container' className='project-link-container'>
@@ -152,11 +156,15 @@ function CarouselComponent() {
           underline='always'
           className='view-project-link'
           onClick={handleProjectLinkClick}
+          fontFamily={'Inter, sans-serif'}
         >
           VER PROYECTO
         </Link>
       </div>
-      <div id='linear-progress-container' className='linear-progress-container-carousel'>
+      <div
+        id='linear-progress-container'
+        className='linear-progress-container-carousel'
+      >
         <LinearProgress
           className='linear-progress'
           variant='determinate'

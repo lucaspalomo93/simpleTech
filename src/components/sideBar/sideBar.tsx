@@ -40,7 +40,17 @@ function SideBar() {
           <img src={ICON.S_ICON} alt='S Icon' />
         </Link>
       </Container>
-      <Typography className='header-text' variant='h5' component='h2'>
+      <Typography
+        sx={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 'bold',
+          textAlign: 'left',
+          marginLeft: '2rem',
+        }}
+        className='header-text'
+        variant='h5'
+        component='h2'
+      >
         Soluciones
       </Typography>
 
@@ -67,6 +77,8 @@ function SideBar() {
                             onClick={() => handleItemClick(index)}
                           >
                             <ListItemText
+                              disableTypography
+                              sx={{ fontFamily: 'Montserrat, sans-serif' }}
                               key={sectionIndex}
                               primary={section.label}
                             />
@@ -77,38 +89,36 @@ function SideBar() {
                         </ListItem>
                       </AccordionSummary>
                       <AccordionDetails>
-                        {section.options.map((subSection, subSectionIndex) => (
-                          <ListItem key={subSectionIndex}>
-                            <div>
-                              <ListItemButton
-                                sx={LIST_ITEM_BUTTON_OPTION}
-                                style={{right: '25px'}}
-                                selected={
-                                  selectedSubSection === subSection.label &&
-                                  selectedSubSectionStyle !== ''
-                                }
-                                onClick={() => {
-                                  handleSubSectionClick(
-                                    subSection.label,
-                                    subSection.colors,
-                                    subSection
-                                  );
-                                }}
-                              >
-                                <ListItemText primary={subSection.label} />
-                                <img
-                                  src={subSection.icon}
-                                  alt='Icono'
-                                  className={
-                                    selectedSubSection === subSection.label &&
-                                    selectedSubSectionStyle !== ''
-                                      ? 'selected-option'
-                                      : ''
-                                  }
-                                />
-                              </ListItemButton>
-                            </div>
-                          </ListItem>
+                        {section.options.map((subSection, detailIndex) => (
+                          <ListItemButton
+                            key={detailIndex}
+                            sx={LIST_ITEM_BUTTON_OPTION}
+                            style={{}}
+                            selected={
+                              selectedSubSection === subSection.label &&
+                              selectedSubSectionStyle !== ''
+                            }
+                            onClick={() => {
+                              handleSubSectionClick(
+                                subSection.label,
+                                subSection.colors,
+                                subSection
+                              );
+                            }}
+                          >
+                            <p className='list-item-text'>{subSection.label}</p>
+                            <img
+                              src={subSection.icon}
+                              alt='Icono'
+                              style={{ width: '60px' }}
+                              className={
+                                selectedSubSection === subSection.label &&
+                                selectedSubSectionStyle !== ''
+                                  ? 'selected-option'
+                                  : ''
+                              }
+                            />
+                          </ListItemButton>
                         ))}
                       </AccordionDetails>
                     </Accordion>
@@ -126,6 +136,8 @@ function SideBar() {
                       onClick={() => handleItemClick(index)}
                     >
                       <ListItemText
+                        disableTypography
+                        sx={{ fontFamily: 'Montserrat, sans-serif' }}
                         key={sectionIndex}
                         primary={section.label}
                       />

@@ -11,7 +11,7 @@ function DefaultSolutionDisplay() {
         <img src={ICON.DOWN_ARROW} alt='down_arrow' />
       </div>
       <div className='default-solution-text' id='default-solution-text'>
-        <Typography className='text' variant='h3' content='h3'>
+        <Typography sx={{fontFamily: 'Raleway, sans-serif', fontWeight: 'bold'}} className='text' variant='h3' content='h3'>
           Te presentamos <br></br>nuestras soluciones
         </Typography>
       </div>

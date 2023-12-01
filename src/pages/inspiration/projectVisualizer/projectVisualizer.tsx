@@ -93,10 +93,10 @@ function ProjectVisualizer() {
       </div>
       <div id='project-name'>
         <Typography
+          fontFamily={'Montserrat, sans-serif'}
+          fontWeight={'bold'}
           style={{
             padding: '1rem 1rem',
-            fontWeight: '500',
-            letterSpacing: '1px',
           }}
           color={COLORS.WHITE}
         >

@@ -35,9 +35,7 @@ function Presentation() {
         }}
       >
         <Link href='/catalogo' underline='none'>
-          <Typography
-            className='presentation-link'
-          >
+          <Typography sx={{fontFamily: 'Montserrat, sans-serif'}}  className='presentation-link'>
             CATÁLOGO DE SOLUCIONES
           </Typography>
         </Link>

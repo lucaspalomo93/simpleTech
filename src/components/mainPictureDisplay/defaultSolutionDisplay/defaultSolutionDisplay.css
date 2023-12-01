@@ -1,14 +1,12 @@
 .icon-img {
   display: flex;
   align-items: flex-start;
-  padding-left: 5rem;
 }
 
 .default-solution-text {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 5rem;
+  justify-content: left;
 }
 
 .text {
@@ -21,7 +19,9 @@
 
 .default-container {
   display: flex;
+  gap: 4rem;
   flex-direction: column;
+  margin-left: 10rem;
 }
 
 @media only screen and (max-width: 480px) {

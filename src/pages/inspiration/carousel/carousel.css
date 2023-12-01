@@ -23,7 +23,7 @@
   align-items: center;
   width: 70%;
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: 5rem;
 }
 
 .side-img-container {
@@ -69,7 +69,6 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 0.9rem;
-  letter-spacing: 0.07rem;
 }
 
 .linear-progress-container-carousel {
