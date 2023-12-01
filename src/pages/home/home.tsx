@@ -1,11 +1,18 @@
 import './home.css';
-import { CssBaseline, Link, useMediaQuery, useTheme } from '@mui/material';
+import {
+  CssBaseline,
+  Divider,
+  Link,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import SideBar from '../../components/sideBar/sideBar';
 import { useContext, useEffect, useState } from 'react';
 import { SimpleTechContext } from '../../context/context';
 import Inspiration from '../inspiration/inspiration';
 import { ICON } from '../../constants/images';
 import CommonSection from './commonSection/commonSection';
+import { COLORS } from '../../constants/colors';
 
 function Home() {
   const { state, setState } = useContext(SimpleTechContext);
@@ -62,19 +69,30 @@ function Home() {
               <SideBar />
             </div>
             {!showSidebar && (
-              <div className='header-icons'>
+              <>
+                <div className='header-icons'>
+                  <div
+                    className='dropdown-container'
+                    onClick={(e) => handleToggleSidebar(e)}
+                  >
+                    <img src={ICON.DROPWDOWN_ICON} alt='dropdown' />
+                  </div>
+                  <div className='solution-icon-container'>
+                    <Link href='/'>
+                      <img src={ICON.S_ICON} alt='solution-icon' />
+                    </Link>
+                  </div>
+                </div>
                 <div
-                  className='dropdown-container'
-                  onClick={(e) => handleToggleSidebar(e)}
+                  style={{
+                    backgroundColor: COLORS.DARK_GREY,
+                    display: 'flex',
+                    justifyContent: 'center',
+                  }}
                 >
-                  <img src={ICON.DROPWDOWN_ICON} alt='dropdown' />
+                  <Divider className='divider' color={COLORS.GREY_TEXT} />
                 </div>
-                <div className='solution-icon-container'>
-                  <Link href='/'>
-                    <img src={ICON.S_ICON} alt='solution-icon' />
-                  </Link>
-                </div>
-              </div>
+              </>
             )}
           </>
         ) : (

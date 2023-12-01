@@ -1,10 +1,11 @@
 import './mainPictureDisplay.css';
 import { imageSelector } from '../../utils/imageSelector';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import DefaultSolutionDisplay from './defaultSolutionDisplay/defaultSolutionDisplay';
 import { IMG_PRESENT_STYLE } from '../../constants/styles';
 import { useContext } from 'react';
 import { SimpleTechContext } from '../../context/context';
+import { ICON } from '../../constants/images';
 
 function MainPictureDisplay() {
   const { state } = useContext(SimpleTechContext);
@@ -16,8 +17,13 @@ function MainPictureDisplay() {
       {img ? (
         <div>
           <Box className='box' component={'img'} src={img} alt='img' />
-          <div className='text-container'>
-            <Typography>{imgText}</Typography>
+          <div className='flecha-text-container'>
+            <div className='icon-flecha'>
+              <img src={ICON.FLECHA_PANELES} alt="flecha_paneles" />
+            </div>
+            <div className='text-container'>
+              <p>{imgText}</p>
+            </div>
           </div>
         </div>
       ) : (

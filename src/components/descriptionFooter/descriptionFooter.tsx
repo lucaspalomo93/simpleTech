@@ -1,5 +1,5 @@
 import './descriptionFooter.css';
-import { Box, Divider, Typography } from '@mui/material';
+import { Divider, Typography } from '@mui/material';
 import { COLORS } from '../../constants/colors';
 import { useContext } from 'react';
 import { SimpleTechContext } from '../../context/context';
@@ -13,11 +13,19 @@ function DescriptionFooter() {
 
   return (
     <>
-      <Box sx={{ backgroundColor: COLORS.DARK_GREY, paddingTop: '3rem' }}>
+      <div
+        style={{
+          backgroundColor: COLORS.DARK_GREY,
+          paddingTop: '2rem',
+          margin: '0 auto',
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
         {state.showColorPicker && (
           <Divider className='divider' color={COLORS.GREY_TEXT} />
         )}
-      </Box>
+      </div>
       <div id='description-footer' className='footer'>
         <div>
           {state.showColorPicker && (
