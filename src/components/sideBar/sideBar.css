@@ -25,4 +25,12 @@
   .first-container {
     height: 100vh;
   }
+
+  .list-item-text {
+    font-size: 12px;
+  }
+
+  .img-icon-style {
+    width: 1px;
+  }
 }

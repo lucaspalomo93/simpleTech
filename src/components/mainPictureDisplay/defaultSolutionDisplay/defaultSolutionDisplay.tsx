@@ -1,6 +1,5 @@
 import './defaultSolutionDisplay.css';
 import { ICON } from '../../../constants/images';
-import { Typography } from '@mui/material';
 
 function DefaultSolutionDisplay() {
 
@@ -11,9 +10,9 @@ function DefaultSolutionDisplay() {
         <img src={ICON.DOWN_ARROW} alt='down_arrow' />
       </div>
       <div className='default-solution-text' id='default-solution-text'>
-        <Typography sx={{fontFamily: 'Raleway, sans-serif', fontWeight: 'bold'}} className='text' variant='h3' content='h3'>
+        <p style={{fontFamily: 'Raleway, sans-serif', fontWeight: 'bold'}} className='text' content='h3'>
           Te presentamos <br></br>nuestras soluciones
-        </Typography>
+        </p>
       </div>
     </div>
   );

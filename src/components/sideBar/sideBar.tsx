@@ -11,6 +11,8 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { items } from '../../constants/menuItems';
@@ -32,6 +34,9 @@ function SideBar() {
     handleItemClick,
     handleSubSectionClick,
   } = useSidebarOptions();
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Container className='first-container'>
@@ -91,9 +96,10 @@ function SideBar() {
                       <AccordionDetails>
                         {section.options.map((subSection, detailIndex) => (
                           <ListItemButton
+                            // className='sidebar-list-item-text'
                             key={detailIndex}
                             sx={LIST_ITEM_BUTTON_OPTION}
-                            style={{}}
+                            style={{gap: isMobile ? '2rem': '0'}}
                             selected={
                               selectedSubSection === subSection.label &&
                               selectedSubSectionStyle !== ''
@@ -110,12 +116,8 @@ function SideBar() {
                             <img
                               src={subSection.icon}
                               alt='Icono'
-                              style={{ width: '60px' }}
-                              className={
-                                selectedSubSection === subSection.label &&
-                                selectedSubSectionStyle !== ''
-                                  ? 'selected-option'
-                                  : ''
+                              style={{ width: isMobile ? '30px' : '60px' }}
+                              className={`img-icon-style ${selectedSubSection === subSection.label && selectedSubSectionStyle !== '' ? 'selected-option' : ''}`
                               }
                             />
                           </ListItemButton>
