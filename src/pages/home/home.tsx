@@ -1,48 +1,24 @@
 import './home.css';
 import { CssBaseline, Link, useMediaQuery, useTheme } from '@mui/material';
 import SideBar from '../../components/sideBar/sideBar';
-import DescriptionFooter from '../../components/descriptionFooter/descriptionFooter';
-import ImageSidebar from '../../components/imageSidebar/imageSidebar';
-import ColorPicker from '../../components/colorPicker/colorPicker';
-import MainPictureDisplay from '../../components/mainPictureDisplay/mainPictureDisplay';
 import { useContext, useEffect, useState } from 'react';
 import { SimpleTechContext } from '../../context/context';
 import Inspiration from '../inspiration/inspiration';
 import { ICON } from '../../constants/images';
-
-const CommonSection = () => {
-  return (
-    <div className='content'>
-      <div className='main-content'>
-        <div className='visualizer'>
-          <div className='picker'>
-            <ColorPicker />
-          </div>
-          <div className='display'>
-            <MainPictureDisplay />
-          </div>
-        </div>
-        <div className='image-sidebar'>
-          <ImageSidebar />
-        </div>
-      </div>
-      <div className='home-footer'>
-        <DescriptionFooter />
-      </div>
-    </div>
-  );
-};
+import CommonSection from './commonSection/commonSection';
 
 function Home() {
   const { state, setState } = useContext(SimpleTechContext);
   const condition = 'INSPIRACIÓN';
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
   const [showSidebar, setShowSidebar] = useState(!isMobile);
 
-  const handleToggleSidebar = (event: React.MouseEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
+  const handleToggleSidebar = (
+    event:
+      | React.MouseEvent<HTMLDivElement>
+      | React.MouseEvent<HTMLButtonElement>
+  ) => {
     event.stopPropagation();
     setShowSidebar(!showSidebar);
   };
@@ -112,7 +88,7 @@ function Home() {
             <Inspiration />
           </div>
         )}
-        {isMobile && !showSidebar && state.sectionSelected === '' &&(
+        {isMobile && !showSidebar && state.sectionSelected === '' && (
           <div className='presentation-buttons-container'>
             <button
               onClick={(e) => handleToggleSidebar(e)}
