@@ -24,7 +24,7 @@ function ImageSidebar() {
   };
 
   return (
-    <div id='image-sidebar-container'>
+    <div id='image-sidebar-container' className='image-sidebar-container'>
       <div className='image-wrapper'>
         {imageList &&
           imageList.map((image: string, index: number) => (

@@ -62,7 +62,7 @@ function Home() {
         {isMobile ? (
           <>
             <div className={`sidebar ${showSidebar ? '' : 'no-display'}`}>
-              <SideBar />
+              <SideBar handleToggleSidebar={handleToggleSidebar} />
             </div>
             {!showSidebar && (
               <>
@@ -93,7 +93,7 @@ function Home() {
           </>
         ) : (
           <div className='sidebar'>
-            <SideBar />
+            <SideBar handleToggleSidebar={handleToggleSidebar} />
           </div>
         )}
         {state.sectionSelected !== condition && (
@@ -104,25 +104,12 @@ function Home() {
         )}
         {state.sectionSelected && state.sectionSelected === condition && (
           <div className='inspiration'>
-            <Inspiration />
+            <Inspiration
+              handleToggleSidebar={handleToggleSidebar}
+              handleInspiracionClick={handleInspiracionClick}
+            />
           </div>
         )}
-        {/* {isMobile && !showSidebar && state.sectionSelected === '' && (
-          // <div className='presentation-buttons-container'>
-            <button
-              onClick={(e) => handleToggleSidebar(e)}
-              className='presentation-solution-button'
-            >
-              Soluciones
-            </button>
-            <button
-              onClick={handleInspiracionClick}
-              className='presentation-inspiration-button'
-            >
-              Inspiración
-            </button>
-          </div>
-        )} */}
       </div>
     </>
   );

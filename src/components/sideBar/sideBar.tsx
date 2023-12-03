@@ -24,8 +24,15 @@ import {
 } from '../../constants/styles';
 import { useSidebarOptions } from '../../hooks/useSideBarOptions';
 import { ICON } from '../../constants/images';
+import { MouseEvent } from 'react';
 
-function SideBar() {
+interface SidebarProps {
+  handleToggleSidebar: (
+    event: MouseEvent<HTMLDivElement | HTMLButtonElement>
+  ) => void;
+}
+
+const SideBar: React.FC<SidebarProps> = ({ handleToggleSidebar }) => {
   const {
     selectedSection,
     expanded,
@@ -96,20 +103,20 @@ function SideBar() {
                       <AccordionDetails>
                         {section.options.map((subSection, detailIndex) => (
                           <ListItemButton
-                            // className='sidebar-list-item-text'
                             key={detailIndex}
                             sx={LIST_ITEM_BUTTON_OPTION}
-                            style={{gap: isMobile ? '2rem': '0'}}
+                            style={{ gap: isMobile ? '2rem' : '0' }}
                             selected={
                               selectedSubSection === subSection.label &&
                               selectedSubSectionStyle !== ''
                             }
-                            onClick={() => {
+                            onClick={(e) => {
                               handleSubSectionClick(
                                 subSection.label,
                                 subSection.colors,
                                 subSection
                               );
+                              handleToggleSidebar(e);
                             }}
                           >
                             <p className='list-item-text'>{subSection.label}</p>
@@ -117,8 +124,12 @@ function SideBar() {
                               src={subSection.icon}
                               alt='Icono'
                               style={{ width: isMobile ? '30px' : '60px' }}
-                              className={`img-icon-style ${selectedSubSection === subSection.label && selectedSubSectionStyle !== '' ? 'selected-option' : ''}`
-                              }
+                              className={`img-icon-style ${
+                                selectedSubSection === subSection.label &&
+                                selectedSubSectionStyle !== ''
+                                  ? 'selected-option'
+                                  : ''
+                              }`}
                             />
                           </ListItemButton>
                         ))}
@@ -135,7 +146,10 @@ function SideBar() {
                         ...LIST_ITEM_DEFAULT(selectedSection, index),
                       }}
                       selected={selectedSection[index]}
-                      onClick={() => handleItemClick(index)}
+                      onClick={(e) => {
+                        handleItemClick(index);
+                        handleToggleSidebar(e);
+                      }}
                     >
                       <ListItemText
                         disableTypography
@@ -154,6 +168,6 @@ function SideBar() {
       </Container>
     </Container>
   );
-}
+};
 
 export default SideBar;

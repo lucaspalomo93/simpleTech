@@ -98,4 +98,8 @@
     margin-bottom: 0;
     height: 3rem;
   }
+
+  .carousel-img-container {
+    height: 260px;
+  }
 }

@@ -7,7 +7,15 @@ import { COLORS } from '../../../constants/colors';
 import DefaultSolutionDisplay from '../../../components/mainPictureDisplay/defaultSolutionDisplay/defaultSolutionDisplay';
 import { ICON } from '../../../constants/images';
 
-function ProjectVisualizer() {
+interface ProjectVisualizerProps {
+  handleToggleSidebar: (event: any) => void;
+  handleInspiracionClick: () => void;
+}
+
+const ProjectVisualizer: React.FC<ProjectVisualizerProps> = ({
+  handleToggleSidebar,
+  handleInspiracionClick,
+}) => {
   const { state, setState } = useContext(SimpleTechContext);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -40,7 +48,7 @@ function ProjectVisualizer() {
           <div className='carousel-wrapper'>
             <div className='close-icon' onClick={handleIconClick}>
               <img
-                className='close-icon-img'
+                className='visualizer-close-icon-img'
                 src={ICON.CLOSE_ICON}
                 alt='Close Icon'
               />
@@ -50,6 +58,8 @@ function ProjectVisualizer() {
               showStatus={false}
               showIndicators={false}
               selectedItem={currentIndex}
+              autoPlay={true}
+              interval={3000}
               onChange={(index) => handleCarouselChange(index)}
             >
               {projectCarouselImages.map((image: string, index: number) => (
@@ -65,7 +75,10 @@ function ProjectVisualizer() {
             </Carousel>
           </div>
         ) : (
-          <DefaultSolutionDisplay />
+          <DefaultSolutionDisplay
+            handleInspiracionClick={handleInspiracionClick}
+            handleToggleSidebar={handleToggleSidebar}
+          />
         )}
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -124,6 +137,6 @@ function ProjectVisualizer() {
       </div>
     </div>
   );
-}
+};
 
 export default ProjectVisualizer;

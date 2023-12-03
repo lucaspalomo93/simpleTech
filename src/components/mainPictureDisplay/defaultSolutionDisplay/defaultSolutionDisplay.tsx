@@ -1,5 +1,6 @@
 import './defaultSolutionDisplay.css';
 import { ICON } from '../../../constants/images';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 interface PresentationButtonsProps {
   handleToggleSidebar: (event: any) => void;
@@ -10,6 +11,9 @@ const DefaultSolutionDisplay: React.FC<PresentationButtonsProps> = ({
   handleToggleSidebar,
   handleInspiracionClick,
 }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <>
       <div className='default-container'>
@@ -26,20 +30,22 @@ const DefaultSolutionDisplay: React.FC<PresentationButtonsProps> = ({
           </p>
         </div>
       </div>
-      <div className='presentation-buttons-container'>
-        <button
-          onClick={(e) => handleToggleSidebar(e)}
-          className='presentation-solution-button'
-        >
-          Soluciones
-        </button>
-        <button
-          onClick={handleInspiracionClick}
-          className='presentation-inspiration-button'
-        >
-          Inspiración
-        </button>
-      </div>
+      {isMobile && (
+        <div className='presentation-buttons-container'>
+          <button
+            onClick={(e) => handleToggleSidebar(e)}
+            className='presentation-solution-button'
+          >
+            Soluciones
+          </button>
+          <button
+            onClick={handleInspiracionClick}
+            className='presentation-inspiration-button'
+          >
+            Inspiración
+          </button>
+        </div>
+      )}
     </>
   );
 };

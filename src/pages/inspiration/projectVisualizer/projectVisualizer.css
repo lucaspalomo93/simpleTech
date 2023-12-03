@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 
-.close-icon-img {
+.visualizer-close-icon-img {
   width: 4rem;
 }
 
@@ -73,10 +73,10 @@
     width: 1rem;
     right: 40px;
     top: 15px;
-    right: 20px;
+    right: 40px;
   }
 
-  .close-icon-img {
+  .visualizer-close-icon-img {
     width: 1.5rem;
   }
 

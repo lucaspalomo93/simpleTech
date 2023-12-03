@@ -107,6 +107,8 @@ function CarouselComponent() {
           showIndicators={false}
           selectedItem={currentIndex}
           onChange={handleSlideChange}
+          autoPlay={true}
+          interval={3000}
           width={'100%'}
         >
           {imageSets[selectedCategory].projectImagePresentation.map(

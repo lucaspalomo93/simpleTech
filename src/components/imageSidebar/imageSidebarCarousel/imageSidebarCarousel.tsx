@@ -18,6 +18,7 @@ function ImageSidebarCarousel({
       <div className='carousel-overlay' onClick={onIconClick}></div>
       <div className='carousel-content'>
         <Carousel
+        className='image-sidebar-carousel-style'
           selectedItem={selectedImageIndex}
           showArrows={true}
           showStatus={false}
