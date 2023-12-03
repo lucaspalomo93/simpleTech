@@ -64,7 +64,7 @@ function Home() {
             <div className={`sidebar ${showSidebar ? '' : 'no-display'}`}>
               <SideBar handleToggleSidebar={handleToggleSidebar} />
             </div>
-            {!showSidebar && (
+            {!showSidebar && !state.showInspirationProject && (
               <>
                 <div className='header-icons'>
                   <div
