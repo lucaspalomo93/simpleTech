@@ -11,7 +11,7 @@ function Presentation() {
     const timeoutId = setTimeout(() => {
       // Después de 3 segundos, realiza la redirección
       navigate('/catalogo');
-    }, 3000);
+    }, 4000);
 
     // Limpia el temporizador al desmontar el componente
     return () => clearTimeout(timeoutId);
@@ -41,7 +41,7 @@ function Presentation() {
         justifyContent: 'space-around',
         height: '100vh',
         opacity: 1,
-        transition: 'opacity 3s ease-out',
+        transition: 'opacity 5s ease-out',
       }}
     >
       <Typography
