@@ -1,35 +1,30 @@
 import './imageSidebar.css';
 import { useContext, useState } from 'react';
 import { SimpleTechContext } from '../../context/context';
+import ImageSidebarCarousel from './imageSidebarCarousel/imageSidebarCarousel';
 
 function ImageSidebar() {
   const { state } = useContext(SimpleTechContext);
   const imageList = state.sidebarImagesArray;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Estado para el visor de imágenes
-  const [imageViewer, setImageViewer] = useState({
-    isOpen: false,
-    currentImage: null,
-  });
+  // Nuevo estado para controlar qué componente mostrar
+  const [showCarousel, setShowCarousel] = useState(false);
 
-  // Manejar clic en una imagen para abrir el visor
-  const handleImageClick = (image: any) => {
-    setImageViewer({
-      isOpen: true,
-      currentImage: image,
-    });
+  const handleImageClick = (index: number) => {
+    // Mostrar el componente ImageSidebarCarousel al hacer clic en la imagen
+    setShowCarousel(true);
+    // Establecer el índice de la imagen clicada
+    setSelectedImageIndex(index);
   };
 
-  // Manejar clic en cualquier parte de la pantalla para cerrar el visor
-  const handleViewerClose = () => {
-    setImageViewer({
-      isOpen: false,
-      currentImage: null,
-    });
+  const handleCarouselIconClick = () => {
+    // Ocultar el componente ImageSidebarCarousel al hacer clic en el icono
+    setShowCarousel(false);
   };
 
   return (
-    <div id='image-sidebar-container'>
+    <div id='image-sidebar-container' className='image-sidebar-container'>
       <div className='image-wrapper'>
         {imageList &&
           imageList.map((image: string, index: number) => (
@@ -37,18 +32,19 @@ function ImageSidebar() {
               id={`img-sidebar-${index}`}
               key={index}
               className='image-container'
-              onClick={() => handleImageClick(image)} // Manejar clic en la imagen
+              onClick={() => handleImageClick(index)}
             >
               <img className='image' src={image} alt={`Image ${index + 1}`} />
             </div>
           ))}
       </div>
 
-      {/* Visor de imágenes */}
-      {imageViewer.isOpen && imageViewer.currentImage && (
-        <div className='image-viewer' onClick={handleViewerClose}>
-          <img src={imageViewer.currentImage} alt='Expanded Image' />
-        </div>
+      {showCarousel && (
+        <ImageSidebarCarousel
+          imageList={imageList}
+          selectedImageIndex={selectedImageIndex}
+          onIconClick={handleCarouselIconClick}
+        />
       )}
     </div>
   );

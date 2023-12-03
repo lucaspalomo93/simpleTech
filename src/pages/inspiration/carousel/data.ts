@@ -35,13 +35,13 @@ export const imageSets: ImageSets = {
     ],
     projectName: [
       'Alvear Housing',
-      'Casa Country',
+      'Vivienda Country Zona Sur',
       'Casa de Piedra',
       'Casa en Blanco',
       'Casa Nube',
       'Casa Urizar',
-      'Huemules',
-      'Mawida',
+      'Huemules Reserva de Montaña',
+      'Posada Mawida',
       'Vivienda Residencial',
     ],
     carouselImages: [
@@ -91,7 +91,7 @@ export const imageSets: ImageSets = {
   },
   'Tiny House': {
     projectImagePresentation: [TINY_HOUSES_PRESENTATION.TINY_0],
-    projectName: ['Tiny'],
+    projectName: ['Tiny House'],
     carouselImages: [[PROJECT_TINY.TINY]],
     projectDisplayName: ['Tiny House'],
     projectDescription_1: ['Godoy Cruz - Mendoza, Argentina'],

@@ -1,6 +1,6 @@
 .box {
-  height: 50vh;
-  width: 70vh;
+  height: 350px;
+  width: 620px;
   background-color: #363636;
 }
 
@@ -10,6 +10,26 @@
   color: #d9d9d9;
 }
 
+.flecha-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  position: relative;
+}
+
+ .icon-flecha {
+  position: absolute;
+  right: 200px;
+  bottom: 15px;
+}
+
+
+.icon-flecha img {
+  width: 60px;
+}
+
+
 @media only screen and (max-width: 480px) {
   .box {
     height: 35vh;
@@ -18,5 +38,18 @@
 
   .text-container {
     margin-bottom: 1rem;
+  }
+
+  .text-container p {
+    font-size: 13px;
+  }
+
+  .icon-flecha {
+    right: 160px;
+    bottom: 28px;
+  }
+
+  .icon-flecha img {
+    width: 30px;
   }
 }

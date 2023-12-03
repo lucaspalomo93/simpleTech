@@ -11,6 +11,8 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { items } from '../../constants/menuItems';
@@ -22,8 +24,15 @@ import {
 } from '../../constants/styles';
 import { useSidebarOptions } from '../../hooks/useSideBarOptions';
 import { ICON } from '../../constants/images';
+import { MouseEvent } from 'react';
 
-function SideBar() {
+interface SidebarProps {
+  handleToggleSidebar: (
+    event: MouseEvent<HTMLDivElement | HTMLButtonElement>
+  ) => void;
+}
+
+const SideBar: React.FC<SidebarProps> = ({ handleToggleSidebar }) => {
   const {
     selectedSection,
     expanded,
@@ -33,6 +42,9 @@ function SideBar() {
     handleSubSectionClick,
   } = useSidebarOptions();
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Container className='first-container'>
       <Container className='s-icon-container'>
@@ -40,7 +52,17 @@ function SideBar() {
           <img src={ICON.S_ICON} alt='S Icon' />
         </Link>
       </Container>
-      <Typography className='header-text' variant='h5' component='h2'>
+      <Typography
+        sx={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 'bold',
+          textAlign: 'left',
+          marginLeft: '2rem',
+        }}
+        className='header-text'
+        variant='h5'
+        component='h2'
+      >
         Soluciones
       </Typography>
 
@@ -67,6 +89,8 @@ function SideBar() {
                             onClick={() => handleItemClick(index)}
                           >
                             <ListItemText
+                              disableTypography
+                              sx={{ fontFamily: 'Montserrat, sans-serif' }}
                               key={sectionIndex}
                               primary={section.label}
                             />
@@ -77,38 +101,37 @@ function SideBar() {
                         </ListItem>
                       </AccordionSummary>
                       <AccordionDetails>
-                        {section.options.map((subSection, subSectionIndex) => (
-                          <ListItem key={subSectionIndex}>
-                            <div>
-                              <ListItemButton
-                                sx={LIST_ITEM_BUTTON_OPTION}
-                                style={{right: '25px'}}
-                                selected={
-                                  selectedSubSection === subSection.label &&
-                                  selectedSubSectionStyle !== ''
-                                }
-                                onClick={() => {
-                                  handleSubSectionClick(
-                                    subSection.label,
-                                    subSection.colors,
-                                    subSection
-                                  );
-                                }}
-                              >
-                                <ListItemText primary={subSection.label} />
-                                <img
-                                  src={subSection.icon}
-                                  alt='Icono'
-                                  className={
-                                    selectedSubSection === subSection.label &&
-                                    selectedSubSectionStyle !== ''
-                                      ? 'selected-option'
-                                      : ''
-                                  }
-                                />
-                              </ListItemButton>
-                            </div>
-                          </ListItem>
+                        {section.options.map((subSection, detailIndex) => (
+                          <ListItemButton
+                            key={detailIndex}
+                            sx={LIST_ITEM_BUTTON_OPTION}
+                            style={{ gap: isMobile ? '2rem' : '0' }}
+                            selected={
+                              selectedSubSection === subSection.label &&
+                              selectedSubSectionStyle !== ''
+                            }
+                            onClick={(e) => {
+                              handleSubSectionClick(
+                                subSection.label,
+                                subSection.colors,
+                                subSection
+                              );
+                              handleToggleSidebar(e);
+                            }}
+                          >
+                            <p className='list-item-text'>{subSection.label}</p>
+                            <img
+                              src={subSection.icon}
+                              alt='Icono'
+                              style={{ width: isMobile ? '30px' : '60px' }}
+                              className={`img-icon-style ${
+                                selectedSubSection === subSection.label &&
+                                selectedSubSectionStyle !== ''
+                                  ? 'selected-option'
+                                  : ''
+                              }`}
+                            />
+                          </ListItemButton>
                         ))}
                       </AccordionDetails>
                     </Accordion>
@@ -123,9 +146,14 @@ function SideBar() {
                         ...LIST_ITEM_DEFAULT(selectedSection, index),
                       }}
                       selected={selectedSection[index]}
-                      onClick={() => handleItemClick(index)}
+                      onClick={(e) => {
+                        handleItemClick(index);
+                        handleToggleSidebar(e);
+                      }}
                     >
                       <ListItemText
+                        disableTypography
+                        sx={{ fontFamily: 'Montserrat, sans-serif' }}
                         key={sectionIndex}
                         primary={section.label}
                       />
@@ -140,6 +168,6 @@ function SideBar() {
       </Container>
     </Container>
   );
-}
+};
 
 export default SideBar;

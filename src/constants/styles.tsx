@@ -22,10 +22,11 @@ export const LIST_ITEM_BUTTON = {
 export const LIST_ITEM_BUTTON_OPTION = {
   borderRadius: '10px',
   display: 'flex',
-  gap: '2rem',
+  justifyContent: 'space-between',
   '&.Mui-selected': {
     backgroundColor: COLORS.WHITE,
     color: COLORS.ORANGE,
+    fontWeight: '700',
     '&:hover': {
       backgroundColor: COLORS.WHITE,
     },

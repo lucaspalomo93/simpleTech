@@ -1,48 +1,27 @@
 import './home.css';
-import { CssBaseline, Link, useMediaQuery, useTheme } from '@mui/material';
+import {
+  CssBaseline,
+  Divider,
+  Link,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import SideBar from '../../components/sideBar/sideBar';
-import DescriptionFooter from '../../components/descriptionFooter/descriptionFooter';
-import ImageSidebar from '../../components/imageSidebar/imageSidebar';
-import ColorPicker from '../../components/colorPicker/colorPicker';
-import MainPictureDisplay from '../../components/mainPictureDisplay/mainPictureDisplay';
 import { useContext, useEffect, useState } from 'react';
 import { SimpleTechContext } from '../../context/context';
 import Inspiration from '../inspiration/inspiration';
 import { ICON } from '../../constants/images';
-
-const CommonSection = () => {
-  return (
-    <div className='content'>
-      <div className='main-content'>
-        <div className='visualizer'>
-          <div className='picker'>
-            <ColorPicker />
-          </div>
-          <div className='display'>
-            <MainPictureDisplay />
-          </div>
-        </div>
-        <div className='image-sidebar'>
-          <ImageSidebar />
-        </div>
-      </div>
-      <div className='home-footer'>
-        <DescriptionFooter />
-      </div>
-    </div>
-  );
-};
+import CommonSection from './commonSection/commonSection';
+import { COLORS } from '../../constants/colors';
 
 function Home() {
   const { state, setState } = useContext(SimpleTechContext);
   const condition = 'INSPIRACIÓN';
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
   const [showSidebar, setShowSidebar] = useState(!isMobile);
 
-  const handleToggleSidebar = (event: React.MouseEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
+  const handleToggleSidebar = (event: any) => {
     event.stopPropagation();
     setShowSidebar(!showSidebar);
   };
@@ -83,49 +62,52 @@ function Home() {
         {isMobile ? (
           <>
             <div className={`sidebar ${showSidebar ? '' : 'no-display'}`}>
-              <SideBar />
+              <SideBar handleToggleSidebar={handleToggleSidebar} />
             </div>
-            {!showSidebar && (
-              <div className='header-icons'>
+            {!showSidebar && !state.showInspirationProject && (
+              <>
+                <div className='header-icons'>
+                  <div
+                    className='dropdown-container'
+                    onClick={(e) => handleToggleSidebar(e)}
+                  >
+                    <img src={ICON.DROPWDOWN_ICON} alt='dropdown' />
+                  </div>
+                  <div className='solution-icon-container'>
+                    <Link href='/'>
+                      <img src={ICON.S_ICON} alt='solution-icon' />
+                    </Link>
+                  </div>
+                </div>
                 <div
-                  className='dropdown-container'
-                  onClick={(e) => handleToggleSidebar(e)}
+                  style={{
+                    backgroundColor: COLORS.DARK_GREY,
+                    display: 'flex',
+                    justifyContent: 'center',
+                  }}
                 >
-                  <img src={ICON.DROPWDOWN_ICON} alt='dropdown' />
+                  <Divider className='divider' color={COLORS.GREY_TEXT} />
                 </div>
-                <div className='solution-icon-container'>
-                  <Link href='/'>
-                    <img src={ICON.S_ICON} alt='solution-icon' />
-                  </Link>
-                </div>
-              </div>
+              </>
             )}
           </>
         ) : (
           <div className='sidebar'>
-            <SideBar />
+            <SideBar handleToggleSidebar={handleToggleSidebar} />
           </div>
         )}
-        {state.sectionSelected !== condition && <CommonSection />}
+        {state.sectionSelected !== condition && (
+          <CommonSection
+            handleToggleSidebar={handleToggleSidebar}
+            handleInspiracionClick={handleInspiracionClick}
+          />
+        )}
         {state.sectionSelected && state.sectionSelected === condition && (
           <div className='inspiration'>
-            <Inspiration />
-          </div>
-        )}
-        {isMobile && !showSidebar && state.sectionSelected === '' &&(
-          <div className='presentation-buttons-container'>
-            <button
-              onClick={(e) => handleToggleSidebar(e)}
-              className='presentation-solution-button'
-            >
-              Soluciones
-            </button>
-            <button
-              onClick={handleInspiracionClick}
-              className='presentation-inspiration-button'
-            >
-              Inspiración
-            </button>
+            <Inspiration
+              handleToggleSidebar={handleToggleSidebar}
+              handleInspiracionClick={handleInspiracionClick}
+            />
           </div>
         )}
       </div>

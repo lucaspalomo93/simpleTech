@@ -1,0 +1,43 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: #363636;
+  flex: 3;
+}
+
+.main-content {
+  display: flex;
+}
+
+.visualizer {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.image-sidebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .visualizer {
+    max-width: 100%;
+  }
+
+  .image-sidebar {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .picker {
+    height: 4rem;
+  }
+}

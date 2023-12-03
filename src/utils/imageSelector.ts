@@ -56,8 +56,17 @@ function findImageInTechos(imageName: string) {
   const defaultTechoTrapezoidal = CENTRAL_IMAGE.TECHOS_TRAPEZOIDAL_DEFAULT;
   const defaultTechoTeja = CENTRAL_IMAGE.TECHOS_TEJA_DEFAULT;
 
+  console.log('imagen...', img);
   if (section && subSection && color) {
-    return img;
+    if (img) {
+      return img;
+    } else if (subSection === 'SINUSOIDAL') {
+      return defaultTechoSinusoidal;
+    } else if (subSection === 'TRAPEZOIDAL') {
+      return defaultTechoTrapezoidal;
+    } else if (subSection === 'TEJA') {
+      return defaultTechoTeja;
+    }
   } else if (section && subSection) {
     if (subSection === 'SINUSOIDAL') {
       return defaultTechoSinusoidal;

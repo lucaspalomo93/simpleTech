@@ -14,3 +14,8 @@
 .title-simpletech {
   font-size: 10px;
 }
+
+.container-presentation {
+  opacity: 1;
+  transition: opacity 2s ease-out;
+}

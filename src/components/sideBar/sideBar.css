@@ -1,15 +1,20 @@
 .selected-option {
   filter: sepia(100%) saturate(800%) hue-rotate(7deg);
+  font-weight: bold;
 }
 
 .s-icon-container {
   margin: 3rem 0 6rem 0;
 }
 
+.list-item-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
 .header-text {
   color: #717078;
   font-weight: bold;
-  margin: 1rem;
 }
 
 .list {
@@ -19,5 +24,13 @@
 @media only screen and (max-width: 480px) {
   .first-container {
     height: 100vh;
+  }
+
+  .list-item-text {
+    font-size: 12px;
+  }
+
+  .img-icon-style {
+    width: 1px;
   }
 }
