@@ -3,8 +3,19 @@ import ColorPicker from '../../../components/colorPicker/colorPicker';
 import DescriptionFooter from '../../../components/descriptionFooter/descriptionFooter';
 import ImageSidebar from '../../../components/imageSidebar/imageSidebar';
 import MainPictureDisplay from '../../../components/mainPictureDisplay/mainPictureDisplay';
+import { MouseEvent } from 'react';
 
-const CommonSection = () => {
+interface PresentationButtonsProps {
+  handleToggleSidebar: (
+    event: MouseEvent<HTMLDivElement | HTMLButtonElement>
+  ) => void;
+  handleInspiracionClick: () => void;
+}
+
+const CommonSection: React.FC<PresentationButtonsProps> = ({
+  handleToggleSidebar,
+  handleInspiracionClick,
+}) => {
   return (
     <div className='content'>
       <div className='main-content'>
@@ -13,7 +24,10 @@ const CommonSection = () => {
             <ColorPicker />
           </div>
           <div className='display'>
-            <MainPictureDisplay />
+            <MainPictureDisplay
+              handleToggleSidebar={handleToggleSidebar}
+              handleInspiracionClick={handleInspiracionClick}
+            />
           </div>
         </div>
         <div className='image-sidebar'>

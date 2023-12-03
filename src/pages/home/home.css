@@ -48,27 +48,6 @@
   margin: 2rem;
 }
 
-.presentation-buttons-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #363636;
-  padding-bottom: 2rem;
-  overflow: hidden;
-}
-
-.presentation-solution-button,
-.presentation-inspiration-button {
-  background-color: #363636;
-  font-size: 1rem;
-  border-color: white;
-  color: #ffffff;
-  padding: 0.5rem;
-  border-radius: 25px;
-  margin-top: 1rem;
-  text-decoration: none;
-}
-
 /* Responsive */
 
 /* Media query para tablet */

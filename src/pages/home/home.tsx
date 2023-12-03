@@ -21,11 +21,7 @@ function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [showSidebar, setShowSidebar] = useState(!isMobile);
 
-  const handleToggleSidebar = (
-    event:
-      | React.MouseEvent<HTMLDivElement>
-      | React.MouseEvent<HTMLButtonElement>
-  ) => {
+  const handleToggleSidebar = (event: any) => {
     event.stopPropagation();
     setShowSidebar(!showSidebar);
   };
@@ -100,14 +96,19 @@ function Home() {
             <SideBar />
           </div>
         )}
-        {state.sectionSelected !== condition && <CommonSection />}
+        {state.sectionSelected !== condition && (
+          <CommonSection
+            handleToggleSidebar={handleToggleSidebar}
+            handleInspiracionClick={handleInspiracionClick}
+          />
+        )}
         {state.sectionSelected && state.sectionSelected === condition && (
           <div className='inspiration'>
             <Inspiration />
           </div>
         )}
-        {isMobile && !showSidebar && state.sectionSelected === '' && (
-          <div className='presentation-buttons-container'>
+        {/* {isMobile && !showSidebar && state.sectionSelected === '' && (
+          // <div className='presentation-buttons-container'>
             <button
               onClick={(e) => handleToggleSidebar(e)}
               className='presentation-solution-button'
@@ -121,7 +122,7 @@ function Home() {
               Inspiración
             </button>
           </div>
-        )}
+        )} */}
       </div>
     </>
   );
