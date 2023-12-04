@@ -1,0 +1,109 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-top-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1e1e1e;
+}
+
+.top-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 430px;
+  margin-left: 4rem;
+  gap: 3rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.landing-simpletech-title {
+  color: #d2632c;
+  font-size: 60px;
+  margin: 0;
+}
+
+.landing-p1 {
+  font-family: 'Raleway', sans-serif;
+  color: #d9d9d9;
+  font-weight: bold;
+  font-size: 70px;
+  margin: 0;
+}
+
+.landing-catalogo-button {
+  border-radius: 20px;
+  background-color: #aab9e4;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #1e1e1e;
+  font-weight: bold;
+  box-shadow: none;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+    background-color: #d2632c;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+.casa-simpletech {
+  width: 800px;
+}
+
+.landing-middle-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.landing-inspiration-text {
+  color: #d2632c;
+  font-size: 45px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+.landing-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  gap: 1rem;
+}
+
+.bottom-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.landing-bottom-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.landing-bottom-span {
+    color: #d2632c;
+}
