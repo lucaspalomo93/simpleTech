@@ -42,6 +42,7 @@ function Presentation() {
         height: '100vh',
         opacity: 1,
         transition: 'opacity 5s ease-out',
+        backgroundColor: COLORS.DARK_GREY,
       }}
     >
       <Typography

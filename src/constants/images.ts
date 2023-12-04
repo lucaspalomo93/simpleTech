@@ -175,6 +175,10 @@ import PROJECT_TINY_2 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TI
 import PROJECT_TINY_3 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TINY_3.jpeg';
 import PROJECT_TINY_4 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TINY_4.jpg';
 
+// LANDING
+import CASA_SIMPLETECH from '/img/landing/CASA_SIMPLETECH.png';
+import BOTTOM_BACKGROUND from '/img/landing/BOTTOM_BACKGROUND.png';
+
 // EXPORTS
 // **********************************************
 export const PICKERS = {
@@ -366,4 +370,9 @@ export const PROJECT_TINY = {
     PROJECT_TINY_3,
     PROJECT_TINY_4,
   ],
+};
+
+export const LANDING = {
+  CASA_SIMPLETECH,
+  BOTTOM_BACKGROUND,
 };

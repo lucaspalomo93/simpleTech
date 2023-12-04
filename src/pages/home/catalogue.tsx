@@ -1,4 +1,4 @@
-import './home.css';
+import './catalogue.css';
 import {
   CssBaseline,
   Divider,
@@ -14,7 +14,7 @@ import { ICON } from '../../constants/images';
 import CommonSection from './commonSection/commonSection';
 import { COLORS } from '../../constants/colors';
 
-function Home() {
+function Catalogue() {
   const { state, setState } = useContext(SimpleTechContext);
   const condition = 'INSPIRACIÓN';
   const theme = useTheme();
@@ -116,4 +116,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Catalogue;
