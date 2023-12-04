@@ -100,6 +100,7 @@ function Home() {
           <CommonSection
             handleToggleSidebar={handleToggleSidebar}
             handleInspiracionClick={handleInspiracionClick}
+            showSidebar={showSidebar}
           />
         )}
         {state.sectionSelected && state.sectionSelected === condition && (

@@ -56,7 +56,6 @@ function findImageInTechos(imageName: string) {
   const defaultTechoTrapezoidal = CENTRAL_IMAGE.TECHOS_TRAPEZOIDAL_DEFAULT;
   const defaultTechoTeja = CENTRAL_IMAGE.TECHOS_TEJA_DEFAULT;
 
-  console.log('imagen...', img);
   if (section && subSection && color) {
     if (img) {
       return img;
