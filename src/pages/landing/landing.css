@@ -70,13 +70,7 @@
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
-}
-
-.landing-inspiration-text {
-  color: #d2632c;
-  font-size: 45px;
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
+  height: 40rem;
 }
 
 .landing-bottom-content {

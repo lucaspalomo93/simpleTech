@@ -31,7 +31,6 @@ export const imageSelector = () => {
     category = 'PAREDES';
   } else {
     // Manejar el caso cuando la categoría no se encuentra
-    // console.error('Categoría no encontrada para', imageName);
     return null;
   }
 

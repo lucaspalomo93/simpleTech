@@ -1,29 +1,10 @@
-import { CssBaseline, useMediaQuery, useTheme } from '@mui/material';
+import { CssBaseline } from '@mui/material';
 import { LANDING } from '../../constants/images';
-import Inspiration from '../inspiration/inspiration';
 import './landing.css';
-import { useContext, useState } from 'react';
-import { SimpleTechContext } from '../../context/context';
 import { Link } from 'react-router-dom';
+import LandingCarousel from './landingcarousel/landingcarousel';
 
 const Landing = () => {
-  const { state, setState } = useContext(SimpleTechContext);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const [showSidebar, setShowSidebar] = useState(!isMobile);
-
-  const handleToggleSidebar = (event: any) => {
-    event.stopPropagation();
-    setShowSidebar(!showSidebar);
-  };
-
-  const handleInspiracionClick = () => {
-    setState({
-      ...state,
-      sectionSelected: 'INSPIRACIÓN',
-    });
-  };
-
   return (
     <>
       <CssBaseline />
@@ -51,13 +32,7 @@ const Landing = () => {
           </div>
         </section>
         <section id='landing-middle-content' className='landing-middle-content'>
-          <p className='landing-inspiration-text'>
-            Inspirate con nuestros proyectos
-          </p>
-          <Inspiration
-            handleToggleSidebar={handleToggleSidebar}
-            handleInspiracionClick={handleInspiracionClick}
-          />
+          <LandingCarousel />
         </section>
         <section
           id='landing-bottom-content'
