@@ -178,6 +178,7 @@ import PROJECT_TINY_4 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TI
 // LANDING
 import CASA_SIMPLETECH from '/img/landing/CASA_SIMPLETECH.png';
 import BOTTOM_BACKGROUND from '/img/landing/BOTTOM_BACKGROUND.png';
+import FLECHA_DERECHA_LANDING from '/img/landing/FLECHA_DERECHA_LANDING.svg';
 
 // EXPORTS
 // **********************************************
@@ -375,4 +376,5 @@ export const PROJECT_TINY = {
 export const LANDING = {
   CASA_SIMPLETECH,
   BOTTOM_BACKGROUND,
+  FLECHA_DERECHA_LANDING,
 };

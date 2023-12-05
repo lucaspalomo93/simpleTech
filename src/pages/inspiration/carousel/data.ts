@@ -104,13 +104,13 @@ export const imageSets: ImageSets = {
       CABIN_PRESENTATION.CABIN_2,
     ],
     projectName: [
-      'Cabaña Tierra del Sol',
       'Cabaña Potrerillos',
+      'Cabaña Tierra del Sol',
       'Parador Club House Maitenes',
     ],
     carouselImages: [
-      [PROJECT_CABIN.SOL],
       [PROJECT_CABIN.POTRERILLOS],
+      [PROJECT_CABIN.SOL],
       [PROJECT_CABIN.MAITENES],
     ],
     projectDisplayName: [
@@ -129,4 +129,37 @@ export const imageSets: ImageSets = {
       'Maxiroof Trapezoidal Negro',
     ],
   },
+};
+
+export const landingImagesAndNames = {
+  images: [
+    CASAS_PRESENTATION.CASA_0,
+    CASAS_PRESENTATION.CASA_1,
+    CASAS_PRESENTATION.CASA_2,
+    CASAS_PRESENTATION.CASA_3,
+    CASAS_PRESENTATION.CASA_4,
+    CASAS_PRESENTATION.CASA_5,
+    CASAS_PRESENTATION.CASA_6,
+    CASAS_PRESENTATION.CASA_7,
+    CASAS_PRESENTATION.CASA_8,
+    CABIN_PRESENTATION.CABIN_0,
+    CABIN_PRESENTATION.CABIN_1,
+    CABIN_PRESENTATION.CABIN_2,
+    TINY_HOUSES_PRESENTATION.TINY_0,
+  ],
+  names: [
+    'Alvear Housing',
+    'Vivienda Country Zona Sur',
+    'Casa de Piedra',
+    'Casa en Blanco',
+    'Casa Nube',
+    'Casa Urizar',
+    'Huemules Reserva de Montaña',
+    'Posada Mawida',
+    'Vivienda Residencial',
+    'Cabaña Tierra del Sol',
+    'Cabaña Potrerillos',
+    'Parador Club House Maitenes',
+    'Tiny House',
+  ],
 };
