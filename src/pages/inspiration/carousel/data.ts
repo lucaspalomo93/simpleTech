@@ -104,13 +104,13 @@ export const imageSets: ImageSets = {
       CABIN_PRESENTATION.CABIN_2,
     ],
     projectName: [
-      'Cabaña Tierra del Sol',
       'Cabaña Potrerillos',
+      'Cabaña Tierra del Sol',
       'Parador Club House Maitenes',
     ],
     carouselImages: [
-      [PROJECT_CABIN.SOL],
       [PROJECT_CABIN.POTRERILLOS],
+      [PROJECT_CABIN.SOL],
       [PROJECT_CABIN.MAITENES],
     ],
     projectDisplayName: [

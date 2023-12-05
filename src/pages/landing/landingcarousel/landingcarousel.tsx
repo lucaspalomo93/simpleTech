@@ -2,6 +2,8 @@ import './landingcarousel.css';
 import { Carousel } from 'react-responsive-carousel';
 import { landingImagesAndNames } from '../../inspiration/carousel/data';
 import { useState } from 'react';
+import { LANDING } from '../../../constants/images';
+import { LinearProgress } from '@mui/material';
 
 const LandingCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,6 +49,9 @@ const LandingCarousel = () => {
             showIndicators={false}
             showArrows={false}
             selectedItem={currentIndex}
+            autoPlay={true}
+            interval={2500}
+            infiniteLoop={true}
             onChange={(index) => setCurrentIndex(index)}
           >
             {landingImagesAndNames.images.map((image, index) => (
@@ -69,6 +74,38 @@ const LandingCarousel = () => {
             />
           </div>
         </div>
+      </div>
+      <div className='landing-carousel-image-name-container'>
+        <div className='landing-name-container'>
+          <p className='landing-image-name'>
+            {landingImagesAndNames.names[currentIndex]}
+          </p>
+        </div>
+        <div>
+          <img
+            src={LANDING.FLECHA_DERECHA_LANDING}
+            alt='flecha-derecha-landing'
+          />
+        </div>
+      </div>
+      <div className='landing-progress-bar'>
+        <LinearProgress
+          className='linear-progress'
+          variant='determinate'
+          value={
+            (currentIndex / (landingImagesAndNames.images.length - 1)) * 100
+          }
+          sx={{
+            backgroundColor: '#383838',
+            '& .MuiLinearProgress-bar': {
+              backgroundColor: '#D2632C',
+            },
+            borderRadius: '10px',
+            width: '80%',
+            height: '0.7rem',
+            margin: '3rem auto',
+          }}
+        />
       </div>
     </div>
   );

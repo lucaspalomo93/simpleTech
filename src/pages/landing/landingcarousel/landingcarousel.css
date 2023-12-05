@@ -36,7 +36,7 @@
 }
 
 .landing-carousel-component {
-    width: 2000px;
+  width: 2000px;
 }
 
 .landing-side-img-container {
@@ -49,4 +49,21 @@
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+}
+
+.landing-carousel-image-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.landing-name-container {
+    width: 200px;
+    height: 50px;
+}
+
+.landing-image-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
