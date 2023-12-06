@@ -1,8 +1,10 @@
 import { CssBaseline } from '@mui/material';
 import { LANDING } from '../../constants/images';
 import './landing.css';
-import { Link } from 'react-router-dom';
 import LandingCarousel from './landingcarousel/landingcarousel';
+import LandingTopContent from './landingTopContent/landingTopContent';
+import LandingBottomContent from './landingBottomContent/landingBottomContent';
+import LandingFooter from './landingFooter/landingFooter';
 
 const Landing = () => {
   return (
@@ -10,26 +12,7 @@ const Landing = () => {
       <CssBaseline />
       <div id='landing-container' className='landing-container'>
         <section id='landig-top-content' className='landing-top-content'>
-          <div id='top-content-left' className='top-content-left'>
-            <h2 className='landing-simpletech-title'>simpletech</h2>
-            <p className='landing-p1'>
-              Donde <br />
-              tu techo <br />
-              es posible
-            </p>
-            <div id='top-content-button' className='button-container'>
-              <Link to='/presentation' className='landing-catalogo-button'>
-                VER CATÁLOGO
-              </Link>
-            </div>
-          </div>
-          <div id='top-content-right' className='top-content-right'>
-            <img
-              className='casa-simpletech'
-              src={LANDING.CASA_SIMPLETECH}
-              alt='casa_simpletech'
-            />
-          </div>
+          <LandingTopContent />
         </section>
         <section id='landing-middle-content' className='landing-middle-content'>
           <LandingCarousel />
@@ -44,22 +27,10 @@ const Landing = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className='bottom-text-container'>
-            <p className='landing-bottom-text'>
-              <span className='landing-bottom-span'>Simpletech</span> es una
-              solución integral para la construcción, renovación y ampliación de
-              espacios en el ámbito residencial.
-            </p>
-          </div>
-          <div id='bottom-content-button' className='button-container'>
-            <Link to='/' className='landing-catalogo-button'>
-              CONTACTANOS
-            </Link>
-          </div>
-          <div></div>
+          <LandingBottomContent />
         </section>
         <footer id='landing-footer' className='landing-footer'>
-          Footer
+          <LandingFooter />
         </footer>
       </div>
     </>
