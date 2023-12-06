@@ -179,6 +179,14 @@ import PROJECT_TINY_4 from '/img/inspiration/projects/tinyHouses/tiny/PROJECT_TI
 import CASA_SIMPLETECH from '/img/landing/CASA_SIMPLETECH.png';
 import BOTTOM_BACKGROUND from '/img/landing/BOTTOM_BACKGROUND.png';
 import FLECHA_DERECHA_LANDING from '/img/landing/FLECHA_DERECHA_LANDING.svg';
+import LANDING_BLUE_DETAIL from '/img/landing/LANDING_BLUE_DETAIL.png';
+import LANDING_RED_DETAIL from '/img/landing/LANDING_RED_DETAIL.png';
+import LANDING_LTN_ICON from '/img/landing/LANDING_LTN_ICON.png';
+import LANDING_HEARTH from '/img/landing/LANDING_HEARTH.png';
+import LANDING_INPUT_ARROW from '/img/landing/LANDING_INPUT_ARROW.png';
+import INSTAGRAM_ICON from '/img/landing/INSTAGRAM_ICON.png';
+import FACEBOOK_ICON from '/img/landing/FACEBOOK_ICON.png';
+import YOUTUBE_ICON from '/img/landing/YOUTUBE_ICON.png';
 
 // EXPORTS
 // **********************************************
@@ -377,4 +385,12 @@ export const LANDING = {
   CASA_SIMPLETECH,
   BOTTOM_BACKGROUND,
   FLECHA_DERECHA_LANDING,
+  LANDING_BLUE_DETAIL,
+  LANDING_RED_DETAIL,
+  LANDING_LTN_ICON,
+  LANDING_HEARTH,
+  LANDING_INPUT_ARROW,
+  INSTAGRAM_ICON,
+  FACEBOOK_ICON,
+  YOUTUBE_ICON,
 };

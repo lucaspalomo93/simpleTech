@@ -1,0 +1,88 @@
+.landing-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.arga-text-container {
+  width: 150px;
+}
+
+.arga-text-p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.arga-text-span {
+  font-weight: bold;
+}
+
+.footer-heart-text-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subscribe-text-p {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.footer-input-container {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  height: 35px;
+}
+
+.footer-input {
+  width: calc(100% - 40px); /* Reducir el ancho para dejar espacio al botón */
+  border: 0;
+  border-radius: 15px;
+  height: 35px;
+  text-align: left;
+  padding-left: 1rem;
+  outline: none;
+}
+
+.input-icon {
+  height: 100%;
+  width: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #d2632c;
+}
+
+.input-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-networks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-text {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.social-networks-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-networks-img {
+  width: 25px;
+}

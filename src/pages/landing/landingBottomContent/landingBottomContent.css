@@ -1,0 +1,28 @@
+.landing-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  gap: 1rem;
+}
+
+.bottom-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.landing-bottom-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.landing-bottom-span {
+  color: #d2632c;
+}

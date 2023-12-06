@@ -1,0 +1,31 @@
+.landing-top-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1e1e1e;
+}
+
+.top-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 430px;
+  margin-left: 4rem;
+  gap: 3rem;
+}
+
+
+.landing-simpletech-title {
+    color: #d2632c;
+    font-size: 60px;
+    margin: 0;
+  }
+  
+  .landing-p1 {
+    font-family: 'Raleway', sans-serif;
+    color: #d9d9d9;
+    font-weight: bold;
+    font-size: 70px;
+    margin: 0;
+  }
+  
