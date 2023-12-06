@@ -6,7 +6,7 @@ const LandingBottomContent = () => {
   return (
     <>
       <div className='landing-bottom-blue-detail-container'>
-        <img src={LANDING.LANDING_BLUE_DETAIL} alt='landing_blue_detail' />
+        <img className='landing-bottom-detail-img' src={LANDING.LANDING_BLUE_DETAIL} alt='landing_blue_detail' />
       </div>
       <div className='bottom-content-container'>
         <div className='bottom-text-container'>
