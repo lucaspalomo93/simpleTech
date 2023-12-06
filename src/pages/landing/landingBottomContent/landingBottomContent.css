@@ -1,10 +1,16 @@
 .landing-bottom-content {
+  height: 700px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.bottom-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 700px;
-  gap: 1rem;
 }
 
 .bottom-text-container {
@@ -25,4 +31,10 @@
 
 .landing-bottom-span {
   color: #d2632c;
+}
+
+.landing-bottom-blue-detail-container {
+  display: flex;
+  width: 100%;
+  justify-content: end;
 }
