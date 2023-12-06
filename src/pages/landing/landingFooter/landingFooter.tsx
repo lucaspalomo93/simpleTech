@@ -36,16 +36,34 @@ const LandingFooter = () => {
         </div>
       </div>
       <div className='social-networks'>
-        <div className='social-text'></div>
+        <div className='social-text'>Seguinos</div>
         <div className='social-networks-icons'>
           <div>
-            <img src='' alt='instagram_icon' />
+            <a href='#'>
+              <img
+                className='social-networks-img'
+                src={LANDING.INSTAGRAM_ICON}
+                alt='instagram_icon'
+              />
+            </a>
           </div>
           <div>
-            <img src='' alt='facebook_icon' />
+            <a href='#'>
+              <img
+                className='social-networks-img'
+                src={LANDING.FACEBOOK_ICON}
+                alt='facebook_icon'
+              />
+            </a>
           </div>
           <div>
-            <img src='' alt='youtube_icon' />
+            <a href='#'>
+              <img
+                className='social-networks-img'
+                src={LANDING.YOUTUBE_ICON}
+                alt='youtube_icon'
+              />
+            </a>
           </div>
         </div>
       </div>

@@ -64,3 +64,25 @@
   width: 20px;
   height: 20px;
 }
+
+.social-networks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-text {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.social-networks-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-networks-img {
+  width: 25px;
+}

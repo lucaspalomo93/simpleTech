@@ -184,6 +184,9 @@ import LANDING_RED_DETAIL from '/img/landing/LANDING_RED_DETAIL.png';
 import LANDING_LTN_ICON from '/img/landing/LANDING_LTN_ICON.png';
 import LANDING_HEARTH from '/img/landing/LANDING_HEARTH.png';
 import LANDING_INPUT_ARROW from '/img/landing/LANDING_INPUT_ARROW.png';
+import INSTAGRAM_ICON from '/img/landing/INSTAGRAM_ICON.png';
+import FACEBOOK_ICON from '/img/landing/FACEBOOK_ICON.png';
+import YOUTUBE_ICON from '/img/landing/YOUTUBE_ICON.png';
 
 // EXPORTS
 // **********************************************
@@ -387,4 +390,7 @@ export const LANDING = {
   LANDING_LTN_ICON,
   LANDING_HEARTH,
   LANDING_INPUT_ARROW,
+  INSTAGRAM_ICON,
+  FACEBOOK_ICON,
+  YOUTUBE_ICON,
 };
