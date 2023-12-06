@@ -1,12 +1,15 @@
 import './landingcarousel.css';
 import { Carousel } from 'react-responsive-carousel';
 import { landingImagesAndNames } from '../../inspiration/carousel/data';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { LANDING } from '../../../constants/images';
 import { LinearProgress } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { SimpleTechContext } from '../../../context/context';
 
 const LandingCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { state, setState } = useContext(SimpleTechContext);
 
   const handlePrevImageClick = () => {
     const prevIndex =
@@ -18,6 +21,13 @@ const LandingCarousel = () => {
   const handleNextImageClick = () => {
     const nextIndex = (currentIndex + 1) % landingImagesAndNames.images.length;
     setCurrentIndex(nextIndex);
+  };
+
+  const handleArrowClick = () => {
+    setState({
+      ...state,
+      sectionSelected: 'INSPIRACIÓN',
+    });
   };
 
   return (
@@ -82,10 +92,12 @@ const LandingCarousel = () => {
           </p>
         </div>
         <div>
-          <img
-            src={LANDING.FLECHA_DERECHA_LANDING}
-            alt='flecha-derecha-landing'
-          />
+          <Link to='/catalogo' onClick={handleArrowClick}>
+            <img
+              src={LANDING.FLECHA_DERECHA_LANDING}
+              alt='flecha-derecha-landing'
+            />
+          </Link>
         </div>
       </div>
       <div className='landing-progress-bar'>
