@@ -59,11 +59,49 @@
 }
 
 .landing-name-container {
-    width: 200px;
-    height: 50px;
+  width: 200px;
+  height: 50px;
 }
 
 .landing-image-name {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+
+
+  .landing-inspiration-text {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .landing-carousel-component {
+    width: 500px;
+  }
+
+  .landing-carousel {
+    justify-content: center;
+    width: 20rem;
+    height: 15rem;
+  }
+
+  .landing-carousel-img {
+    height: 200px;
+  }
+
+  .landing-side-img-container {
+    height: 190px;
+    width: 100px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .landing-carousel-image-name-container {
+    gap: 1.5rem;
+  }
+
+  .landing-name-container {
+    width: 150px;
+  }
 }
