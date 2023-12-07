@@ -36,7 +36,7 @@ const LandingFooter = () => {
         </div>
       </div>
       <div className='social-networks'>
-        <div className='social-text'>Seguinos</div>
+        <p className='social-text'>Seguinos</p>
         <div className='social-networks-icons'>
           <div>
             <a href='#'>

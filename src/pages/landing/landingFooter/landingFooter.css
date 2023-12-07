@@ -86,3 +86,77 @@
 .social-networks-img {
   width: 25px;
 }
+
+@media only screen and (max-width: 480px) {
+  .landing-footer-container {
+    gap: 1rem;
+  }
+
+  .arga-text-p {
+    font-size: 8px;
+  }
+
+  .arga-text-container {
+    width: 50px;
+  }
+
+  .input-icon {
+    width: 20px;
+  }
+
+  .ltn-icon {
+    width: 30px;
+  }
+
+  .ltn-icon img {
+    width: 40px;
+  }
+
+  .subscribe-text-p {
+    font-size: 8px;
+  }
+
+  .footer-input-container {
+    width: 140px;
+    height: 10px;
+  }
+
+  .footer-input {
+    height: 10px;
+    font-size: 10px;
+  }
+
+  .input-icon {
+    width: 20px;
+  }
+
+  .input-icon img {
+    height: 10px;
+  }
+
+  .footer-heart-text-container {
+    gap: 0.2rem;
+  }
+
+  .footer-heart-container img{
+    width: 10px;
+  }
+
+  .social-networks {
+    gap: 0;
+  }
+
+  .social-text {
+    width: 5px;
+    display: inline;
+    margin: 0;
+  }
+
+  .social-text p {
+    width: 5px;
+  }
+
+  .social-networks-img {
+    width: 15px;
+  }
+}
