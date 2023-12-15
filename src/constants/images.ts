@@ -187,6 +187,7 @@ import LANDING_INPUT_ARROW from '/img/landing/LANDING_INPUT_ARROW.png';
 import INSTAGRAM_ICON from '/img/landing/INSTAGRAM_ICON.png';
 import FACEBOOK_ICON from '/img/landing/FACEBOOK_ICON.png';
 import YOUTUBE_ICON from '/img/landing/YOUTUBE_ICON.png';
+import SIMPLETECH_TEXT_LOGO from '/img/landing/SIMPLETECH_TEXT_LOGO.png';
 
 // EXPORTS
 // **********************************************
@@ -393,4 +394,5 @@ export const LANDING = {
   INSTAGRAM_ICON,
   FACEBOOK_ICON,
   YOUTUBE_ICON,
+  SIMPLETECH_TEXT_LOGO,
 };

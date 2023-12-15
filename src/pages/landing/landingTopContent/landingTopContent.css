@@ -17,11 +17,6 @@
   gap: 3rem;
 }
 
-.landing-simpletech-title {
-  color: #d2632c;
-  font-size: 60px;
-  margin: 0;
-}
 
 .landing-p1 {
   font-family: 'Raleway', sans-serif;
@@ -29,6 +24,7 @@
   font-weight: bold;
   font-size: 70px;
   margin: 0;
+  line-height: 80px;
 }
 
 .top-content-detail-container {
@@ -42,7 +38,6 @@
   width: 200px;
 }
 
-
 @media only screen and (max-width: 480px) {
   .main-top-content-container {
     flex-direction: column;
@@ -52,6 +47,7 @@
   .landing-p1 {
     font-size: 30px;
     padding-left: 2rem;
+    line-height: 40px;
   }
 
   .landing-simpletech-title {
@@ -73,7 +69,7 @@
   .top-content-detail-container {
     top: 26.1rem;
   }
-  
+
   .top-content-detail-img {
     width: 50px;
   }
