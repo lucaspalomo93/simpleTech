@@ -19,13 +19,18 @@ const LandingTopContent = () => {
           className='top-content-left'
           style={topContentLeftStyle}
         >
-          <h2 className='landing-simpletech-title'>simpletech</h2>
-          <p className='landing-p1'>
-            Donde <br />
-            tu techo <br />
-            es posible
-          </p>
-          <div id='top-content-button' className='button-container top-button-container'>
+          <div id='simpletech-logo-top-content'>
+            <img src={LANDING.SIMPLETECH_TEXT_LOGO} alt='simpletech_logo' />
+          </div>
+          <div className='landing-p1-container'>
+            <p className='landing-p1'>Donde</p>
+            <p className='landing-p1'>tu techo</p>
+            <p className='landing-p1'> es posible</p>
+          </div>
+          <div
+            id='top-content-button'
+            className='button-container top-button-container'
+          >
             <Link to='/presentation' className='landing-catalogo-button'>
               VER CATÁLOGO
             </Link>
