@@ -1,8 +1,9 @@
-import './presentation.css';
 import { Container, Link, Typography } from '@mui/material';
-import { COLORS } from '../../constants/colors';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { COLORS } from '../../constants/colors';
+import { LANDING } from '../../constants/images';
+import './presentation.css';
 
 function Presentation() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function Presentation() {
     const timeoutId = setTimeout(() => {
       // Después de 3 segundos, realiza la redirección
       navigate('/catalogo');
-    }, 4000);
+    }, 1000);
 
     // Limpia el temporizador al desmontar el componente
     return () => clearTimeout(timeoutId);
@@ -38,27 +39,16 @@ function Presentation() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         height: '100vh',
         opacity: 1,
         transition: 'opacity 5s ease-out',
         backgroundColor: COLORS.DARK_GREY,
       }}
     >
-      <Typography
-        variant='h1'
-        content='h1'
-        textAlign={'center'}
-        justifyContent={'center'}
-        color={COLORS.ORANGE}
-        fontWeight={'bold'}
-        paddingTop={'30vh'}
-        paddingBottom={'20vh'}
-        fontSize={'4rem'}
-        className='title-simpletech'
-      >
-        simpletech
-      </Typography>
+      <div id='simpletech-logo-presentation' className='simpletech-logo-presentation'>
+        <img src={LANDING.SIMPLETECH_TEXT_LOGO} alt='simpletech_logo' />
+      </div>
 
       <Container
         sx={{
